@@ -1,0 +1,63 @@
+/*	CAROUSEL:	*/
+#myPicturama {
+	position:absolute;
+	bottom:0;
+	overflow:hidden;
+	height:100%;
+	width:100%;
+	display:flex;
+	flex-flow:column nowrap
+}
+
+
+.myBarControl {
+	animation:fadeInUp;
+	animation-duration:2s;
+	width:100%;
+	display:flex;
+	flex-flow:row wrap;
+	align-items:end;
+	justify-content:space-between
+}
+.myBarControl>li:nth-child(2) svg {
+	width:96px;
+	height:96px
+}
+.myBarControl>li:nth-child(3) {justify-items:end}
+
+
+#menuBarControl {padding:0 0 0 1rem}
+#menuBarControl li {min-width:250px}
+ 
+
+/* #myInfosFileCarousel {width:100%} */
+
+
+.myMiniatures {
+	width:100%;
+	display:flex;
+	flex-flow:row;
+	justify-content:space-between
+}
+.myMiniatures svg{font-size:6em}
+
+
+#myListing {
+	background-color:var(--my-white-15);
+	overflow:auto;
+	display:flex;
+	align-items:center;
+	flex-flow:row nowrap
+}
+#myListing>li {
+	margin-right:1rem; 
+	display:flex;
+	flex-flow:column;
+	align-items:center
+}
+#myListing img {
+	min-width:300px;
+	min-height:150px;
+	max-width:400px;
+	max-height:200px
+}

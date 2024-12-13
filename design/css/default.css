@@ -1,0 +1,102 @@
+/*	DEFEAULT:	*/
+/*	FONTS		*/
+/*	Open Sans	*/
+@font-face {
+	font-family:'Open Sans';
+	font-style:normal;
+	font-weight:400;
+	src:local('Open Sans Regular'), local('OpenSans-Regular'), url(../fonts/Open_Sans/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+	unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+}
+
+
+/*	VARIABLES	*/
+:root {
+	--my-color1:	rgba(221, 96, 159, 1);
+	--my-color2:	rgba(158, 146, 228, 1);
+	--my-color3:	rgba(19, 164, 90, 1);
+	--my-color4:	rgba(107, 208, 24, 1);
+
+	--my-white:	rgba(242, 242, 242, 1);
+	--my-white-95:	rgba(242, 242, 242, .95);
+	--my-white-50:	rgba(242, 242, 242, .5);
+	--my-white-15:	rgba(242, 242, 242, .15);
+
+	--my-black:	rgba(42, 42, 42, 1);
+	--my-black-95:	rgba(42, 42, 42, .95);
+	--my-black-50:	rgba(42, 42, 42, .5);
+	--my-black-15:	rgba(42, 42, 42, .15);
+
+	--my-blue:	rgba(0, 0, 242, 1);
+	--my-green:	rgba(0, 242, 0, 1);
+	--my-red:	rgba(242, 0, 0, 1)
+}
+
+
+/*	PANEL COLORS:	*/
+.my-trnsprnt	{opacity:0}
+.my-color1	{color:var(--my-color1)}
+.my-color2	{color:var(--my-color2)}
+.my-color3	{color:var(--my-color3)}
+.my-color4	{color:var(--my-color4)}
+.my-white	{color:var(--my-white)}
+.my-black	{color:var(--my-black)}
+.my-blue	{color:var(--my-blue)}
+.my-green	{color:var(--my-green)}
+.my-red		{color:var(--my-red)}
+
+
+/*	BGCOLORS:	*/
+.my-bg-trnsprnt	{background-color:transparent}
+.my-bg-white	{background-color:var(--my-white)}
+.my-bg-black	{background-color:var(--my-black)}
+.my-bg-white-15	{background-color:var(--my-white-15)}
+.my-bg-black-15	{background-color:var(--my-black-15)}
+.my-bg-white-50	{background-color:var(--my-white-50)}
+.my-bg-black-50	{background-color:var(--my-black-50)}
+.my-bg-white-95	{background-color:var(--my-white-95)}
+.my-bg-black-95	{background-color:var(--my-black-95)}
+
+
+/*	BALISES:	*/ 
+html,
+body,
+header, main, footer,
+nav,
+address,
+section, div, article,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+p,
+img,
+span,
+a,
+i,
+pre,
+code {
+	padding:0;
+	margin:0;
+	font-size:1rem;
+	font:inherit;
+	font-family:'Open Sans';
+	vertical-align:baseline
+}
+
+
+/*	MULTICOLOR */
+.rainbow_text_animated {
+	background:linear-gradient(to right, var(--my-color1), var(--my-color2), var(--my-color3), var(--my-color4));
+	-webkit-background-clip:text;
+	background-clip:text;
+	color:transparent;
+	animation:rainbow_animation 4s ease-in-out infinite;
+	background-size:200% 50%
+}
+@keyframes rainbow_animation {
+	0%, 100% {background-position:0 0}
+	50% {background-position:100% 0}
+}
+@keyframes rainbow_bg_animation {
+	0%, 100% {background-position:0 0}
+	50% {background-position:100% 0}
+}
