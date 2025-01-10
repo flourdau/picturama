@@ -30,34 +30,64 @@
 #menuBarControl li {min-width:250px}
  
 
-/* #myInfosFileCarousel {width:100%} */
-
-
 .myMiniatures {
-	width:100%;
-	display:flex;
-	flex-flow:row;
-	justify-content:space-between
+	background-color: var(--bs-body-color);
+	padding:2% 10%;
+	text-align:end
 }
-.myMiniatures svg{font-size:6em}
+.myMiniatures>div{
+	display:flex;
+	justify-content:center;
+	flex-flow:row wrap
+}
+.myMiniatures>div>svg{
+	z-index:1;
+	color:var(--bs-gray-500);
+	position:absolute;
+	min-width:256px;
+	height:256px;
+	right:-64px
+}
+.myMiniatures>div>svg:hover {color:var(--bs-gray-700)}
+.myMiniatures>div>svg:first-child{
+	right:none;
+	left:-64px
+}
 
 
-#myListing {
-	background-color:var(--my-white-15);
-	overflow:auto;
-	display:flex;
-	align-items:center;
-	flex-flow:row nowrap
+.items {
+    display:flex;
+    gap:var(--gap);
+    overflow-x:auto;
+    scroll-snap-type:x proximity;
+    padding:calc(var(--gap) * .5);
+    margin:calc(var(--gap) * -.5);
+    scroll-padding-inline:calc(var(--gap) * .5)
 }
-#myListing>li {
-	margin-right:1rem; 
-	display:flex;
-	flex-flow:column;
-	align-items:center
+
+
+.item {
+	max-height:300px;
+	min-width:calc((100% - (var(--items) - 1) * var(--gap)) / var(--items));
+	scroll-snap-align:start
 }
-#myListing img {
-	min-width:300px;
-	min-height:150px;
-	max-width:400px;
-	max-height:200px
+.item img {
+    width:100%;
+	height:100%
+}
+
+
+
+@media (min-width:1000px) and (pointer:fine) {
+    .items {overflow:hidden}
+}
+
+@media (max-width:1000px) {
+	.myMiniatures>div>svg {display:none}
+    .items {
+        padding:1rem;
+        margin:-1rem;
+        scroll-padding-inline:0
+    }
+    .item {scroll-snap-align:center}
 }

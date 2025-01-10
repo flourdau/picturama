@@ -83,6 +83,7 @@ export default class MyPicturama {
 
 
 	myUpDateColor(event) {
+		document.querySelector(".myBarControl>li:nth-child(3)").classList.toggle('d-none')
 		window.myBgColor = event.target.value
 		window.myBody.style.backgroundColor = event.target.value
 	}
@@ -90,6 +91,8 @@ export default class MyPicturama {
 
 	myAddImg(event) {
 		document.querySelector(".myMiniatures").classList.remove('d-none')
+		document.querySelector(".myBarControl>li:nth-child(2)").classList.remove('d-none')
+		document.querySelector(".myBarControl>li:nth-child(3)").classList.remove('d-none')
 		window.myListing.innerHTML = ''	// Reset DOM list
 		window.myList.push(event.target.files) // Sav JS FilesList
 		window.myPositionX= 0 // Reset Position
@@ -98,10 +101,10 @@ export default class MyPicturama {
 		for (let line = 0; line < window.myList.length; line++) {
 			for (let column = 0; column < window.myList[line].length; column++) {
 				const item = document.createElement("li"),
-				myText = document.createElement("span"),
 				reader = new FileReader,
 				img = new Image
 
+				item.classList.add('item')
 				if (window.myList[line]) reader.readAsDataURL(window.myList[line][column])
 
 				reader.addEventListener("load", () => {
@@ -113,14 +116,12 @@ export default class MyPicturama {
 						img.src = URL.createObjectURL(window.myList[line][column])
 						img.classList.add('rounded')
 						img.classList.add('img-thumbnail')
-						myText.textContent = window.myList[line][column].name
 						item.append(img)
-						item.append(myText)
 					}
 					if (column === 0 && line === 0) 
 						MyPicturama.myChangeBg(URL.createObjectURL(window.myList[0][0]))
 				}, false)
-
+	
 				window.myListing.appendChild(item)
 	}}}
 
@@ -203,6 +204,7 @@ export default class MyPicturama {
 		document.getElementById("myInputPause").classList.add('d-none')
 		window.myShuffle = false
 		document.querySelector("#myShuffle").style.color = 'black'
+		document.querySelector(".myMiniatures").classList.add('d-none')
 	}
 
 
