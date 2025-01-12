@@ -1,3 +1,5 @@
+/*	MyPicturama
+*/
 export default class MyPicturama {
 	constructor() {
 		/* Select elements */
@@ -307,6 +309,7 @@ export default class MyPicturama {
 				behavior: 'smooth'
 		})
 	}
+
 
 	/*
 	 * Ferme le slider

@@ -1,4 +1,4 @@
-/*	CAROUSEL:	*/
+/*	PICTURAMA	*/
 #myPicturama {
 	position:absolute;
 	bottom:0;
@@ -78,9 +78,7 @@
 
 
 
-@media (min-width:1000px) and (pointer:fine) {
-    .items {overflow:hidden}
-}
+@media (min-width:1000px) and (pointer:fine) {items {overflow:hidden}}
 
 @media (max-width:1000px) {
 	.myMiniatures>div>svg {display:none}

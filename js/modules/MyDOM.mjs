@@ -1,3 +1,5 @@
+/*  MyDOM
+*/
 export default class MyDOM {
     constructor() {
         window.myHTML = document.querySelector("html")

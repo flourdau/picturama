@@ -1,8 +1,6 @@
-/*	
-	MYCLOCK
-	modify 2 elements of DOM (#myDate & #myHour)
- */
-
+/*	MYCLOCK
+ *	modify 2 elements of DOM (#myDate & #myHour)
+*/
 export default class MyClock {
 	$myDate	=	document.getElementById("myDate")
 	$myHour	=	document.getElementById("myHour")
@@ -33,7 +31,8 @@ export default class MyClock {
 	get getMyDate() { return this.myDate }
 }
 
-
+/*	MyCustomClock
+*/
 export class MyCustomClock {
     constructor() {
 		this.colorPicker = document.querySelector("#myInputClockColor")
@@ -99,7 +98,6 @@ export class MyCustomClock {
 
 
 	myFontSize(event) {
-		// document.querySelector("#collapseClock>svg").style.fontSize = event.target.value+ 'rem'
 		document.querySelector("#myHour").style.fontSize = event.target.value+ 'rem'
 		document.querySelector("#myDate").style.fontSize = (event.target.value / 2) + 'rem'
 	}
