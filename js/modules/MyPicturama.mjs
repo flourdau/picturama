@@ -3,7 +3,11 @@ export default class MyPicturama {
 		/* Select elements */
 		window.myBody = document.querySelector("body")
 		window.myListing = document.getElementById("myListing")
+		window.nextButton = document.querySelector('[data-slider-next]')
+		window.prevButton = document.querySelector('[data-slider-prev]')
+		window.wrapper = document.querySelector('[data-slider-wrapper]')
 		this.colorPicker = document.querySelector("#myInputColor")
+
 
 		/* Initialize globales */
 		window.myList = new Array
@@ -20,6 +24,7 @@ export default class MyPicturama {
 		/* Create eventListeners */
 		this.colorPicker.addEventListener("input", this.myUpDateColor, false)
 		this.colorPicker.addEventListener("change", this.myUpDateColor, false)
+		document.querySelector(".btn-close").addEventListener("click", this.myCloseSlider, false)
 		document.getElementById("mySelectTimer").addEventListener("change", this.myDelay, false)
 		document.getElementById("mySelectCenterX").addEventListener("change", this.myCenterX, false)
 		document.getElementById("mySelectCenterY").addEventListener("change", this.myCenterY, false)
@@ -32,6 +37,9 @@ export default class MyPicturama {
 		document.getElementById("myInputLeft").addEventListener("click", this.myLeft, false)
 		document.getElementById("myInputRight").addEventListener("click", this.myRight, false)
 		document.getElementById("myInputReset").addEventListener("click", this.myReset, false)
+		window.nextButton.addEventListener('click', () => this.move(1))
+		window.prevButton.addEventListener('click', () => this.move(-1))
+		window.wrapper.addEventListener('scrollend', () => this.updateUI())
 		
 		/* Execute functions */
 		this.colorPicker.select()
@@ -40,7 +48,10 @@ export default class MyPicturama {
 
 
 	static myFlashButton() {
-		setInterval(()=>{document.getElementById("myInputDLLabel").classList.toggle('my-color3')}, 500)
+		setInterval(()=>{
+			document.querySelector(".myBarControl>li>svg").classList.toggle('my-color3')
+			document.getElementById("myInputDLLabel").classList.toggle('my-color3')
+		}, 500)
 	}
 
 
@@ -83,7 +94,7 @@ export default class MyPicturama {
 
 
 	myUpDateColor(event) {
-		document.querySelector(".myBarControl>li:nth-child(3)").classList.toggle('d-none')
+		document.querySelector(".myBarControl>li:nth-child(3)").classList.remove('d-none')
 		window.myBgColor = event.target.value
 		window.myBody.style.backgroundColor = event.target.value
 	}
@@ -123,7 +134,9 @@ export default class MyPicturama {
 				}, false)
 	
 				window.myListing.appendChild(item)
-	}}}
+	}}
+	window.prevButton.setAttribute('hidden', 'hidden')
+}
 
 
 	myLeft() {
@@ -163,12 +176,14 @@ export default class MyPicturama {
 
 
 	myPlay() {
+		document.querySelector("nav").classList.toggle('d-none')
+		document.querySelector(".myClock svg").classList.toggle('d-none')
+		document.querySelector(".myClock>div").classList.toggle('d-none')
 		document.querySelector(".myMiniatures").classList.add('d-none')
 		document.getElementById("myInputPlayPause").classList.add('d-none')
 		document.getElementById("myInputPause").classList.remove('d-none')
 		document.querySelector(".myBarControl>li:nth-child(1)").classList.toggle('my-trnsprnt')
 		document.querySelector(".myBarControl>li:nth-child(2)").classList.toggle('my-trnsprnt')
-		document.querySelector(".myBarControl").style.backgroundColor = "rgba(0, 0, 0, .01)"
 
 		window.mySetInterval = setInterval(function(){
 
@@ -223,8 +238,80 @@ export default class MyPicturama {
 	myFullScreen() {
 		document.querySelector("nav").classList.toggle('d-none')
 		document.querySelector(".myClock>div").classList.toggle('d-none')
+		document.querySelector(".myClock svg").classList.toggle('d-none')
 		document.querySelector(".myBarControl>li:nth-child(1)").classList.toggle('my-trnsprnt')
 		document.querySelector(".myBarControl>li:nth-child(2)").classList.toggle('my-trnsprnt')
-		document.querySelector(".myMiniatures").classList.toggle('d-none')
+		if (window.wrapper.children.length > 0)
+			document.querySelector(".myMiniatures").classList.toggle('d-none')
+	}
+
+
+	/*	SLIDER	*/
+	/**
+	* Utilise la variable --items pour déterminer le nombre d'élément visible
+	**/
+	get itemsToScroll () {
+		return parseInt(window.getComputedStyle(window.wrapper).getPropertyValue('--items'), 10);
+	}
+
+
+	/**
+	* Nombre total de "pages" dans notre slider
+	* @returns {number}
+	**/
+	get pages () {
+		return Math.ceil(window.wrapper.children.length / this.itemsToScroll)
+	}
+
+
+	/**
+	* Page courante
+	* @returns {number}
+	**/
+	get page () {
+		return Math.ceil(window.wrapper.scrollLeft / window.wrapper.offsetWidth)
+	}
+
+
+	/**
+	* Affiche / Masque les boutons de navigation
+	**/
+	updateUI () {
+		if (this.page === 0)
+			window.prevButton.setAttribute('hidden', 'hidden')
+		else
+			window.prevButton.removeAttribute('hidden')
+	
+		if (this.page === this.pages - 1)
+			window.nextButton.setAttribute('hidden', 'hidden')
+		else
+			window.nextButton.removeAttribute('hidden')
+	}
+
+
+	/**
+	 * Déplace le slider de n pages
+	 * @param {number} n
+	 */
+	move (n) {
+		let newPage = this.page + n
+	
+		if (newPage < 0)
+			newPage = 0
+	
+		if (newPage >= this.pages)
+			newPage = this.pages - 1
+	
+		window.wrapper.scrollTo({
+			left: window.wrapper.children[newPage * this.itemsToScroll].offsetLeft,
+				behavior: 'smooth'
+		})
+	}
+
+	/*
+	 * Ferme le slider
+	*/
+	myCloseSlider() {
+		document.querySelector(".myMiniatures").classList.add('d-none')
 	}
 }

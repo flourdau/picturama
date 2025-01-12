@@ -99,6 +99,7 @@ export class MyCustomClock {
 
 
 	myFontSize(event) {
+		// document.querySelector("#collapseClock>svg").style.fontSize = event.target.value+ 'rem'
 		document.querySelector("#myHour").style.fontSize = event.target.value+ 'rem'
 		document.querySelector("#myDate").style.fontSize = (event.target.value / 2) + 'rem'
 	}
