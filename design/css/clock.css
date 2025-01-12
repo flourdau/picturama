@@ -46,7 +46,7 @@
 @media screen and (max-width:700px) {#myHour {font-size:4rem}}
 /*	< 400px		*/
 @media screen and (max-width:400px) {
-	#myHour {font-size:3em}
-	#myDate {font-size:1m}
+	#myHour {font-size:3rem}
+	#myDate {font-size:1.5rem}
 	.myClock {padding:4rem 0 0 0}
 }
