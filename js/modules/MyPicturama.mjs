@@ -17,7 +17,7 @@ export default class MyPicturama {
 		window.myPositionX = 0
 		window.myPositionY = 0
 		window.myDelay = 5
-		window.mySetInterval = "undefined"
+		window.mySetInterval = undefined
 		window.myShuffle = false
 		window.myCenterX = "center"
 		window.myCenterY = "top"

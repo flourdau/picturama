@@ -2,8 +2,6 @@
  *	modify 2 elements of DOM (#myDate & #myHour)
 */
 export default class MyClock {
-	$myDate	=	document.getElementById("myDate")
-	$myHour	=	document.getElementById("myHour")
     local	=	'fr-FR'
     options	=	{	weekday	:	"long",
 					year	:	"numeric",
@@ -12,9 +10,11 @@ export default class MyClock {
 
 
     constructor() {
-        this.d		=	new Date()
-        this.myHour	=	this.d.toLocaleTimeString(this.local)
-        this.myDate	=	this.d.toLocaleDateString(this.local, this.options)
+		this.$myDate	=	document.getElementById("myDate")
+		this.$myHour	=	document.getElementById("myHour")
+        this.d			=	new Date()
+        this.myHour		=	this.d.toLocaleTimeString(this.local)
+        this.myDate		=	this.d.toLocaleDateString(this.local, this.options)
 
         this.myDate	=	this.myDate.toLowerCase()
 									.split(' ')

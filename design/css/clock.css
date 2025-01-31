@@ -5,7 +5,7 @@
 	display:flex;
 	flex-flow:column nowrap;
 	justify-content:center;
-	align-self:end
+	align-self:flex-end
 }
 
 
@@ -41,12 +41,16 @@
 
 /*	QUERY	*/
 /*	< 1200px	*/
-@media screen and (max-width:1200px) {.myClock {align-items:center}}
+@media screen and (max-width:1200px) {
+	/* .myClock {align-items:center} */
+}
 /*	< 700px		*/
-@media screen and (max-width:700px) {#myHour {font-size:4rem}}
+@media screen and (max-width:700px) {
+	#myHour {font-size:4rem}
+}
 /*	< 400px		*/
 @media screen and (max-width:400px) {
 	#myHour {font-size:3rem}
 	#myDate {font-size:1.5rem}
-	.myClock {padding:4rem 0 0 0}
+	/* .myClock {padding:4rem 0 0 0} */
 }

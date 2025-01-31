@@ -9,7 +9,7 @@ body {
 nav {
 	z-index:100;
 	display:flex;
-	justify-content:end
+	justify-content:flex-end
 }
 
 
@@ -17,6 +17,18 @@ svg {
 	height:64px;
 	width:64px;
 	color:var(--bs-body-color);
-	padding:.5rem;
-	font-size:4em
+	padding:.5rem
+}
+
+
+
+/*	QUERY	*/
+/*	< 700px		*/
+@media screen and (max-width:700px) {
+	svg {
+		/* background-color: aqua; */
+		height:48px;
+		width:48px;
+		padding:.25rem
+	}
 }

@@ -12,8 +12,8 @@
 
 /*	VARIABLES	*/
 :root {
-    --items:4;
-    --gap:1rem;
+	--items:4;
+	--gap:1rem;
 
 	--my-color1:	rgba(221, 96, 159, 1);
 	--my-color2:	rgba(158, 146, 228, 1);

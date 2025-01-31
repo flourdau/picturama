@@ -16,7 +16,7 @@
 	width:100%;
 	display:flex;
 	flex-flow:row wrap;
-	align-items:end;
+	align-items:flex-end;
 	justify-content:space-between
 }
 .myBarControl>li:nth-child(2) svg {
