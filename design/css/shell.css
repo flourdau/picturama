@@ -1,0 +1,38 @@
+.my-size-max {
+	width:100% !important;
+	height:100%
+}
+
+
+.my-shell {
+	/* width:50%; */
+	display:flex;
+	flex-flow:column
+}
+
+
+.my-shell-content {
+	height:100%;
+	display:flex
+}
+
+
+.my-shell-bar {
+	background-color:var(--bs-body-color);
+	width:100%;
+	display:flex;
+	flex-flow:row;
+	justify-content:flex-end
+}
+.my-shell-bar>li {padding:.5rem}
+.my-shell-bar>li:first-child {
+	width:100%;
+	justify-self:flex-start
+}
+.my-shell-bar svg {
+	cursor:pointer;
+	height:32px;
+	width:32px;
+	color:var(--my-color1);
+	padding:.5rem
+}

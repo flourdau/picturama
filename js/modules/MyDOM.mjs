@@ -4,6 +4,7 @@ export default class MyDOM {
     constructor() {
         window.myHTML = document.querySelector("html")
         document.getElementById("mySelectTheme").addEventListener("click", this.mySwitchTheme, false)
+        // this.footerYear()
     }
 
     mySwitchTheme() {
@@ -12,4 +13,6 @@ export default class MyDOM {
         else
             window.myHTML.setAttribute('data-bs-theme', 'dark')
     }
+
+    // footerYear() {document.getElementById("footer-year").innerHTML = new Date().getFullYear()}
 }

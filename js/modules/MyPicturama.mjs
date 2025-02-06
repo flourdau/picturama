@@ -179,8 +179,8 @@ export default class MyPicturama {
 
 	myPlay() {
 		document.querySelector("nav").classList.toggle('d-none')
-		document.querySelector(".myClock svg").classList.toggle('d-none')
-		document.querySelector(".myClock>div").classList.toggle('d-none')
+		document.querySelector("#myClock svg").classList.toggle('d-none')
+		document.querySelector("#myClock>div").classList.toggle('d-none')
 		document.querySelector(".myMiniatures").classList.add('d-none')
 		document.getElementById("myInputPlayPause").classList.add('d-none')
 		document.getElementById("myInputPause").classList.remove('d-none')
@@ -239,8 +239,8 @@ export default class MyPicturama {
 
 	myFullScreen() {
 		document.querySelector("nav").classList.toggle('d-none')
-		document.querySelector(".myClock>div").classList.toggle('d-none')
-		document.querySelector(".myClock svg").classList.toggle('d-none')
+		document.querySelector("#myClock>div").classList.toggle('d-none')
+		document.querySelector("#myClock svg").classList.toggle('d-none')
 		document.querySelector(".myBarControl>li:nth-child(1)").classList.toggle('my-trnsprnt')
 		document.querySelector(".myBarControl>li:nth-child(2)").classList.toggle('my-trnsprnt')
 		if (window.wrapper.children.length > 0)

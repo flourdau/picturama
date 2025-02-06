@@ -1,56 +1,5 @@
 /*	CLOCK	*/
 .myClock {
-	margin-top:64px;
-	flex:1;
 	display:flex;
-	flex-flow:column nowrap;
-	justify-content:center;
-	align-self:flex-end
-}
-
-
-#myHour {
-	font-size:8rem;
-	padding-right:1rem
-}
-
-
-#myDate {
-	font-size:4rem;
-	padding-right:1.5rem
-}
-
-
-.accordion-item {
-	border:0;
-	background-color:transparent
-}
-.accordion-button:not(.collapsed) {
-	background-color:transparent;
-	box-shadow:none
-}
-.accordion-button {background-color:transparent}
-
-
-#collapseClock {
-	list-style:none;
-	text-align:end
-}
-
-
-
-/*	QUERY	*/
-/*	< 1200px	*/
-@media screen and (max-width:1200px) {
-	/* .myClock {align-items:center} */
-}
-/*	< 700px		*/
-@media screen and (max-width:700px) {
-	#myHour {font-size:4rem}
-}
-/*	< 400px		*/
-@media screen and (max-width:400px) {
-	#myHour {font-size:3rem}
-	#myDate {font-size:1.5rem}
-	/* .myClock {padding:4rem 0 0 0} */
+	flex-flow:column
 }

@@ -1,13 +1,15 @@
 /*	DOM	*/
+html {height:100%}
+
+
 body {
-	display:flex;
-	flex-flow:column nowrap;
+	height:100%;
 	background-color:var(--my-color2)
 }
 
 
 nav {
-	z-index:100;
+	/* z-index:100; */
 	display:flex;
 	justify-content:flex-end
 }
@@ -21,14 +23,53 @@ svg {
 }
 
 
+footer {
+	margin:1rem 0 0 0;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-items:center;
+	font-size:1.28rem
+}
+footer address, footer ul, footer li {text-align:center}
+footer ul {
+	display:flex;
+	align-items:center
+}
+footer li {
+	display:inline;
+	padding:1.28rem
+}
+footer a {
+	color:var(--my-color3);
+	text-decoration:none
+}
+footer a:hover {color:var(--my-color1)}
+footer svg {
+	color:var(--my-color1);
+	height:48px;
+	width:48px
+}
+footer svg:hover {color:var(--my-color3)}
+
 
 /*	QUERY	*/
 /*	< 700px		*/
 @media screen and (max-width:700px) {
 	svg {
-		/* background-color: aqua; */
 		height:48px;
-		width:48px;
-		padding:.25rem
+		width:48px
+	}
+
+	footer {
+		display:flex;
+		flex-flow:column;
+		font-size:.64rem
+	}
+	footer ul, footer li {display:block	}
+	footer li {padding:.2rem}
+	footer svg {
+		height:32px;
+		width:32px
 	}
 }
