@@ -3,7 +3,7 @@
 */
 export default class MyInfos {
 	constructor() {
-		this.blocInfos = document.querySelector('#myInfos')
+		this.blocInfos = document.querySelector('#myInfos .my-shell-content ul')
 		this.blocScreen = document.querySelector('.my-screen')
 		this.blocPointer = document.querySelector('.my-pointer')
 

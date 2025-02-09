@@ -4,12 +4,14 @@ html {height:100%}
 
 body {
 	height:100%;
-	background-color:var(--my-color2)
+	background-color:var(--my-color3)
 }
 
 
+header {height:100%}
+
+
 nav {
-	/* z-index:100; */
 	display:flex;
 	justify-content:flex-end
 }

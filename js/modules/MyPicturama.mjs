@@ -236,11 +236,16 @@ export default class MyPicturama {
 		}
 	}
 
-
 	myFullScreen() {
+		const ContentShellBar	=	document.getElementsByClassName("my-shell-bar")
+		const ContentShellPrompt	=	document.getElementsByClassName("my-shell-prompt")
+		for (let i = 0; i < ContentShellBar.length; i++) {
+				ContentShellBar[i].classList.toggle('d-none')
+		}
+		for (let i = 0; i < ContentShellPrompt.length; i++) {
+			ContentShellPrompt[i].classList.toggle('d-none')
+		}
 		document.querySelector("nav").classList.toggle('d-none')
-		document.querySelector("#myClock>div").classList.toggle('d-none')
-		document.querySelector("#myClock svg").classList.toggle('d-none')
 		document.querySelector(".myBarControl>li:nth-child(1)").classList.toggle('my-trnsprnt')
 		document.querySelector(".myBarControl>li:nth-child(2)").classList.toggle('my-trnsprnt')
 		if (window.wrapper.children.length > 0)

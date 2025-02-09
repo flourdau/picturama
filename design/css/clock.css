@@ -1,5 +1,7 @@
 /*	CLOCK	*/
-.myClock {
+#myClock {
 	display:flex;
 	flex-flow:column
 }
+
+#myClock .my-shell-content {font-size:2rem}
