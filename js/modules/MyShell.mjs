@@ -9,10 +9,10 @@ export default class MyShell {
 			function() {
 				const val = this.parentNode.parentNode.parentNode.parentNode.querySelector('.btn-shell-font-size input').value
 
-				this.style.fontSize = (val * 1.5) + 'rem'
+				this.style.fontSize = (val * 1.25) + 'rem'
 		})
 
-			
+
 		// MESSAGE
 		document.querySelector("#myMessage .my-shell-prompt input").addEventListener("input",
 			function() {
@@ -26,11 +26,11 @@ export default class MyShell {
 		for (let i = 0; i < buttonClose.length; i++) {
 			buttonClose[i].addEventListener("click", function() {
 				if (confirm('close?'))
-					this.parentNode.parentNode.innerHTML = ''				
+					this.parentNode.parentNode.classList.toggle('d-none')				
 			})
 		}
-		
-		
+
+
 		// MAX
 		const buttonMax		=	document.getElementsByClassName("btnMaximize")
 		for (let i = 0; i < buttonMax.length; i++) {

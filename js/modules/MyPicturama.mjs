@@ -33,11 +33,9 @@ export default class MyPicturama {
 		document.querySelector(".btn-picturama-timer select").addEventListener("change", this.myDelay, false)
 		document.querySelector(".btn-picturama-center-x select").addEventListener("change", this.myCenterX, false)
 		document.querySelector(".btn-picturama-center-y select").addEventListener("change", this.myCenterY, false)
-		
 		document.querySelector(".btn-picturama-shell-center-x select").addEventListener("change", this.myShellCenterX, false)
 		document.querySelector(".btn-picturama-shell-center-y select").addEventListener("change", this.myShellCenterY, false)
 		document.querySelector(".btn-picturama-shell-flexflow select").addEventListener("change", this.myShellFlexFlow, false)
-
 		document.querySelector(".btn-picturama-bg-size select").addEventListener("change", this.mySize, false)
 		document.querySelector(".btn-picturama-shuffle").addEventListener("click", this.myShuffle, false)
 		document.querySelector(".btn-picturama-reset").addEventListener("click", this.myReset, false)
@@ -49,7 +47,10 @@ export default class MyPicturama {
 		window.nextButton.addEventListener('click', () => this.move(1))
 		window.prevButton.addEventListener('click', () => this.move(-1))
 		window.wrapper.addEventListener('scrollend', () => this.updateUI())
-		
+		document.querySelector(".btn-picturama-check-clock").addEventListener('change', () => this.myBlocShell("#myClock"), false)
+		document.querySelector(".btn-picturama-check-message").addEventListener('change', () => this.myBlocShell("#myMessage"), false)
+		document.querySelector(".btn-picturama-check-infos").addEventListener('change', () => this.myBlocShell("#myInfos"), false)
+
 		/* Execute functions */
 		this.colorPicker.select()
 		MyPicturama.myFlashButton()
@@ -288,6 +289,10 @@ export default class MyPicturama {
 		MyPicturama.myUpdateScreen()
 	}
 
+
+	myBlocShell(myClass) {
+		document.querySelector(myClass).classList.toggle('d-none')
+	}
 
 	/*	SLIDER	*/
 	/**

@@ -1,3 +1,8 @@
+/*	SHELL:
+ *
+ */
+
+
 .my-size-max {
 	width:100% !important;
 	height:100%
@@ -16,6 +21,7 @@
 	display:flex;
 	flex-flow:row wrap;
 	column-gap:5rem;
+	row-gap:5rem;
 	justify-content:center;
 	align-items:flex-start;
 	width:100%;
@@ -24,12 +30,11 @@
 
 
 .my-shell {
-	box-shadow:.35rem .2rem .2rem var(--my-color1);
+	/* box-shadow:.35rem .2rem .2rem var(--my-color1); */
 	background-color: var(--bs-body-color);
 	color:var(--my-color1);
 	display:flex;
-	flex-flow:column;
-	margin:1.5rem 0
+	flex-flow:column
 }
 
 
@@ -48,7 +53,7 @@
 }
 .my-shell-bar>li {padding:.5rem}
 .my-shell-bar>li:nth-child(2), .my-shell-bar>li:first-child {
-	width: 100%;
+	width:100%;
 	justify-self:flex-start
 }
 .my-shell-bar svg {
@@ -60,7 +65,7 @@
 }
 
 
-/*	< 700px		*/
+/*	< 700px	*/
 @media screen and (max-width:700px) {
 	#myShells {justify-content:center}	
 }

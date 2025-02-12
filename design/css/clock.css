@@ -1,8 +1,19 @@
-/*	CLOCK	*/
-#myClock {
+/*	CLOCK:
+ *
+ */
+
+
+ #myClock {
 	display:flex;
 	flex-flow:column
 }
 
 #myClock .my-shell-content {font-size:2rem}
 #myClock .my-shell-content #myHour {font-size:8rem}
+
+
+/*	< 700px	*/
+@media screen and (max-width:700px) {
+	#myClock .my-shell-content {font-size:1.5rem}
+	#myClock .my-shell-content #myHour {font-size:2.5rem}
+}
