@@ -1,5 +1,6 @@
-/*	MYDEBUG
- *	Browser informations
+/**
+ *	MYDEBUG
+ *	@description: Debug informations
 */
 export default class MyDebug {
 	constructor() {

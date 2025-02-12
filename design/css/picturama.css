@@ -2,8 +2,6 @@
 #myPicturama {
 	position:absolute;
 	bottom:0;
-	/* overflow:hidden; */
-	/* height:100%; */
 	width:100%;
 	display:flex;
 	flex-flow:column nowrap
@@ -19,15 +17,19 @@
 	align-items:flex-end;
 	justify-content:space-between
 }
-.myBarControl>li:nth-child(2) svg {
+.myBarControl>ul {
+	display:flex;
+	flex-flow:row;
+	align-items:center
+}
+.myBarControl>ul>li:nth-child(2) svg {
 	width:96px;
 	height:96px
 }
-.myBarControl>li:nth-child(3) {justify-items:end}
-
-
-#menuBarControl {padding:0 0 0 1rem}
-#menuBarControl li {min-width:250px}
+.myBarControl>ul> svg {
+	width:72px;
+	height:72px
+}
  
 
 .myMiniatures {
@@ -41,7 +43,6 @@
 	flex-flow:row wrap
 }
 .myMiniatures>div>svg{
-	/* z-index:1; */
 	color:var(--bs-gray-500);
 	position:absolute;
 	min-width:256px;
@@ -92,7 +93,7 @@
 
 /*	< 400px		*/
 @media screen and (max-width:400px) {
-	.myBarControl>li:nth-child(2) svg {
+	.myBarControl ul>li:nth-child(2) svg  {
 		width:64px;
 		height:64px
 	}

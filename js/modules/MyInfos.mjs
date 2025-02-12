@@ -1,5 +1,6 @@
-/*	MYINFOS
- *	Browser informations
+/**
+ *	MYINFOS
+ *	@description: Browser JavaScript informations
 */
 export default class MyInfos {
 	constructor() {
@@ -15,7 +16,7 @@ export default class MyInfos {
 			this.blocInfos.appendChild(spanLon)
 		})
 
-		window.addEventListener('mousemove', (event) => {this.blocPointer.innerHTML = `Cursor: X: ${event.clientX} Y: ${event.clientY}`})
+		window.addEventListener('mousemove', (e) => {this.blocPointer.innerHTML = `Cursor: ${e.clientX}x${e.clientY}px`})
 		window.addEventListener("resize", () => {this.blocScreen.innerHTML = `Screen: ${window.innerWidth}x${window.innerHeight}px`})
 
 		const spanBrower = myCreateLiElement('span', `Version: ${navigator.appVersion}`)
@@ -27,7 +28,7 @@ export default class MyInfos {
 		this.blocScreen = myCreateLiElement('span', `Screen: ${window.innerWidth}x${window.innerHeight}px`)
 		this.blocInfos.appendChild(this.blocScreen)
 
-		this.blocPointer = myCreateLiElement('span', `Cursor: X: 0 Y: 0`)
+		this.blocPointer = myCreateLiElement('span', `Cursor: 0x0px`)
 		this.blocInfos.appendChild(this.blocPointer)
 
 		const spanLanguage = myCreateLiElement('span', `Langue: ${navigator.language}`)

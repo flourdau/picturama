@@ -1,32 +1,43 @@
-/*	MYCLOCK
- *	modify 2 elements of DOM (#myDate & #myHour)
-*/
+/**
+ *	MYCLOCK
+ *	@description: Modify 2 elements of DOM (#myDate & #myHour)
+ */
 export default class MyClock {
-    local	=	'fr-FR'
-    options	=	{	weekday	:	"long",
-					year	:	"numeric",
-					month	:	"long",
-					day		:	"numeric" }
+	constructor() {
+		//	Options
+		this.local			=	'fr-FR'
+		this.options		=	{
+									weekday	:	"long",
+									year	:	"numeric",
+									month	:	"long",
+									day		:	"numeric"
+								}
 
 
-    constructor() {
-		this.$myDate	=	document.getElementById("myDate")
-		this.$myHour	=	document.getElementById("myHour")
-        this.d			=	new Date()
-        this.myHour		=	this.d.toLocaleTimeString(this.local)
-        this.myDate		=	this.d.toLocaleDateString(this.local, this.options)
+		//	Created Date
+		const currentDate	= new Date()
+		const myHour		= currentDate.toLocaleTimeString(this.local)
+		let myDate			= currentDate.toLocaleDateString(this.local, this.options)
 
-        this.myDate	=	this.myDate.toLowerCase()
+
+		//	Modifications Date
+		myDate				=	myDate.toLowerCase()
 									.split(' ')
 									.map((s) => s.charAt(0).toUpperCase() + s.substring(1))
 									.join(' ')
-		this.$myDate.innerHTML	=	this.getMyDate
-		this.$myHour.innerHTML	=	this.getMyHour
+
+		//	ID Selectors
+		this.$myDate		=	document.getElementById("myDate")
+		this.$myHour		=	document.getElementById("myHour")
+
+		if (!this.$myDate || !this.$myHour) {
+			console.error("Error: Elements with IDs 'myDate' or 'myHour' not found in the DOM.")
+			return
+		}
+
+
+		//	Update DOM
+		this.$myDate.textContent	=	myDate
+		this.$myHour.textContent	=	myHour
     }
-
-
-	get getMyHour() { return this.myHour }
-
-
-	get getMyDate() { return this.myDate }
 }

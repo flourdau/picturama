@@ -1,4 +1,6 @@
-/*  MyDOM
+/**
+ *  MYDOM
+ *  @description: Global mofications to the DOM
 */
 export default class MyDOM {
     constructor() {

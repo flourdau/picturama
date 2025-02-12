@@ -1,4 +1,6 @@
-/*	MyPicturama
+/**
+ * MYPICTURAMA
+ * @description: 
 */
 export default class MyPicturama {
 	constructor() {
@@ -8,7 +10,7 @@ export default class MyPicturama {
 		window.nextButton = document.querySelector('[data-slider-next]')
 		window.prevButton = document.querySelector('[data-slider-prev]')
 		window.wrapper = document.querySelector('[data-slider-wrapper]')
-		this.colorPicker = document.querySelector("#myInputColor")
+		this.colorPicker = document.querySelector(".btn-picturama-color input")
 
 
 		/* Initialize globales */
@@ -26,19 +28,24 @@ export default class MyPicturama {
 		/* Create eventListeners */
 		this.colorPicker.addEventListener("input", this.myUpDateColor, false)
 		this.colorPicker.addEventListener("change", this.myUpDateColor, false)
-		document.querySelector(".btn-close").addEventListener("click", this.myCloseSlider, false)
-		document.getElementById("mySelectTimer").addEventListener("change", this.myDelay, false)
-		document.getElementById("mySelectCenterX").addEventListener("change", this.myCenterX, false)
-		document.getElementById("mySelectCenterY").addEventListener("change", this.myCenterY, false)
-		document.getElementById("mySelectSize").addEventListener("change", this.mySize, false)
+		document.querySelector(".myMiniatures button").addEventListener("click", this.myCloseSlider, false)
+		document.querySelector(".btn-picturama-dl input").addEventListener("change", this.myAddImg, false)
+		document.querySelector(".btn-picturama-timer select").addEventListener("change", this.myDelay, false)
+		document.querySelector(".btn-picturama-center-x select").addEventListener("change", this.myCenterX, false)
+		document.querySelector(".btn-picturama-center-y select").addEventListener("change", this.myCenterY, false)
+		
+		document.querySelector(".btn-picturama-shell-center-x select").addEventListener("change", this.myShellCenterX, false)
+		document.querySelector(".btn-picturama-shell-center-y select").addEventListener("change", this.myShellCenterY, false)
+		document.querySelector(".btn-picturama-shell-flexflow select").addEventListener("change", this.myShellFlexFlow, false)
+
+		document.querySelector(".btn-picturama-bg-size select").addEventListener("change", this.mySize, false)
+		document.querySelector(".btn-picturama-shuffle").addEventListener("click", this.myShuffle, false)
+		document.querySelector(".btn-picturama-reset").addEventListener("click", this.myReset, false)
 		document.getElementById("myInputPlayPause").addEventListener("click", this.myPlay, false)
 		document.getElementById("myInputFullScreen").addEventListener("click", this.myFullScreen, false)
-		document.getElementById("myShuffle").addEventListener("click", this.myShuffle, false)
 		document.getElementById("myInputPause").addEventListener("click", this.myPause, false)
-		document.getElementById("myInputDL").addEventListener("change", this.myAddImg, false)
 		document.getElementById("myInputLeft").addEventListener("click", this.myLeft, false)
 		document.getElementById("myInputRight").addEventListener("click", this.myRight, false)
-		document.getElementById("myInputReset").addEventListener("click", this.myReset, false)
 		window.nextButton.addEventListener('click', () => this.move(1))
 		window.prevButton.addEventListener('click', () => this.move(-1))
 		window.wrapper.addEventListener('scrollend', () => this.updateUI())
@@ -51,8 +58,8 @@ export default class MyPicturama {
 
 	static myFlashButton() {
 		setInterval(()=>{
-			document.querySelector(".myBarControl>li>svg").classList.toggle('my-color3')
-			document.getElementById("myInputDLLabel").classList.toggle('my-color3')
+			document.querySelector(".myBarControl>svg").classList.toggle('my-color3')
+			document.querySelector(".btn-picturama-dl").classList.toggle('my-color3')
 		}, 500)
 	}
 
@@ -69,34 +76,57 @@ export default class MyPicturama {
 
 
 	myDelay() {
-		window.myDelay = document.getElementById("mySelectTimer").value
+		window.myDelay = document.querySelector(".btn-picturama-timer select").value
 	}
 
 
 	mySize() {
 		if (window.myList.length > 0) {
-			window.mySize = document.getElementById("mySelectSize").value
+			window.mySize = document.querySelector(".btn-picturama-bg-size select").value
 			MyPicturama.myChangeBg(URL.createObjectURL(window.myList[window.myPositionY][window.myPositionX]))
 		}
 	}
 
 
 	myCenterY() {
-		window.myCenterY = document.getElementById("mySelectCenterY").value
+		window.myCenterY = document.querySelector(".btn-picturama-center-y select").value
+
 		if (window.myList.length > 0)
 			MyPicturama.myChangeBg(URL.createObjectURL(window.myList[window.myPositionY][window.myPositionX]))
 	}
 
 
 	myCenterX() {
-		window.myCenterX = document.getElementById("mySelectCenterX").value
+		window.myCenterX = document.querySelector(".btn-picturama-center-x select").value
+
 		if (window.myList.length > 0)
 			MyPicturama.myChangeBg(URL.createObjectURL(window.myList[window.myPositionY][window.myPositionX]))
 	}
 
 
+	myShellCenterY() {
+		window.myShellCenterY = document.querySelector(".btn-picturama-shell-center-y select").value
+
+		document.querySelector("#myShells").style.justifyContent = window.myShellCenterY
+	}
+
+
+	myShellCenterX() {
+		window.myShellCenterX = document.querySelector(".btn-picturama-shell-center-x select").value
+
+		document.querySelector("#myShells").style.alignItems = window.myShellCenterX
+	}
+
+
+	myShellFlexFlow() {
+		window.myShellFlexFlow = document.querySelector(".btn-picturama-shell-flexflow select").value
+
+		document.querySelector("#myShells").style.flexFlow = window.myShellFlexFlow
+	}
+
+
 	myUpDateColor(event) {
-		document.querySelector(".myBarControl>li:nth-child(3)").classList.remove('d-none')
+		document.querySelector("#myPicturama>div>div:nth-child(4)").classList.remove('d-none')
 		window.myBgColor = event.target.value
 		window.myBody.style.backgroundColor = event.target.value
 	}
@@ -104,8 +134,13 @@ export default class MyPicturama {
 
 	myAddImg(event) {
 		document.querySelector(".myMiniatures").classList.remove('d-none')
-		document.querySelector(".myBarControl>li:nth-child(2)").classList.remove('d-none')
-		document.querySelector(".myBarControl>li:nth-child(3)").classList.remove('d-none')
+		document.querySelector("#myPicturama>div>ul:nth-child(3)").classList.remove('d-none')
+		document.querySelector("#myPicturama>div>div:nth-child(4)").classList.remove('d-none')
+		document.querySelector(".myBarControl>div>div:nth-child(1) ul>li:nth-child(2)").classList.remove('d-none')
+		document.querySelector(".myBarControl>div>div:nth-child(1) ul>li:nth-child(3)").classList.remove('d-none')
+		document.querySelector(".myBarControl>div>div:nth-child(1) ul>li:nth-child(4)").classList.remove('d-none')
+		document.querySelector(".myBarControl>div>div:nth-child(3)").classList.remove('d-none')
+
 		window.myListing.innerHTML = ''	// Reset DOM list
 		window.myList.push(event.target.files) // Sav JS FilesList
 		window.myPositionX= 0 // Reset Position
@@ -178,15 +213,9 @@ export default class MyPicturama {
 
 
 	myPlay() {
-		document.querySelector("nav").classList.toggle('d-none')
-		document.querySelector("#myClock svg").classList.toggle('d-none')
-		document.querySelector("#myClock>div").classList.toggle('d-none')
-		document.querySelector(".myMiniatures").classList.add('d-none')
 		document.getElementById("myInputPlayPause").classList.add('d-none')
 		document.getElementById("myInputPause").classList.remove('d-none')
-		document.querySelector(".myBarControl>li:nth-child(1)").classList.toggle('my-trnsprnt')
-		document.querySelector(".myBarControl>li:nth-child(2)").classList.toggle('my-trnsprnt')
-
+		MyPicturama.myUpdateScreen()
 		window.mySetInterval = setInterval(function(){
 
 			if (!window.myShuffle) {
@@ -228,28 +257,35 @@ export default class MyPicturama {
 	myShuffle() {
 		if (!window.myShuffle) {
 			window.myShuffle = true
-			document.querySelector("#myShuffle").style.color = 'red'
+			document.querySelector(".btn-picturama-shuffle").style.color = 'red'
 		}
 		else {
 			window.myShuffle = false
-			document.querySelector("#myShuffle").style.color = 'black'
+			document.querySelector(".btn-picturama-shuffle").style.color = 'black'
 		}
 	}
 
-	myFullScreen() {
+
+	static	myUpdateScreen() {
 		const ContentShellBar	=	document.getElementsByClassName("my-shell-bar")
 		const ContentShellPrompt	=	document.getElementsByClassName("my-shell-prompt")
+
 		for (let i = 0; i < ContentShellBar.length; i++) {
-				ContentShellBar[i].classList.toggle('d-none')
+			ContentShellBar[i].classList.toggle('d-none')
 		}
 		for (let i = 0; i < ContentShellPrompt.length; i++) {
 			ContentShellPrompt[i].classList.toggle('d-none')
 		}
 		document.querySelector("nav").classList.toggle('d-none')
-		document.querySelector(".myBarControl>li:nth-child(1)").classList.toggle('my-trnsprnt')
-		document.querySelector(".myBarControl>li:nth-child(2)").classList.toggle('my-trnsprnt')
+		document.querySelector(".myBarControl>svg").classList.toggle('my-trnsprnt')
+		document.querySelector(".myBarControl>ul").classList.toggle('my-trnsprnt')
 		if (window.wrapper.children.length > 0)
 			document.querySelector(".myMiniatures").classList.toggle('d-none')
+	}
+
+
+	myFullScreen() {
+		MyPicturama.myUpdateScreen()
 	}
 
 
