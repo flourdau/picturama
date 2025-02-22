@@ -34,4 +34,4 @@ export default class MyChrono {
 		this.isPaused = !this.isPaused
 		this.pauseButton.textContent = this.isPaused ? "Reprendre" : "Pause"
 	}
- }
+}
