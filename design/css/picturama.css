@@ -17,7 +17,7 @@
 	animation-duration:2s;
 	width:100%;
 	display:flex;
-	flex-flow:row wrap;
+	flex-flow:column nowrap;
 	align-items:flex-end;
 	justify-content:space-between
 }
@@ -26,25 +26,21 @@
 	flex-flow:row;
 	align-items:center
 }
+.myBarControl>ul:first-child {
+	display:flex;
+	flex-flow:row;
+	align-self:center;
+	align-items:center
+}
+.myBarControl svg {
+	width:72px;
+	height:72px
+}
 .myBarControl>ul>li:nth-child(2) svg {
 	width:96px;
 	height:96px
 }
-.myBarControl>ul> svg {
-	width:72px;
-	height:72px
-}
-#flush-collapseTwo>ul>li:nth-child(4), 
-#flush-collapseTwo>ul>li:nth-child(5),
-#flush-collapseTwo>ul>li:nth-child(6){
-	width:100%;
-	margin-bottom:.25rem
-}
-#flush-collapseTwo>ul>li:nth-child(4) label, 
-#flush-collapseTwo>ul>li:nth-child(5) label,
-#flush-collapseTwo>ul>li:nth-child(6) label{
-	width:100%
-}
+
 
 .myMiniatures {
 	background-color: var(--bs-body-color);

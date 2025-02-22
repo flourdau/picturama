@@ -1,0 +1,54 @@
+/*	BLOCS:
+ *
+ */
+ #myShells {
+	padding:2rem 4rem;
+	display:flex;
+	flex-flow:row wrap;
+	column-gap:5rem;
+	row-gap:5rem;
+	justify-content:center;
+	align-items:flex-start;
+	width:100%;
+	height:100%
+}
+
+
+#myPub .my-shell-content>ul {
+display:flex;
+flex-flow:column;
+align-items:center;
+justify-content:center;
+}
+#myPub img {
+    margin: auto;
+	min-width:64px;
+	max-width:256px;
+	width:100%
+}
+.my-social-network {
+    display:flex;
+    flex-flow:row;
+}
+
+#myMessage .my-shell-content {font-size:3rem}
+
+
+#myInfos {color:var(--my-color3) !important}
+#myInfos {width:65%}
+
+
+#myTV {background-color:transparent}
+#myTV>.my-shell-content {
+	padding:3rem 4rem 6rem 4rem;
+	min-width:600px;
+	min-height:400px;
+	background:center / contain no-repeat url('../img/SimpsonshdTV.webp') 
+}
+
+
+/*	QUERY	*/
+/*	< 700px		*/
+@media screen and (max-width:700px) {
+	#myShells {justify-content:center}
+}

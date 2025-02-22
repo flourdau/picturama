@@ -6,8 +6,15 @@ export default class MyDOM {
     constructor() {
         window.myHTML = document.querySelector("html")
         document.getElementById("mySelectTheme").addEventListener("click", this.mySwitchTheme, false)
-        // this.footerYear()
+        document.querySelector(".btn-picturama-check-clock").addEventListener('change', () => this.myToggleBloc("#myClock"), false)
+		document.querySelector(".btn-picturama-check-chrono").addEventListener('change', () => this.myToggleBloc("#myChrono"), false)
+		document.querySelector(".btn-picturama-check-message").addEventListener('change', () => this.myToggleBloc("#myMessage"), false)
+		document.querySelector(".btn-picturama-check-infos").addEventListener('change', () => this.myToggleBloc("#myInfos"), false)
+		document.querySelector(".btn-picturama-check-cam").addEventListener('change', () => this.myToggleBloc("#myCam"), false)
+
+        this.footerYear()
     }
+
 
     mySwitchTheme() {
         if (window.myHTML.getAttribute('data-bs-theme') === 'dark')
@@ -16,5 +23,11 @@ export default class MyDOM {
             window.myHTML.setAttribute('data-bs-theme', 'dark')
     }
 
-    // footerYear() {document.getElementById("footer-year").innerHTML = new Date().getFullYear()}
+
+    myToggleBloc(myClass) {
+		document.querySelector(myClass).classList.toggle('d-none')
+	}
+
+
+    footerYear() {document.getElementById("footer-year").innerHTML = new Date().getFullYear()}
 }

@@ -47,9 +47,6 @@ export default class MyPicturama {
 		window.nextButton.addEventListener('click', () => this.move(1))
 		window.prevButton.addEventListener('click', () => this.move(-1))
 		window.wrapper.addEventListener('scrollend', () => this.updateUI())
-		document.querySelector(".btn-picturama-check-clock").addEventListener('change', () => this.myBlocShell("#myClock"), false)
-		document.querySelector(".btn-picturama-check-message").addEventListener('change', () => this.myBlocShell("#myMessage"), false)
-		document.querySelector(".btn-picturama-check-infos").addEventListener('change', () => this.myBlocShell("#myInfos"), false)
 
 		/* Execute functions */
 		this.colorPicker.select()
@@ -58,10 +55,7 @@ export default class MyPicturama {
 
 
 	static myFlashButton() {
-		setInterval(()=>{
-			document.querySelector(".myBarControl>svg").classList.toggle('my-color3')
-			document.querySelector(".btn-picturama-dl").classList.toggle('my-color3')
-		}, 500)
+		setInterval(() => {document.querySelector(".btn-picturama-dl").classList.toggle('my-color3')}, 500)
 	}
 
 
@@ -127,7 +121,7 @@ export default class MyPicturama {
 
 
 	myUpDateColor(event) {
-		document.querySelector("#myPicturama>div>div:nth-child(4)").classList.remove('d-none')
+		document.querySelector(".myBarControl>div:nth-child(2)").classList.remove('d-none')
 		window.myBgColor = event.target.value
 		window.myBody.style.backgroundColor = event.target.value
 	}
@@ -135,12 +129,13 @@ export default class MyPicturama {
 
 	myAddImg(event) {
 		document.querySelector(".myMiniatures").classList.remove('d-none')
-		document.querySelector("#myPicturama>div>ul:nth-child(3)").classList.remove('d-none')
-		document.querySelector("#myPicturama>div>div:nth-child(4)").classList.remove('d-none')
-		document.querySelector(".myBarControl>div>div:nth-child(1) ul>li:nth-child(2)").classList.remove('d-none')
-		document.querySelector(".myBarControl>div>div:nth-child(1) ul>li:nth-child(3)").classList.remove('d-none')
-		document.querySelector(".myBarControl>div>div:nth-child(1) ul>li:nth-child(4)").classList.remove('d-none')
-		document.querySelector(".myBarControl>div>div:nth-child(3)").classList.remove('d-none')
+		document.querySelector("#myPicturama>div>ul:nth-child(1)").classList.remove('d-none')
+		document.querySelector("#myPicturama>div>div:nth-child(2)").classList.remove('d-none')
+		document.querySelector(".my-nav-control>div:nth-child(1) ul>li:nth-child(2)").classList.remove('d-none')
+		document.querySelector(".my-nav-control>div:nth-child(1) ul>li:nth-child(3)").classList.remove('d-none')
+		document.querySelector(".my-nav-control>div:nth-child(1) ul>li:nth-child(4)").classList.remove('d-none')
+		document.querySelector(".myBarControl>div:nth-child(2)").classList.remove('d-none')
+		document.querySelector(".my-nav-control>div:nth-child(3)").classList.remove('d-none')
 
 		window.myListing.innerHTML = ''	// Reset DOM list
 		window.myList.push(event.target.files) // Sav JS FilesList
@@ -267,18 +262,28 @@ export default class MyPicturama {
 	}
 
 
-	static	myUpdateScreen() {
+	static myUpdateScreen() {
 		const ContentShellBar	=	document.getElementsByClassName("my-shell-bar")
 		const ContentShellPrompt	=	document.getElementsByClassName("my-shell-prompt")
+		const Separation	=	document.getElementsByClassName("separation")
 
 		for (let i = 0; i < ContentShellBar.length; i++) {
 			ContentShellBar[i].classList.toggle('d-none')
 		}
+
 		for (let i = 0; i < ContentShellPrompt.length; i++) {
 			ContentShellPrompt[i].classList.toggle('d-none')
 		}
+
+		for (let i = 0; i < Separation.length; i++) {
+			Separation[i].classList.toggle('d-none')
+		}
+
+		document.querySelector('#myChrono .my-shell-content>button').classList.toggle('d-none')
+		document.querySelector('main').classList.toggle('d-none')
+		document.querySelector('footer').classList.toggle('d-none')
 		document.querySelector("nav").classList.toggle('d-none')
-		document.querySelector(".myBarControl>svg").classList.toggle('my-trnsprnt')
+		document.querySelector(".my-nav-control>svg").classList.toggle('my-trnsprnt')
 		document.querySelector(".myBarControl>ul").classList.toggle('my-trnsprnt')
 		if (window.wrapper.children.length > 0)
 			document.querySelector(".myMiniatures").classList.toggle('d-none')
@@ -289,10 +294,6 @@ export default class MyPicturama {
 		MyPicturama.myUpdateScreen()
 	}
 
-
-	myBlocShell(myClass) {
-		document.querySelector(myClass).classList.toggle('d-none')
-	}
 
 	/*	SLIDER	*/
 	/**

@@ -4,7 +4,7 @@
 */
 export default class MyShell {
     constructor() {
-		// CLOCK
+		// BIG CLOCK
 		document.querySelector("#myClock #myHour").addEventListener("click",
 			function() {
 				const val = this.parentNode.parentNode.parentNode.parentNode.querySelector('.btn-shell-font-size input').value
