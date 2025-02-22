@@ -10,7 +10,7 @@
 
 
 .my-shell {
-	background-color: var(--bs-body-color);
+	/* background-color: var(--bs-body-color); */
 	color:var(--my-color1);
 	display:flex;
 	flex-flow:column
