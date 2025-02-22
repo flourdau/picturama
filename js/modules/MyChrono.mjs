@@ -1,9 +1,7 @@
-/**
- *	MYCHRONO
+/**	MYCHRONO
  *	@description: Modify 1 elements of DOM (#myChrono)
  */
 export default class MyChrono {
-	
 	isPaused = true
 	
 	constructor() {
@@ -36,5 +34,4 @@ export default class MyChrono {
 		this.isPaused = !this.isPaused
 		this.pauseButton.textContent = this.isPaused ? "Reprendre" : "Pause"
 	}
-
  }

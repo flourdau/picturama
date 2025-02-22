@@ -14,13 +14,12 @@ body {
 
 /* header {height:100%} */
 
+
 /*	MYCONTROLS
  *
  */
-.my-nav-links {
-	margin:1rem;
-}
- .btn-checks {
+.my-nav-links {	margin:1rem}
+.btn-checks {
 	display:flex;
 	column-gap:1rem;
 	row-gap:1rem;

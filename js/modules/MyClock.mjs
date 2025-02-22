@@ -1,5 +1,4 @@
-/**
- *	MYCLOCK
+/**	MYCLOCK
  *	@description: Modify 2 elements of DOM (#myDate & #myHour)
  */
 export default class MyClock {
@@ -12,7 +11,6 @@ export default class MyClock {
 									month	:	"long",
 									day		:	"numeric"
 								}
-
 
 		//	Created Date
 		const currentDate	= new Date()
@@ -39,5 +37,5 @@ export default class MyClock {
 		//	Update DOM
 		this.$myDate.textContent	=	myDate
 		this.$myHour.textContent	=	myHour
-    }
+	}
 }

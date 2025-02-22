@@ -1,7 +1,9 @@
 /*	BLOCS:
  *
  */
- #myShells {
+
+
+#myShells {
 	padding:2rem 4rem;
 	display:flex;
 	flex-flow:row wrap;
@@ -15,10 +17,10 @@
 
 
 #myPub .my-shell-content>ul {
-display:flex;
-flex-flow:column;
-align-items:center;
-justify-content:center;
+    display:flex;
+    flex-flow:column;
+    align-items:center;
+    justify-content:center
 }
 #myPub img {
     margin: auto;

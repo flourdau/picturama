@@ -1,5 +1,4 @@
-/**
- * MYPICTURAMA
+/**	MYPICTURAMA
  * @description: 
 */
 export default class MyPicturama {

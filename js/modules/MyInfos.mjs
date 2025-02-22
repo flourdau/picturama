@@ -1,5 +1,4 @@
-/**
- *	MYINFOS
+/**	MYINFOS
  *	@description: Browser JavaScript informations
 */
 export default class MyInfos {

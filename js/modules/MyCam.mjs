@@ -1,5 +1,4 @@
-/**
- *	MYCAM
+/**	MYCAM
  *	@description:	Gestion Cam
 */
 export default class MyCam {

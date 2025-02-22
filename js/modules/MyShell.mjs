@@ -1,5 +1,4 @@
-/**
- *	MYSHELL
+/**	MYSHELL
  *	@description: Emulate a shell design
 */
 export default class MyShell {

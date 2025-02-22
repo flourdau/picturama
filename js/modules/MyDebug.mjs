@@ -1,5 +1,4 @@
-/**
- *	MYDEBUG
+/**	MYDEBUG
  *	@description: Debug informations
 */
 export default class MyDebug {
