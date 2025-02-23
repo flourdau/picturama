@@ -56,4 +56,12 @@
 /*	< 700px		*/
 @media screen and (max-width:700px) {
 	#myShells {justify-content:center}
+
+
+	#myTV>.my-shell-content {
+		padding:2rem 2rem 4rem 2rem;
+		min-width:320px;
+		min-height:280px;
+		background:center / contain no-repeat url('https://flourdau.github.io/picturama/design/img/SimpsonsHDTV.webp') 
+	}
 }

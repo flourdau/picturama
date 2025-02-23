@@ -282,7 +282,7 @@ export default class MyPicturama {
 		document.querySelector('main').classList.toggle('d-none')
 		document.querySelector('footer').classList.toggle('d-none')
 		document.querySelector("nav").classList.toggle('d-none')
-		document.querySelector(".my-nav-control>svg").classList.toggle('my-trnsprnt')
+		document.querySelector(".navbar-toggler>svg").classList.toggle('my-trnsprnt')
 		document.querySelector(".myBarControl>ul").classList.toggle('my-trnsprnt')
 		if (window.wrapper.children.length > 0)
 			document.querySelector(".myMiniatures").classList.toggle('d-none')

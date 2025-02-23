@@ -3,12 +3,12 @@
  */
 
 
-html {height:100%}
+/* html {height:100%} */
 
 
 body {
-	height:100%;
-	background-color:var(--my-color2)
+	/* height:100%; */
+	background-color:var(--my-color3)
 }
 
 
@@ -18,8 +18,10 @@ body {
 /*	MYCONTROLS
  *
  */
-#staticBackdrop {
-	padding:1rem
+ #staticBackdrop {padding:1rem}
+.my-nav-control>div  {
+	display: flex;
+	flex-flow:column nowrap
 }
 .my-nav-links {margin:1rem}
 .btn-checks {
@@ -124,6 +126,9 @@ footer svg:hover {color:var(--my-color3)}
 		height:48px;
 		width:48px
 	}
+
+
+	main {flex-flow:column}
 
 
 	.separation {flex-direction:column}
