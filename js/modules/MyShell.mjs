@@ -74,13 +74,13 @@ export default class MyShell {
 			}, false)
 			myContent.querySelector('.btn-shell-X select').addEventListener("change", () => {
 				const myShellX = myContent.querySelector(".btn-shell-X select").value
+				let tmp = 'center'
 
-				if (myShellX === 'left') {
-					const tmp = 'flex-start'
-				}
-				else if (myShellX === 'right') {
-					const tmp = 'flex-end'
-				}
+				if (myShellX === 'left')
+					tmp = 'flex-start'
+				else if (myShellX === 'right')
+					tmp = 'flex-end'
+
 				myContent.querySelector('.my-shell-content').style.textAlign = myShellX
 				myContent.querySelector('.my-shell-content').style.justifyContent = tmp
 			}, false)

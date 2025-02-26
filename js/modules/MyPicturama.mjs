@@ -128,6 +128,7 @@ export default class MyPicturama {
 
 	myAddImg(event) {
 		document.querySelector(".myMiniatures").classList.remove('d-none')
+		document.querySelector(".myMiniatures").classList.add('show')
 		document.querySelector("#myPicturama>div>ul:nth-child(1)").classList.remove('d-none')
 		document.querySelector("#myPicturama>div>div:nth-child(2)").classList.remove('d-none')
 		document.querySelector(".my-nav-control>div:nth-child(1) ul>li:nth-child(2)").classList.remove('d-none')
@@ -279,9 +280,10 @@ export default class MyPicturama {
 		}
 
 		document.querySelector('#myChrono .my-shell-content>button').classList.toggle('d-none')
+		document.querySelector('#staticBackdrop').classList.toggle('d-none')
 		document.querySelector('main').classList.toggle('d-none')
 		document.querySelector('footer').classList.toggle('d-none')
-		document.querySelector("nav").classList.toggle('d-none')
+		document.querySelector(".navbar").classList.toggle('d-none')
 		document.querySelector(".navbar-toggler>svg").classList.toggle('my-trnsprnt')
 		document.querySelector(".myBarControl>ul").classList.toggle('my-trnsprnt')
 		if (window.wrapper.children.length > 0)

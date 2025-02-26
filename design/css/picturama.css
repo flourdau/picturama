@@ -3,7 +3,7 @@
  */
 
 
- #myPicturama {
+#myPicturama {
 	position:absolute;
 	bottom:0;
 	width:100%;
@@ -43,24 +43,24 @@
 
 
 .myMiniatures {
-	background-color: var(--bs-body-color);
-	padding:2% 10%;
-	text-align:end
+	height:45vh !important
 }
-.myMiniatures>div{
+.myMiniatures>div:last-child {
+	/* height:800px; */
+	padding:2% 10%;
 	display:flex;
 	justify-content:center;
 	flex-flow:row wrap
 }
-.myMiniatures>div>svg{
+.myMiniatures>div:last-child>svg{
 	color:var(--bs-gray-500);
 	position:absolute;
 	min-width:256px;
 	height:256px;
 	right:-64px
 }
-.myMiniatures>div>svg:hover {color:var(--bs-gray-700)}
-.myMiniatures>div>svg:first-child{
+.myMiniatures>div:last-child>svg:hover {color:var(--bs-gray-700)}
+.myMiniatures>div:last-child>svg:first-child{
 	right:none;
 	left:-64px
 }

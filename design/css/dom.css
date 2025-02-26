@@ -3,24 +3,24 @@
  */
 
 
-/* html {height:100%} */
-
-
 body {
-	/* height:100%; */
+	display: flex;
+	flex-flow:column;
 	background-color:var(--my-color3)
 }
 
 
-/* header {height:100%} */
-
+header {min-height:100vh}
 
 /*	MYCONTROLS
  *
  */
- #staticBackdrop {padding:1rem}
+ #staticBackdrop {
+	overflow:visible;
+	padding:1rem
+}
 .my-nav-control>div  {
-	display: flex;
+	display:flex;
 	flex-flow:column nowrap
 }
 .my-nav-links {margin:1rem}
@@ -35,7 +35,6 @@ body {
 svg {
 	height:64px;
 	width:64px;
-	/* color:var(--bs-body-color); */
 	padding:.5rem
 }
 
