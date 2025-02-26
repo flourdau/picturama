@@ -10,27 +10,28 @@
 	column-gap:5rem;
 	row-gap:5rem;
 	justify-content:center;
-	align-items:flex-start;
+	align-items:center;
 	width:100%
 }
 
 
 #myPub .my-shell-content>ul {
-    display:flex;
-    flex-flow:column;
-    align-items:center;
-    justify-content:center
+	display:flex;
+	flex-flow:column;
+	align-items:center;
+	justify-content:center
 }
 #myPub img {
-    margin: auto;
+	margin: auto;
 	min-width:64px;
 	max-width:256px;
 	width:100%
 }
 .my-social-network {
-    display:flex;
-    flex-flow:row;
+	display:flex;
+	flex-flow:row
 }
+
 
 #myMessage .my-shell-content {font-size:3rem}
 
@@ -41,7 +42,7 @@
 
 #myTV {background-color:transparent}
 #myTV>.my-shell-content {
-    padding:3rem 4rem 6rem 4rem;
+	padding:3rem 4rem 6rem 4rem;
 	min-width:600px;
 	min-height:400px;
 	background:center / contain no-repeat url('https://flourdau.github.io/picturama/design/img/SimpsonsHDTV.webp') 

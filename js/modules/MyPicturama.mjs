@@ -120,7 +120,7 @@ export default class MyPicturama {
 
 
 	myUpDateColor(event) {
-		document.querySelector(".myBarControl>div:nth-child(2)").classList.remove('d-none')
+		document.querySelector(".myBarControl>ul>li:nth-child(3)").classList.remove('d-none')
 		window.myBgColor = event.target.value
 		window.myBody.style.backgroundColor = event.target.value
 	}
@@ -134,8 +134,10 @@ export default class MyPicturama {
 		document.querySelector(".my-nav-control>div:nth-child(1) ul>li:nth-child(2)").classList.remove('d-none')
 		document.querySelector(".my-nav-control>div:nth-child(1) ul>li:nth-child(3)").classList.remove('d-none')
 		document.querySelector(".my-nav-control>div:nth-child(1) ul>li:nth-child(4)").classList.remove('d-none')
-		document.querySelector(".myBarControl>div:nth-child(2)").classList.remove('d-none')
 		document.querySelector(".my-nav-control>div:nth-child(3)").classList.remove('d-none')
+		document.querySelector(".myBarControl>ul>li:nth-child(2)").classList.remove('d-none')
+		document.querySelector(".myBarControl>ul>li:last-child").classList.remove('d-none')
+		document.querySelector(".btn-checks>li:last-child label").classList.remove('d-none')
 
 		window.myListing.innerHTML = ''	// Reset DOM list
 		window.myList.push(event.target.files) // Sav JS FilesList
@@ -285,9 +287,13 @@ export default class MyPicturama {
 		document.querySelector('footer').classList.toggle('d-none')
 		document.querySelector(".navbar").classList.toggle('d-none')
 		document.querySelector(".navbar-toggler>svg").classList.toggle('my-trnsprnt')
-		document.querySelector(".myBarControl>ul").classList.toggle('my-trnsprnt')
-		if (window.wrapper.children.length > 0)
-			document.querySelector(".myMiniatures").classList.toggle('d-none')
+		document.querySelector(".myBarControl>ul").classList.remove('d-none')
+		document.querySelector(".myBarControl").classList.toggle('bg-body')
+		document.querySelector(".myBarControl>ul>li:nth-child(1) svg").classList.toggle('d-none')
+		document.querySelector(".myBarControl>ul>li:nth-child(2)>ul").classList.toggle('d-none')
+
+		// if (window.wrapper.children.length > 0)
+		// 	document.querySelector(".myMiniatures").classList.toggle('d-none')
 	}
 
 

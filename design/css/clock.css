@@ -7,7 +7,6 @@
 	display:flex;
 	flex-flow:column
 }
-
 #myClock .my-shell-content {font-size:2rem}
 #myClock .my-shell-content #myHour {font-size:8rem}
 

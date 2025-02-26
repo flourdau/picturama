@@ -4,7 +4,7 @@
 
 
 body {
-	display: flex;
+	display:flex;
 	flex-flow:column;
 	background-color:var(--my-color3)
 }
@@ -16,10 +16,11 @@ header {min-height:100vh}
  *
  */
  #staticBackdrop {
+	max-width:500px;
 	overflow:visible;
 	padding:1rem
 }
-.my-nav-control>div  {
+.my-nav-control>div {
 	display:flex;
 	flex-flow:column nowrap
 }
@@ -89,7 +90,7 @@ main {
  *
  */
 footer {
-	margin:1rem 0 0 0;
+	margin:1rem 0 100px 0;
 	display:flex;
 	flex-flow:row nowrap;
 	justify-content:center;
@@ -132,8 +133,8 @@ footer svg:hover {color:var(--my-color3)}
 
 	.separation {flex-direction:column}
 	.separation hr {
-			width:98%;
-			margin:0 2%
+		width:98%;
+		margin:0 2%
 	}
 
 

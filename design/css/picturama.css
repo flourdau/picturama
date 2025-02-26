@@ -15,18 +15,16 @@
 .myBarControl {
 	animation:fadeInUp;
 	animation-duration:2s;
-	width:100%;
-	display:flex;
-	flex-flow:column nowrap;
-	align-items:flex-end;
-	justify-content:space-between
+	width:100%
 }
 .myBarControl>ul {
 	display:flex;
-	flex-flow:row;
-	align-items:center
+	flex-flow:row nowrap;
+	align-items:center;
+	justify-content:space-between
 }
-.myBarControl>ul:first-child {
+.myBarControl>ul>li:first-child {justify-self:flex-start}
+.myBarControl>ul:first-child>li>ul {
 	display:flex;
 	flex-flow:row;
 	align-self:center;
@@ -42,11 +40,8 @@
 }
 
 
-.myMiniatures {
-	height:45vh !important
-}
+.myMiniatures {height:45vh !important}
 .myMiniatures>div:last-child {
-	/* height:800px; */
 	padding:2% 10%;
 	display:flex;
 	justify-content:center;
@@ -93,18 +88,22 @@
 
 @media (max-width:1000px) {
 	.myMiniatures>div>svg {display:none}
-    .items {
-        padding:1rem;
-        margin:-1rem;
-        scroll-padding-inline:0
-    }
-    .item {scroll-snap-align:center}
+
+	.items {
+		padding:1rem;
+		margin:-1rem;
+		scroll-padding-inline:0
+	}
+
+	.item {scroll-snap-align:center}
 }
 
 /*	< 400px	*/
 @media screen and (max-width:400px) {
+
 	.myBarControl ul>li:nth-child(2) svg  {
 		width:64px;
 		height:64px
 	}
+
 }
