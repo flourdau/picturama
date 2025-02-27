@@ -15,7 +15,7 @@ header {min-height:100vh}
 /*	MYCONTROLS
  *
  */
- #staticBackdrop {
+#staticBackdrop {
 	max-width:500px;
 	overflow:visible;
 	padding:1rem
@@ -107,7 +107,6 @@ footer li {
 	padding:1.28rem
 }
 footer a {
-	color:var(--my-color3);
 	text-decoration:none
 }
 footer a:hover {color:var(--my-color1)}

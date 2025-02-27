@@ -10,7 +10,7 @@
 
 
 .my-shell {
-	color:var(--my-color1);
+	/* color:var(--my-color3); */
 	display:flex;
 	flex-flow:column
 }

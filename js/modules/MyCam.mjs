@@ -22,6 +22,7 @@ export default class MyCam {
 			navigator.mediaDevices.getUserMedia({ video: true, audio: false })
 			.then((stream) => {
 				video.srcObject = stream
+
 				if (document.querySelector("#SwitchCamera").checked)
 					video.play()
 				else
