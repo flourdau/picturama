@@ -10,24 +10,28 @@ export default class MyCam {
 	startbutton = null
 
 	constructor() {
-		if (this.showViewLiveResultButton(this)) {
+		if (this.showViewLiveResultButton(this))
 			return
-		}
 
 		this.video = document.getElementById("video")
 		this.canvas = document.getElementById("canvas")
 		this.photo = document.getElementById("photo")
 		this.startbutton = document.getElementById("startbutton")
-  
-		navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+
+		document.querySelector("#SwitchCamera").addEventListener("change", () => {
+			navigator.mediaDevices.getUserMedia({ video: true, audio: false })
 			.then((stream) => {
 				video.srcObject = stream
-				video.play()
+				if (document.querySelector("#SwitchCamera").checked)
+					video.play()
+				else
+					video.stop
 			})
-			.catch((err) => {console.error(`Une erreur est survenue : ${err}`)})
+			.catch((err) => {console.error(`Une erreur est survenue : ${err}`)})}
+		, false)
+
   
-		this.video.addEventListener(
-			"canplay",
+		this.video.addEventListener("canplay",
 			(ev) => {
 			if (!this.streaming) {
 				this.height = this.video.videoHeight / (this.video.videoWidth / this.width)
