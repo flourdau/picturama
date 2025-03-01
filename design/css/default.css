@@ -42,27 +42,10 @@
 
 /*	PANEL COLORS:	*/
 .my-trnsprnt	{opacity:0}
-.my-color1	{color:var(--my-color1)}
-.my-color2	{color:var(--my-color2)}
-.my-color3	{color:var(--my-color3)}
-.my-color4	{color:var(--my-color4)}
-.my-white	{color:var(--my-white)}
-.my-black	{color:var(--my-black)}
-.my-blue	{color:var(--my-blue)}
-.my-green	{color:var(--my-green)}
-.my-red		{color:var(--my-red)}
 
 
 /*	BGCOLORS:	*/
 .my-bg-trnsprnt	{background-color:transparent}
-.my-bg-white	{background-color:var(--my-white)}
-.my-bg-black	{background-color:var(--my-black)}
-.my-bg-white-15	{background-color:var(--my-white-15)}
-.my-bg-black-15	{background-color:var(--my-black-15)}
-.my-bg-white-50	{background-color:var(--my-white-50)}
-.my-bg-black-50	{background-color:var(--my-black-50)}
-.my-bg-white-95	{background-color:var(--my-white-95)}
-.my-bg-black-95	{background-color:var(--my-black-95)}
 
 
 /*	BALISES:	*/ 
