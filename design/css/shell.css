@@ -10,9 +10,15 @@
 
 
 .my-shell {
-	/* color:var(--my-color3); */
 	display:flex;
 	flex-flow:column
+}
+
+
+.my-shell svg {
+	cursor:pointer;
+	height:32px;
+	width:32px
 }
 
 
@@ -26,7 +32,6 @@
 
 
 .my-shell-bar {
-	background-color:var(--bs-gray-800);
 	display:flex;
 	flex-flow:row;
 	justify-content:flex-end

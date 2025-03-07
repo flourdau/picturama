@@ -121,6 +121,7 @@ export default class MyPicturama {
 
 	myUpDateColor(event) {
 		document.querySelector(".myBarControl>ul>li:nth-child(3)").classList.remove('d-none')
+		document.querySelector("body").classList.remove('bg-body')
 		window.myBgColor = event.target.value
 		window.myBody.style.backgroundColor = event.target.value
 	}
@@ -137,6 +138,7 @@ export default class MyPicturama {
 		document.querySelector(".my-nav-control>div:nth-child(3)").classList.remove('d-none')
 		document.querySelector(".myBarControl>ul>li:nth-child(2)").classList.remove('d-none')
 		document.querySelector(".myBarControl>ul>li:last-child").classList.remove('d-none')
+		document.querySelector(".btn-checks>li:last-child").classList.remove('d-none')
 		document.querySelector(".btn-checks>li:last-child label").classList.remove('d-none')
 
 		window.myListing.innerHTML = ''	// Reset DOM list
@@ -213,7 +215,6 @@ export default class MyPicturama {
 	myPlay() {
 		document.getElementById("myInputPlayPause").classList.add('d-none')
 		document.getElementById("myInputPause").classList.remove('d-none')
-		MyPicturama.myUpdateScreen()
 		window.mySetInterval = setInterval(function(){
 
 			if (!window.myShuffle) {
@@ -287,7 +288,7 @@ export default class MyPicturama {
 		document.querySelector('footer').classList.toggle('d-none')
 		document.querySelector(".navbar").classList.toggle('d-none')
 		document.querySelector(".myBarControl>ul").classList.remove('d-none')
-		document.querySelector(".myBarControl").classList.toggle('bg-body')
+		document.querySelector(".myBarControl").classList.toggle('bg-body-secondary')
 		document.querySelector(".myBarControl>ul>li:nth-child(1) svg").classList.toggle('d-none')
 		document.querySelector(".myBarControl>ul>li:nth-child(2)>ul").classList.toggle('d-none')
 	}

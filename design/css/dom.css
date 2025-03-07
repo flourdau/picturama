@@ -5,20 +5,37 @@
 
 body {
 	display:flex;
-	flex-flow:column;
-	background-color:var(--my-color3)
+	flex-flow:column
+}
+
+
+nav>a  svg {
+	height:48px;
+	width:48px;
+	color:var(--my-color1)
+}
+nav>div  svg {
+	height:32px;
+	width:32px
 }
 
 
 header {min-height:100vh}
 
+
 /*	MYCONTROLS
  *
  */
-#staticBackdrop {
+ #staticBackdrop {
 	max-width:500px;
 	overflow:visible;
 	padding:1rem
+}
+#staticBackdrop svg {
+	cursor:pointer;
+	height:32px;
+	width:32px;
+	padding:.25rem
 }
 .my-nav-control>div {
 	display:flex;
@@ -27,17 +44,11 @@ header {min-height:100vh}
 .my-nav-links {margin:1rem}
 .btn-checks {
 	display:flex;
-	column-gap:1rem;
-	row-gap:1rem;
-	flex-flow:row wrap
+	gap:1.5rem;
+	flex-flow:row wrap;
+	justify-content:space-evenly
 }
 
-
-svg {
-	height:64px;
-	width:64px;
-	padding:.5rem
-}
 
 
 /*	SEPARATOR:
@@ -121,12 +132,6 @@ footer svg:hover {color:var(--my-color3)}
 /*	QUERY	*/
 /*	< 700px		*/
 @media screen and (max-width:700px) {
-	svg {
-		height:48px;
-		width:48px
-	}
-
-
 	main {flex-flow:column}
 
 

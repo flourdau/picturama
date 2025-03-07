@@ -41,7 +41,8 @@
 
 
 /*	PANEL COLORS:	*/
-.my-trnsprnt	{opacity:0}
+.my-trnsprnt {opacity:0}
+.my-color3 {color:var(--my-color3)}
 
 
 /*	BGCOLORS:	*/
