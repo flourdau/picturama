@@ -37,14 +37,12 @@
 	justify-content:flex-end
 }
 .my-shell-bar>li {padding:.5rem}
-.my-shell-bar>li:nth-child(2), .my-shell-bar>li:first-child {
+.my-shell-bar>li:nth-child(2), .my-shell-bar>li:first-child>img {
 	width:100%;
 	justify-self:flex-start
 }
-.my-shell-bar svg {
+.my-shell-bar img {
 	cursor:pointer;
 	height:32px;
 	width:32px;
-	color:var(--my-color1);
-	padding:.5rem
 }
