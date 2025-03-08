@@ -2,26 +2,31 @@
  *	@description: Emulate a shell design
 */
 export default class MyShell {
-    constructor() {
+
+	constructor() {
+		const buttonClose	=	document.getElementsByClassName("btnClose")
+		const buttonMax		=	document.getElementsByClassName("btnMaximize")
+		const buttonMin		=	document.getElementsByClassName("btnMinimize")
+		const buttonMagic	=	document.getElementsByClassName("btnMagic")
+
 		// BIG CLOCK
 		document.querySelector("#myClock #myHour").addEventListener("click",
 			function() {
 				const val = this.parentNode.parentNode.parentNode.parentNode.querySelector('.btn-shell-font-size input').value
 
 				this.style.fontSize = (val * 1.15) + 'rem'
+
 		})
 
 
 		// MESSAGE
 		document.querySelector("#myMessage .my-shell-prompt input").addEventListener("input",
-			function() {
-				document.querySelector("#myMessage .my-shell-content span").innerHTML = this.value
+			function() {document.querySelector("#myMessage .my-shell-content span").innerHTML = this.value
 		})
 
 
 		// BOUTONS 
 		// CLOSE
-		const buttonClose	=	document.getElementsByClassName("btnClose")
 		for (let i = 0; i < buttonClose.length; i++) {
 			buttonClose[i].addEventListener("click", function() {
 				if (confirm('close?'))
@@ -31,7 +36,6 @@ export default class MyShell {
 
 
 		// MAX
-		const buttonMax		=	document.getElementsByClassName("btnMaximize")
 		for (let i = 0; i < buttonMax.length; i++) {
 			buttonMax[i].addEventListener("click", function() {
 				this.parentNode.parentNode.parentNode.classList.toggle('my-size-max')
@@ -40,7 +44,6 @@ export default class MyShell {
 
 
 		// MIN
-		const buttonMin		=	document.getElementsByClassName("btnMinimize")		
 		for (let i = 0; i < buttonMin.length; i++) {
 			buttonMin[i].addEventListener("click", function() {
 				this.parentNode.parentNode.querySelector(".my-shell-content").classList.toggle('d-none')
@@ -49,12 +52,10 @@ export default class MyShell {
 
 
 		// MAGICBUTTON
-		const buttonMagic	=	document.getElementsByClassName("btnMagic")
 		function myMagicButton(e) {
 			const myContent = e.parentNode.parentNode
 			const colorPickerBG = myContent.querySelector(".btn-shell-bg-color input")
 			const colorPicker = myContent.querySelector(".btn-shell-color input")
-
 
 			function myUpDateBGColor(e) {
 				myContent.style.background = e.target.value
@@ -63,7 +64,6 @@ export default class MyShell {
 			function myUpDateColor(e) {
 				myContent.style.color = e.target.value
 			}
-
 
 			colorPickerBG.addEventListener("input", myUpDateBGColor, false)
 			colorPickerBG.addEventListener("change", myUpDateBGColor, false)
@@ -109,5 +109,7 @@ export default class MyShell {
 		for (let i = 0; i < buttonMagic.length; i++) {
 			buttonMagic[i].addEventListener("click", function() {myMagicButton(this)})
 		}
+
 	}
+
 }

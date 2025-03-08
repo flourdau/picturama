@@ -2,18 +2,11 @@
  *	@description: Browser JavaScript informations
 */
 export default class MyInfos {
+
 	constructor() {
 		this.blocInfos = document.querySelector('#myInfos .my-shell-content ul')
 		this.blocScreen = document.querySelector('.my-screen')
 		this.blocPointer = document.querySelector('.my-pointer')
-
-		// navigator.geolocation.getCurrentPosition((position) => {
-		// 	const spanLat = myCreateLiElement('span', `Latitude: ${position.coords.latitude} °`)
-		// 	const spanLon = myCreateLiElement('span', `Longitude: ${position.coords.longitude} °`)
-
-		// 	this.blocInfos.appendChild(spanLat)
-		// 	this.blocInfos.appendChild(spanLon)
-		// })
 
 		window.addEventListener('mousemove', (e) => {this.blocPointer.innerHTML = `Cursor: ${e.clientX}x${e.clientY}px`})
 		window.addEventListener("resize", () => {this.blocScreen.innerHTML = `Screen: ${window.innerWidth}x${window.innerHeight}px`})
@@ -34,6 +27,7 @@ export default class MyInfos {
 		this.blocInfos.appendChild(spanLanguage)
 
 		document.querySelector("#SwitchLocalisation").addEventListener("change", this.myLocalisation, false)
+
 	}
 
 	myLocalisation() {
@@ -47,7 +41,9 @@ export default class MyInfos {
 				this.blocInfos.appendChild(spanLon)
 				document.querySelector("#SwitchLocalisation").setAttribute('disabled', "")
 		})}
+
 	}
+
 }
 
 function myCreateLiElement(tag, text) {
@@ -56,5 +52,7 @@ function myCreateLiElement(tag, text) {
 
 	element.append(text)
 	liElement.append(element)
+
 	return liElement
+
 }

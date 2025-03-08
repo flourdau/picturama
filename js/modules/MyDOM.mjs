@@ -2,8 +2,10 @@
  *  @description: Global mofications to the DOM
 */
 export default class MyDOM {
+
     constructor() {
         window.myHTML = document.querySelector("html")
+
         document.getElementById("mySelectTheme").addEventListener("click", this.mySwitchTheme, false)
         document.querySelector(".btn-picturama-check-clock").addEventListener('change', () => this.myToggleBloc("#myClock"), false)
 		document.querySelector(".btn-picturama-check-chrono").addEventListener('change', () => this.myToggleBloc("#myChrono"), false)
@@ -14,6 +16,7 @@ export default class MyDOM {
 		document.querySelector(".btn-picturama-check-miniatures").addEventListener('change', () => this.myToggleBloc(".myMiniatures"), false)
 
         this.footerYear()
+
     }
 
 
@@ -22,13 +25,13 @@ export default class MyDOM {
             window.myHTML.setAttribute('data-bs-theme', 'light')
         else
             window.myHTML.setAttribute('data-bs-theme', 'dark')
+
     }
 
 
-    myToggleBloc(myClass) {
-		document.querySelector(myClass).classList.toggle('d-none')
-	}
+    myToggleBloc(myClass) {document.querySelector(myClass).classList.toggle('d-none')}
 
 
     footerYear() {document.getElementById("footer-year").innerHTML = new Date().getFullYear()}
+
 }

@@ -2,6 +2,7 @@
  * @description: 
 */
 export default class MyPicturama {
+
 	constructor() {
 		/* Select elements */
 		window.myBody = document.querySelector("body")
@@ -368,4 +369,5 @@ export default class MyPicturama {
 	myCloseSlider() {
 		document.querySelector(".myMiniatures").classList.add('d-none')
 	}
+
 }

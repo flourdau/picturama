@@ -2,6 +2,7 @@
  *	@description: Modify 2 elements of DOM (#myDate & #myHour)
  */
 export default class MyClock {
+
 	constructor() {
 		//	Options
 		this.local			=	'fr-FR'
@@ -16,7 +17,6 @@ export default class MyClock {
 		const currentDate	= new Date()
 		const myHour		= currentDate.toLocaleTimeString(this.local)
 		let myDate			= currentDate.toLocaleDateString(this.local, this.options)
-
 
 		//	Modifications Date
 		myDate				=	myDate.toLowerCase()
@@ -33,9 +33,10 @@ export default class MyClock {
 			return
 		}
 
-
 		//	Update DOM
 		this.$myDate.textContent	=	myDate
 		this.$myHour.textContent	=	myHour
+
 	}
+
 }
