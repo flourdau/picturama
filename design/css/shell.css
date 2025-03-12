@@ -38,7 +38,6 @@
 	justify-content:flex-end;
 	align-items:center
 }
-
 .my-shell-bar>li>:nth-child(2) li{
 	display:flex;
 	flex-flow:row nowrap
@@ -48,6 +47,4 @@
 	width:100%;
 	justify-self:flex-start
 }
-.my-shell-name {
-	cursor:all-scroll;
-}
+.my-shell-name {cursor:all-scroll}

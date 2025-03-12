@@ -124,8 +124,8 @@ export default class MyShell {
 			let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0
 
 			// if present, the header is where you move the DIV from:
-			if (document.querySelector(".my-shell-name"))
-				document.querySelector(".my-shell-name").onmousedown = dragMouseDown
+			if (elmnt.querySelector(".my-shell-name"))
+				elmnt.querySelector(".my-shell-name").onmousedown = dragMouseDown
 			// otherwise, move the DIV from anywhere inside the DIV:
 			else
 				elmnt.onmousedown = dragMouseDown
