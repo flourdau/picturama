@@ -9,12 +9,14 @@ body {
 }
 
 
-nav>a  svg {
+nav>a i {
+	font-size:2rem;
 	height:48px;
 	width:48px;
 	color:var(--my-color1)
 }
-nav>div  svg {
+nav>div i {
+	font-size:1.5rem;
 	height:32px;
 	width:32px
 }

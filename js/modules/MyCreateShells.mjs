@@ -2,7 +2,6 @@
  *	@description: Create a shell elements 
 */
 export default class MyCreateShells {
-
 	constructor() {
 		const shells = document.getElementsByClassName("my-shell")
 
@@ -36,12 +35,12 @@ export default class MyCreateShells {
 		return div
 
 	}
-	
+
 
 	createBtnY() {
 		const li = document.createElement("li")
 		const label = document.createElement("label")
-		const svg = document.createElement("img")
+		const svg = document.createElement("i")
 		const select = document.createElement("select")
 		const option1 = document.createElement("option")
 		const option2 = document.createElement("option")
@@ -49,17 +48,19 @@ export default class MyCreateShells {
 
 		li.classList.add("btn-shell-Y")
 		li.classList.add("dropdown-item")
-		li.title = 'Centrage vertical.'
-
+		
+		label.title = 'Centrage vertical.'
 		label.classList.add("form-label")
 		label.classList.add("d-flex")
 		label.classList.add("align-items-center")
 
-		svg.src = "/design/svg/center-y.svg"
+		svg.classList.add("btn")
+		svg.classList.add("bi")
+		svg.classList.add("bi-arrows-expand")
 
 		select.classList.add("form-select")
 		select.name = "myShellY"
-		select.attributes["aria-label"] = "Select vertical center."
+		select.setAttribute("aria-label", "Select vertical center.")
 
 		option1.value = "top"
 		option1.innerHTML = 'Haut'
@@ -84,7 +85,7 @@ export default class MyCreateShells {
 	createBtnX() {
 		const li = document.createElement("li")
 		const label = document.createElement("label")
-		const svg = document.createElement("img")
+		const svg = document.createElement("i")
 		const select = document.createElement("select")
 		const option1 = document.createElement("option")
 		const option2 = document.createElement("option")
@@ -92,17 +93,20 @@ export default class MyCreateShells {
 
 		li.classList.add("btn-shell-X")
 		li.classList.add("dropdown-item")
-		li.title = 'Centrage horizontal.'
-
+		
+		label.title = 'Centrage horizontal.'
 		label.classList.add("form-label")
 		label.classList.add("d-flex")
 		label.classList.add("align-items-center")
 
-		svg.src = "/design/svg/center-x.svg"
-
+		svg.classList.add("btn")
+		svg.classList.add("bi")
+		svg.classList.add("bi-text-center")
+		svg.title = "'Select horizontal center."
+		
 		select.classList.add("form-select")
 		select.name = "myShellX"
-		select.attributes["aria-label"] = "Select horizontal center."
+		select.setAttribute("aria-label", "Select horizontal center.")
 
 		option1.value = "left"
 		option1.innerHTML = 'Gauche'
@@ -127,9 +131,9 @@ export default class MyCreateShells {
 	createBtnFontSize() {
 		const li = document.createElement("li")
 		const label = document.createElement("label")
-		const svgMin = document.createElement("img")
+		const svgMin = document.createElement("i")
 		const input = document.createElement("input")
-		const svgMax = document.createElement("img")
+		const svgMax = document.createElement("i")
 
 		li.classList.add("btn-shell-font-size")
 		li.classList.add("dropdown-item")
@@ -138,8 +142,11 @@ export default class MyCreateShells {
 		label.classList.add("form-label")
 		label.classList.add("d-flex")
 		label.classList.add("align-items-center")
-
-		svgMin.src = "/design/svg/font-size-min.svg"
+		label.setAttribute("aria-label", "Taille de la police.")
+		
+		svgMin.classList.add("btn")
+		svgMin.classList.add("bi")
+		svgMin.classList.add("bi-dash")
 
 		input.type = "range"
 		input.name = "myShellFontSize"
@@ -148,7 +155,9 @@ export default class MyCreateShells {
 		input.step = "1"
 		input.value = "4"
 
-		svgMax.src = "/design/svg/font-size-min.svg"
+		svgMax.classList.add("btn")
+		svgMax.classList.add("bi")
+		svgMax.classList.add("bi-plus")
 
 		label.append(svgMin)
 		label.appendChild(input)
@@ -161,23 +170,23 @@ export default class MyCreateShells {
 	createBtnFont() {
 		const li = document.createElement("li")
 		const label = document.createElement("label")
-		const svg = document.createElement("img")
-		const span = document.createElement("span")
+		const svg = document.createElement("i")
 		const select = document.createElement("select")
 		const option1 = document.createElement("option")
 		const option2 = document.createElement("option")
 
 		li.classList.add("btn-shell-font")
 		li.classList.add("dropdown-item")
-		li.title = 'Style de la police.'
 
 		label.classList.add("form-label")
 		label.classList.add("d-flex")
 		label.classList.add("align-items-center")
 
-		svg.src = "/design/svg/font.svg"
-
-		span.innerHTML = 'Style de la police.'
+		svg.classList.add("btn")
+		svg.classList.add("bi")
+		svg.classList.add("bi-fonts")
+		svg.title = "'Style de la police."
+		svg.setAttribute("aria-label", "Style de la police.")
 
 		select.classList.add("form-select")
 		select.name = "myShellFont"
@@ -193,7 +202,6 @@ export default class MyCreateShells {
 		select.appendChild(option2)
 
 		label.append(svg)
-		label.appendChild(span)
 		label.appendChild(select)
 		li.appendChild(label)
 
@@ -203,20 +211,23 @@ export default class MyCreateShells {
 	createBtnColor() {
 		const li = document.createElement("li")
 		const label = document.createElement("label")
-		const svg = document.createElement("img")
+		const svg = document.createElement("i")
 		const span = document.createElement("span")
 		const input = document.createElement("input")
 		const button = document.createElement("button")
 
 		li.classList.add("btn-shell-color")
 		li.classList.add("dropdown-item")
-		li.title = 'Couleur du texte.'
 
 		label.classList.add("form-label")
 		label.classList.add("d-flex")
 		label.classList.add("align-items-center")
 
-		svg.src = "/design/svg/color.svg"
+		svg.classList.add("btn")
+		svg.classList.add("bi")
+		svg.classList.add("bi-palette")
+		svg.title = "Couleur du texte."
+		svg.setAttribute("aria-label", "Couleur du texte.")
 
 		span.innerHTML = 'Couleur du teste.'
 
@@ -230,8 +241,8 @@ export default class MyCreateShells {
 		label.append(svg)
 		label.appendChild(span)
 		label.appendChild(input)
-		label.appendChild(button)
 		li.appendChild(label)
+		li.appendChild(button)
 
 		return li
 
@@ -239,40 +250,43 @@ export default class MyCreateShells {
 	createBtnBGColor() {
 		const li = document.createElement("li")
 		const label = document.createElement("label")
-		const svg = document.createElement("img")
+		const svg = document.createElement("i")
 		const span = document.createElement("span")
 		const input = document.createElement("input")
 		const button = document.createElement("button")
-		const svgReset = document.createElement("img")
+		const svgReset = document.createElement("i")
 
 		li.classList.add("btn-shell-bg-color")
 		li.classList.add("dropdown-item")
-		li.title = 'Couleur du background.'
 
-		label.classList.add("dropdown-item")
 		label.classList.add("form-label")
 		label.classList.add("d-flex")
 		label.classList.add("align-items-center")
-
-		svg.src = "/design/svg/bgcolor.svg"
-
+		
+		svg.classList.add("btn")
+		svg.classList.add("bi")
+		svg.classList.add("bi-paint-bucket")
+		svg.title = "Couleur du background."
+		svg.setAttribute("aria-label", "Couleur du background.")
+		
 		span.innerHTML = 'Couleur du background.'
 
 		input.type = "color"
 		input.hidden = true
 
+		svgReset.classList.add("btn-shell-delete-bg-color")
+		svgReset.classList.add("bi-arrow-counterclockwise")
+
 		button.classList.add("btn")
 		button.title = "Suppression de la couleur du background."
-
-		svgReset.src = "/design/svg/reset.svg"
-		svgReset.classList.add("btn-shell-delete-bg-color")
 		button.appendChild(svgReset)
 
 		label.append(svg)
 		label.appendChild(span)
 		label.appendChild(input)
-		label.appendChild(button)
+
 		li.appendChild(label)
+		li.appendChild(button)
 
 		return li
 
@@ -280,17 +294,21 @@ export default class MyCreateShells {
 	createBtnOpacity() {
 		const li = document.createElement("li")
 		const label = document.createElement("label")
-		const svg = document.createElement("img")
+		const svg = document.createElement("i")
 		const input = document.createElement("input")
 
-		li.classList.add("btn-shell-opacity")
 		li.classList.add("dropdown-item")
-
+		li.classList.add("btn-shell-opacity")
+		
 		label.classList.add("form-label")
 		label.classList.add("d-flex")
 		label.classList.add("align-items-center")
 
-		svg.src = "/design/svg/opacity.svg"
+		svg.classList.add("btn")
+		svg.classList.add("bi")
+		svg.classList.add("bi-transparency")
+		svg.title = "Transparence"
+		svg.setAttribute("aria-label", "Transparence")
 
 		input.type = "range"
 		input.min = "0"
@@ -307,15 +325,19 @@ export default class MyCreateShells {
 	}
 	createBtnMagic() {
 		const magicBtn = document.createElement("li")
-		const img = document.createElement("img")
+		const img = document.createElement("i")
 		const ul = document.createElement("ul")
 
-		magicBtn.classList.add("btnMagic")
-		magicBtn.classList.add("btn")
+		img.classList.add("btnMagic")
+		img.classList.add("btn")
+		img.classList.add("bi")
+		img.classList.add("bi-code-slash")
 
-		img.src = "/design/svg/code.svg"
 		img.alt = "Magic Boutton"
 		img.setAttribute("data-bs-toggle", "dropdown")
+		img.title = "Magic Boutton"
+		img.setAttribute("aria-label", "Magic Boutton")
+
 		magicBtn.appendChild(img)
 
 		ul.classList.add("dropdown-menu")
@@ -348,13 +370,16 @@ export default class MyCreateShells {
 
 	createBtnMinimize() {
 		const minBtn = document.createElement("li")
-		const img = document.createElement("img")
+		const img = document.createElement("i")
 
-		minBtn.classList.add("btnMinimize")
-		minBtn.classList.add("btn")
+		img.classList.add("btnMinimize")
+		img.classList.add("btn")
+		img.classList.add("bi")
+		img.classList.add("bi-dash")
 
-		img.src = "/design/svg/minimize.svg"
 		img.alt = "Minimize"
+		img.title = "Minimize"
+		img.setAttribute("aria-label", "Minimize")
 
 		minBtn.appendChild(img)
 
@@ -365,13 +390,16 @@ export default class MyCreateShells {
 
 	createBtnMaximize() {
 		const maxBtn = document.createElement("li")
-		const img = document.createElement("img")
+		const img = document.createElement("i")
 
-		maxBtn.classList.add("btnMaximize")
-		maxBtn.classList.add("btn")
+		img.classList.add("btnMaximize")
+		img.classList.add("btn")
+		img.classList.add("bi")
+		img.classList.add("bi-window-fullscreen")
 
-		img.src = "/design/svg/maximize.svg"
 		img.alt = "Maximize"
+		img.title = "Maximize"
+		img.setAttribute("aria-label", "Maximize")
 
 		maxBtn.appendChild(img)
 
@@ -379,16 +407,19 @@ export default class MyCreateShells {
 
 	}
 
-
+	
 	createBtnClose() {
 		const closeBtn = document.createElement("li")
-		const img = document.createElement("img")
+		const img = document.createElement("i")
+		
+		img.classList.add("btnClose")
+		img.classList.add("btn")
+		img.classList.add("bi")
+		img.classList.add("btn-close")
 
-		closeBtn.classList.add("btnClose")
-		closeBtn.classList.add("btn")
-
-		img.src = "/design/svg/close.svg"
 		img.alt = "Close"
+		img.title = "Close"
+		img.setAttribute("aria-label", "Close")
 
 		closeBtn.appendChild(img)
 
@@ -412,5 +443,4 @@ export default class MyCreateShells {
 		return item
 
 	}
-
 }

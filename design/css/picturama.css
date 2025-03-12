@@ -24,42 +24,45 @@
 	display:flex;
 	flex-flow:row
 }
-.myBarControl svg {
+.myBarControl i {
 	padding:.15rem;
 	width:48px;
 	height:48px
 }
-.myBarControl>ul>li:nth-child(1) svg {
+.myBarControl>ul>li:nth-child(1) i {
 	justify-self:flex-end;
 	align-self:flex-end
 }
-.myBarControl>ul>li:nth-child(2) svg {
+.myBarControl>ul>li:nth-child(2) i {
 	padding:.25rem;
 	width:96px;
 	height:96px
 }
-.myBarControl>ul>li:nth-child(3) svg {align-self:flex-end}
+.myBarControl>ul>li:nth-child(3) i {align-self:flex-end}
 
 
-.myMiniatures {height:45vh !important}
+.myMiniatures {
+	padding:0 5%;
+	height:45vh !important
+}
 .myMiniatures>div:last-child {
-	padding:2% 10%;
 	display:flex;
+	flex-flow:row nowrap;
 	justify-content:center;
-	align-items:center;
-	flex-flow:row wrap
+	align-items:flex-start
 }
-.myMiniatures>div:last-child>svg{
-	color:var(--bs-gray-500);
+.myMiniatures>div:last-child>i {
 	position:absolute;
-	min-width:256px;
-	height:256px;
-	right:-64px
+	font-size:8rem;
+	color:var(--bs-gray-500);
+	right: 0;
+	bottom:0;
+	max-width:128px
 }
-.myMiniatures>div:last-child>svg:hover {color:var(--bs-gray-700)}
-.myMiniatures>div:last-child>svg:first-child{
+.myMiniatures>div:last-child>i:hover {color:var(--bs-gray-700)}
+.myMiniatures>div:last-child>i:first-child {
 	right:none;
-	left:-64px
+	left:0
 }
 
 
