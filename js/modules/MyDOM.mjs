@@ -2,7 +2,6 @@
  *  @description: Global mofications to the DOM
 */
 export default class MyDOM {
-
     constructor() {
         window.myHTML = document.querySelector("html")
 
@@ -33,5 +32,4 @@ export default class MyDOM {
 
 
     footerYear() {document.getElementById("footer-year").innerHTML = new Date().getFullYear()}
-
 }

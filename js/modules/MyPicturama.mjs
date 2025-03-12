@@ -58,6 +58,7 @@ export default class MyPicturama {
 
 	static myChangeBg(path){
 		const myBody = document.querySelector("body")
+
 		myBody.style.background = window.myBgColor + " url('" + path + "')"
 		myBody.style.backgroundSize = window.mySize
 		myBody.style.backgroundAttachment = "fixed"

@@ -2,7 +2,6 @@
  *	@description: Emulate a shell design
 */
 export default class MyShell {
-
 	constructor() {
 		const buttonClose	=	document.getElementsByClassName("btnClose")
 		const buttonMax		=	document.getElementsByClassName("btnMaximize")
@@ -121,14 +120,9 @@ export default class MyShell {
 
 		// NAMEBUTTON DRAGGABLE
 		function myNameButton(elmnt) {
-			let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0
+			let pos1, pos2, pos3, pos4 = 0
 
-			// if present, the header is where you move the DIV from:
-			if (elmnt.querySelector(".my-shell-name"))
-				elmnt.querySelector(".my-shell-name").onmousedown = dragMouseDown
-			// otherwise, move the DIV from anywhere inside the DIV:
-			else
-				elmnt.onmousedown = dragMouseDown
+			elmnt.onmousedown = dragMouseDown
 
 			function dragMouseDown(e) {
 				e = e || window.event
@@ -166,5 +160,4 @@ export default class MyShell {
 			buttonNameDraggable[i].addEventListener("mouseover", function() {myNameButton(this)})
 		}
 	}
-
 }
