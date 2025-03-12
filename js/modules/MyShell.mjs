@@ -8,6 +8,7 @@ export default class MyShell {
 		const buttonMax		=	document.getElementsByClassName("btnMaximize")
 		const buttonMin		=	document.getElementsByClassName("btnMinimize")
 		const buttonMagic	=	document.getElementsByClassName("btnMagic")
+		const buttonNameDraggable	=	document.getElementsByClassName("my-shell")
 
 		// BIG CLOCK
 		document.querySelector("#myClock #myHour").addEventListener("click",
@@ -117,6 +118,53 @@ export default class MyShell {
 			buttonMagic[i].addEventListener("click", function() {myMagicButton(this)})
 		}
 
+
+		// NAMEBUTTON DRAGGABLE
+		function myNameButton(elmnt) {
+			let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0
+
+			// if present, the header is where you move the DIV from:
+			if (document.querySelector(".my-shell-name"))
+				document.querySelector(".my-shell-name").onmousedown = dragMouseDown
+			// otherwise, move the DIV from anywhere inside the DIV:
+			else
+				elmnt.onmousedown = dragMouseDown
+
+			function dragMouseDown(e) {
+				e = e || window.event
+				e.preventDefault()
+				// get the mouse cursor position at startup:
+				pos3 = e.clientX
+				pos4 = e.clientY
+				document.onmouseup = closeDragElement
+				// call a function whenever the cursor moves:
+				document.onmousemove = elementDrag
+			}
+
+			function elementDrag(e) {
+				e = e || window.event
+				e.preventDefault()
+
+				// calculate the new cursor position:
+				pos1 = pos3 - e.clientX
+				pos2 = pos4 - e.clientY
+				pos3 = e.clientX
+				pos4 = e.clientY
+
+				// set the element's new position:
+				elmnt.style.top = (elmnt.offsetTop - pos2) + "px"
+				elmnt.style.left = (elmnt.offsetLeft - pos1) + "px"
+			}
+
+			function closeDragElement() {
+				// stop moving when mouse button is released:
+				document.onmouseup = null
+				document.onmousemove = null
+			}
+		}
+		for (let i = 0; i < buttonNameDraggable.length; i++) {
+			buttonNameDraggable[i].addEventListener("mouseover", function() {myNameButton(this)})
+		}
 	}
 
 }

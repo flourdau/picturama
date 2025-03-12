@@ -10,6 +10,8 @@
 
 
 .my-shell {
+	position: absolute;
+	left:5rem;
 	display:flex;
 	flex-flow:column
 }
@@ -45,4 +47,7 @@
 .my-shell-bar>li:nth-child(2) {
 	width:100%;
 	justify-self:flex-start
+}
+.my-shell-name {
+	cursor:all-scroll;
 }

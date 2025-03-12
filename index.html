@@ -156,7 +156,7 @@
 
 			<section id="myShells">
 				<!-- OFFCANVAS MYCONTROLS -->
-				<section id="staticBackdrop" class="my-shell shadow-lg offcanvas-xxl offcanvas-start" data-bs-scroll="false" tabindex="-1" aria-labelledby="staticBackdropLabel">
+				<section id="staticBackdrop" class="shadow-lg offcanvas-xxl offcanvas-start" data-bs-scroll="false" tabindex="-1" aria-labelledby="staticBackdropLabel">
 					<div class="offcanvas-header">
 						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#staticBackdrop" aria-label="Close"></button>
 					</div>
@@ -229,99 +229,61 @@
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Blocs</button>
 							</h3>
 							<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-								<ul class="accordion-body">
-									<!-- SHELLS-X -->
+								<ul class="accordion-body btn-checks">
+									<!-- BTN-CLOCK -->
 									<li>
-										<label class="btn-picturama-shell-center-x btn-group" type="button">
-											<i class="btn bi bi-arrows-expand"></i>
-											<select name="myShellCenterX" class="form-select" aria-label="Select horizontal center">
-												<option value="flex-start">Haut</option>
-												<option selected value="center">Centre</option>
-												<option value="flex-end">Bas</option>
-											</select>
+										<input id="btn-check1" class="btn-picturama-check-clock btn-check" type="checkbox" autocomplete="off" checked>
+										<label for="btn-check1" class="btn btn-secondary" type="button">
+											<i class="bi bi-clock"></i>
 										</label>
 									</li>
-									<!-- SHELLS-Y -->
+									<!-- BTN-CHRONO -->
 									<li>
-										<label class="btn-picturama-shell-center-y btn-group" type="button">
-											<i class="btn bi bi-text-center"></i>
-											<select name="myShellCenterY" class="form-select" aria-label="Select vertical center">
-												<option selected value="flex-start">Gauche</option>
-												<option value="center">Centre</option>
-												<option value="space-around">Space-around</option>
-												<option value="space-between">Space-between</option>
-												<option value="flex-end">Droite</option>
-											</select>
+										<input id="btn-check6" class="btn-picturama-check-chrono btn-check" type="checkbox" autocomplete="off">
+										<label for="btn-check6" class="btn btn-secondary" type="button">
+											<i class="bi bi-stopwatch"></i>
 										</label>
 									</li>
-									<!-- SHELLS-FLEXFLOW -->
+									<!-- BTN-MESSAGE -->
 									<li>
-										<label class="btn-picturama-shell-flexflow btn-group" type="button">
-											<i class="btn bi bi-layout-sidebar"></i>
-											<select name="myShellFlexFlow" class="form-select" aria-label="Select vertical center">
-												<option selected value="row wrap">Column</option>
-												<option value="row-reverse wrap">Column-reverse</option>
-											</select>
+										<input id="btn-check2" class="btn-picturama-check-message btn-check" type="checkbox" autocomplete="off">
+										<label for="btn-check2" class="btn btn-secondary" type="button">
+											<i class="bi bi-chat"></i>
 										</label>
 									</li>
+									<!-- BTN-INFOS -->
 									<li>
-										<ul class="btn-checks">
-											<!-- BTN-CLOCK -->
-											<li>
-												<input id="btn-check1" class="btn-picturama-check-clock btn-check" type="checkbox" autocomplete="off" checked>
-												<label for="btn-check1" class="btn btn-secondary" type="button">
-													<i class="bi bi-clock"></i>
-												</label>
-											</li>
-											<!-- BTN-CHRONO -->
-											<li>
-												<input id="btn-check6" class="btn-picturama-check-chrono btn-check" type="checkbox" autocomplete="off">
-												<label for="btn-check6" class="btn btn-secondary" type="button">
-													<i class="bi bi-stopwatch"></i>
-												</label>
-											</li>
-											<!-- BTN-MESSAGE -->
-											<li>
-												<input id="btn-check2" class="btn-picturama-check-message btn-check" type="checkbox" autocomplete="off">
-												<label for="btn-check2" class="btn btn-secondary" type="button">
-													<i class="bi bi-chat"></i>
-												</label>
-											</li>
-											<!-- BTN-INFOS -->
-											<li>
-												<input id="btn-check3" class="btn-picturama-check-infos btn-check" type="checkbox" autocomplete="off">
-												<label for="btn-check3" class="btn btn-secondary" type="button">
-													<i class="bi bi-info-circle"></i>
-												</label>
-											</li>
-											<!-- BTN-CAM -->
-											<li>
-												<input id="btn-check5" class="btn-picturama-check-cam btn-check" type="checkbox" autocomplete="off">
-												<label for="btn-check5" class="btn btn-secondary d-flex justify-content-left align-items-center" type="button">
-													<i class="bi bi-camera"></i>
-												</label>
-											</li>
-											<!-- BTN-MYPUB -->
-											<li>
-												<input id="btn-check4" class="btn-picturama-check-pub btn-check" type="checkbox" autocomplete="off">
-												<label for="btn-check4" class="btn btn-secondary d-flex justify-content-left align-items-center" type="button">
-													<i class="bi bi-qr-code"></i>
-												</label>
-											</li>
-											<!-- BTN-MINIATURES -->
-											<li class="d-none">
-												<input id="btn-check7" class="btn-picturama-check-miniatures btn-check" type="checkbox" autocomplete="off">
-												<label for="btn-check7" class="btn d-none btn-secondary" type="button">
-													<i class="bi bi-images"></i>
-												</label>
-											</li>
-										</ul>
+										<input id="btn-check3" class="btn-picturama-check-infos btn-check" type="checkbox" autocomplete="off">
+										<label for="btn-check3" class="btn btn-secondary" type="button">
+											<i class="bi bi-info-circle"></i>
+										</label>
+									</li>
+									<!-- BTN-CAM -->
+									<li>
+										<input id="btn-check5" class="btn-picturama-check-cam btn-check" type="checkbox" autocomplete="off">
+										<label for="btn-check5" class="btn btn-secondary d-flex justify-content-left align-items-center" type="button">
+											<i class="bi bi-camera"></i>
+										</label>
+									</li>
+									<!-- BTN-MYPUB -->
+									<li>
+										<input id="btn-check4" class="btn-picturama-check-pub btn-check" type="checkbox" autocomplete="off">
+										<label for="btn-check4" class="btn btn-secondary d-flex justify-content-left align-items-center" type="button">
+											<i class="bi bi-qr-code"></i>
+										</label>
+									</li>
+									<!-- BTN-MINIATURES -->
+									<li class="d-none">
+										<input id="btn-check7" class="btn-picturama-check-miniatures btn-check" type="checkbox" autocomplete="off">
+										<label for="btn-check7" class="btn d-none btn-secondary" type="button">
+											<i class="bi bi-images"></i>
+										</label>
 									</li>
 								</ul>
 							</div>
 						</div>
 						<!-- DIAPORAMA -->
-						<div class="accordion-item">
+						<div class="accordion-item d-none">
 							<h3 class="accordion-header" id="flush-headingThree">
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Diaporama</button>
 							</h3>
