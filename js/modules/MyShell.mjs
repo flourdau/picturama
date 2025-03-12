@@ -122,7 +122,14 @@ export default class MyShell {
 		function myNameButton(elmnt) {
 			let pos1, pos2, pos3, pos4 = 0
 
-			elmnt.onmousedown = dragMouseDown
+			// if present, the header is where you move the DIV from:
+			if (elmnt.querySelector(".my-shell-name"))
+				elmnt.querySelector(".my-shell-name").onmousedown = dragMouseDown
+			if (elmnt.querySelector(".my-shell-content"))
+				elmnt.querySelector(".my-shell-content").onmousedown = dragMouseDown
+			// otherwise, move the DIV from anywhere inside the DIV:
+			else
+				elmnt.onmousedown = dragMouseDown
 
 			function dragMouseDown(e) {
 				e = e || window.event

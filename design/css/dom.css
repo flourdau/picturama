@@ -28,8 +28,7 @@ header {min-height:100vh}
 /*	MYCONTROLS
  *
  */
- #staticBackdrop {
-	max-width:500px;
+#staticBackdrop {
 	overflow:visible;
 	padding:1rem
 }
