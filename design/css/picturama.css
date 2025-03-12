@@ -25,9 +25,9 @@
 	flex-flow:row
 }
 .myBarControl i {
+	vertical-align: middle;
 	padding:.15rem;
-	width:48px;
-	height:48px
+	font-size:1.5rem
 }
 .myBarControl>ul>li:nth-child(1) i {
 	justify-self:flex-end;
@@ -35,8 +35,7 @@
 }
 .myBarControl>ul>li:nth-child(2) i {
 	padding:.25rem;
-	width:96px;
-	height:96px
+	font-size:2rem
 }
 .myBarControl>ul>li:nth-child(3) i {align-self:flex-end}
 

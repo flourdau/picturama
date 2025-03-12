@@ -288,9 +288,10 @@ export default class MyPicturama {
 		document.querySelector('main').classList.toggle('d-none')
 		document.querySelector('footer').classList.toggle('d-none')
 		document.querySelector(".navbar").classList.toggle('d-none')
-		document.querySelector(".myBarControl>ul").classList.remove('d-none')
+
+		// document.querySelector(".myBarControl>ul").classList.remove('d-none')
 		document.querySelector(".myBarControl").classList.toggle('bg-body-secondary')
-		document.querySelector(".myBarControl>ul>li:nth-child(1) svg").classList.toggle('d-none')
+		document.querySelector(".myBarControl>ul>li:nth-child(1) i").classList.toggle('d-none')
 		document.querySelector(".myBarControl>ul>li:nth-child(2)>ul").classList.toggle('d-none')
 	}
 
