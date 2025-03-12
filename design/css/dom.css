@@ -33,11 +33,9 @@ header {min-height:100vh}
 	overflow:visible;
 	padding:1rem
 }
-#staticBackdrop svg {
+#staticBackdrop i {
 	cursor:pointer;
-	height:32px;
-	width:32px;
-	padding:.25rem
+	font-size:1.75rem
 }
 .my-nav-control>div {
 	display:flex;
@@ -123,11 +121,7 @@ footer a {
 	text-decoration:none
 }
 footer a:hover {color:var(--my-color1)}
-footer svg {
-	color:var(--my-color1);
-	height:48px;
-	width:48px
-}
+footer i {color:var(--my-color1)}
 footer svg:hover {color:var(--my-color3)}
 
 
@@ -151,8 +145,4 @@ footer svg:hover {color:var(--my-color3)}
 	}
 	footer ul, footer li {display:block	}
 	footer li {padding:.2rem}
-	footer svg {
-		height:32px;
-		width:32px
-	}
 }

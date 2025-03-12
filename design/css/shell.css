@@ -15,10 +15,9 @@
 }
 
 
-.my-shell svg {
-	cursor:pointer;
-	height:32px;
-	width:32px
+.my-shell i {
+	vertical-align:middle;
+	font-size:1.5rem
 }
 
 
@@ -34,7 +33,8 @@
 .my-shell-bar {
 	display:flex;
 	flex-flow:row;
-	justify-content:flex-end
+	justify-content:flex-end;
+	align-items:center
 }
 
 .my-shell-bar>li>:nth-child(2) li{
@@ -46,10 +46,3 @@
 	width:100%;
 	justify-self:flex-start
 }
-/* .my-shell-bar img ,
-.my-shell-bar object,
-.my-shell-bar object svg {
-	cursor:pointer;
-	height:32px;
-	width:32px;
-} */

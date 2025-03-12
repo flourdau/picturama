@@ -87,7 +87,7 @@
 @media (min-width:1000px) and (pointer:fine) {items {overflow:hidden}}
 
 @media (max-width:1000px) {
-	.myMiniatures>div>svg {display:none}
+	.myMiniatures>div>i {display:none}
 
 	.items {
 		padding:1rem;
@@ -101,7 +101,7 @@
 /*	< 400px	*/
 @media screen and (max-width:400px) {
 
-	.myBarControl ul>li:nth-child(2) svg  {
+	.myBarControl ul>li:nth-child(2) i {
 		width:64px;
 		height:64px
 	}
