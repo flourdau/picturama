@@ -3,32 +3,41 @@
  */
 export default class MyChrono {
 	isPaused = true
+	seconds = 0
 	
 	constructor() {
 		this.intervalId
-		this.pauseButton = document.querySelector('#myChrono .my-shell-content>button')
+		this.pauseButton = document.querySelector('#myChrono .myChronoPlay')
 		this.pauseButton.addEventListener('click', () => this.togglePause(this), false)
+		this.pauseReset = document.querySelector('#myChrono .myChronoReset')
+		this.pauseReset.addEventListener('click', () => this.myReset(this), false)
+		this.chronometre = document.querySelector('#myChrono>.my-shell-content>div')
 		window.onload = this.startChronometre(this)
 	}
 
 	startChronometre() {
-		let chronometre = document.querySelector('#myChrono>.my-shell-content>div')
-		let seconds = 0
 
 		this.intervalId = setInterval(() => {
 			if (!this.isPaused) {
-				seconds++
-				let hrs = Math.floor(seconds / 3600)
-				let mins = Math.floor((seconds % 3600) / 60)
-				let secs = seconds % 60
+				this.seconds++
+				let hrs = Math.floor(this.seconds / 3600)
+				let mins = Math.floor((this.seconds % 3600) / 60)
+				let secs = this.seconds % 60
 
-				chronometre.textContent = 
+				this.chronometre.textContent = 
 					(hrs < 10 ? "0" + hrs : hrs) + ":" + 
 					(mins < 10 ? "0" + mins : mins) + ":" + 
 					(secs < 10 ? "0" + secs : secs)
 			}
 		}, 1000)
 	}
+
+
+	myReset() {
+		this.seconds = 0
+		this.chronometre.textContent = "00:00:00"
+	}
+
 
 	togglePause() {
 		this.isPaused = !this.isPaused
