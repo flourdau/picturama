@@ -48,3 +48,11 @@
 	justify-self:flex-start
 }
 .my-shell-name {cursor:all-scroll}
+
+
+/*	< 700px	*/
+@media screen and (max-width:700px) {
+
+	.my-shell {position:initial}
+
+}
