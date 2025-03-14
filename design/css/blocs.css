@@ -33,6 +33,14 @@
 	flex-flow:row
 }
 
+#myReadMe .my-shell-content>p:last-child {text-align:right}
+#myReadMe img {
+	position:absolute;
+	bottom:0;
+	right: 0;
+	width:256px
+}
+
 
 #myMessage .my-shell-content {font-size:3rem}
 
@@ -57,6 +65,9 @@
 /*	< 700px		*/
 @media screen and (max-width:700px) {
 	#myShells {justify-content:center}
+
+
+	#myReadMe img {display:none}
 
 
 	#myTV>.my-shell-content {

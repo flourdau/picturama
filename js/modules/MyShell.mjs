@@ -109,7 +109,6 @@ export default class MyShell {
 				myContent.style.background = 'transparent'
 			}, false)
 
-
 			colorPickerBG.select()
 			colorPicker.select()
 		}

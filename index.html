@@ -28,6 +28,7 @@
 		<!--	JS	-->
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+		<script src="  https://cdn.jsdelivr.net/npm/showdown@1.9.0/dist/showdown.min.js" crossorigin="anonymous"></script>
 
 		<!--	MY JS	-->
 		<script type="module">
@@ -40,6 +41,7 @@
 			import MyDebug from  "./js/modules/MyDebug.mjs"
 			import MyInfos from  "./js/modules/MyInfos.mjs"
 			import MyCam from  "./js/modules/MyCam.mjs"
+			import MyReadMe from  "./js/modules/MyReadMe.mjs"
 
 			//	MYDOM
 			new MyDOM()
@@ -57,6 +59,8 @@
 			new MyCam()
 			//	MYCHRONO
 			new MyChrono()
+			//	MYREADME
+			new MyReadMe()
 			//  MYDEBUG
 			// new MyDebug()
 		</script>
@@ -95,7 +99,7 @@
 									<hr class="d-lg-none text-white-50">
 								</li>
 								<li class="nav-item col-6 col-lg-auto">
-									<a class="nav-link py-2 px-0 px-lg-2" href="/#read_me">Read Me</a>
+									<a class="myBtnReadMe nav-link py-2 px-0 px-lg-2" href="/#read_me">Read Me</a>
 								</li>
 								<li class="nav-item py-1 col-12 col-lg-auto">
 									<div class="vr d-none d-lg-flex h-100 mx-lg-2"></div>
@@ -329,12 +333,10 @@
 
 				<!-- MYCLOCK -->
 				<section id="myClock" class="my-shell">
-					<div class="my-shell-content bg-body-tertiary bg-opacity-75" style="text-align: center; justify-content: center;">
-						<ul class="rainbow_text_animated">
-							<li id='myHour'><span></span></li>
-							<li id='myDate'><span></span></li>
-						</ul>
-					</div>
+					<ul class="rainbow_text_animated my-shell-content bg-body-tertiary bg-opacity-75" style="text-align: center; justify-content: center;">
+						<li id='myHour'><span></span></li>
+						<li id='myDate'><span></span></li>
+					</ul>
 				</section>
 
 				<!-- MYPUB -->
@@ -364,7 +366,7 @@
 					<div class="my-shell-content bg-body-tertiary bg-opacity-50">
 						<div class="rainbow_text_animated">00:00:00</div>
 						<button type="button" class="myChronoPlay btn btn-secondary">Play</button>
-						<i  type="button" class="myChronoReset btn bi bi-arrow-counterclockwise"></i>
+						<i type="button" class="myChronoReset btn bi bi-arrow-counterclockwise"></i>
 					</div>
 				</section>
 

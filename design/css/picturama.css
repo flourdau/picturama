@@ -83,11 +83,16 @@
 .item img {max-height:25vh}
 
 
+/*	> 1000px	*/
+@media (min-width:1000px) and (pointer:fine) {
+	items {overflow:hidden}
+}
 
-@media (min-width:1000px) and (pointer:fine) {items {overflow:hidden}}
 
+/*	< 1000px	*/
 @media (max-width:1000px) {
 	.myMiniatures>div>i {display:none}
+
 
 	.items {
 		padding:1rem;
@@ -95,15 +100,16 @@
 		scroll-padding-inline:0
 	}
 
+
 	.item {scroll-snap-align:center}
 }
 
+
+
 /*	< 400px	*/
 @media screen and (max-width:400px) {
-
 	.myBarControl ul>li:nth-child(2) i {
 		width:64px;
 		height:64px
 	}
-
 }
