@@ -4,7 +4,32 @@
 export default class MyDOM {
 	constructor() {
 		window.myHTML = document.querySelector("html")
+		const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
 
+		if (isDarkMode)
+			window.myHTML.setAttribute('data-bs-theme', 'dark')
+		else if (isLightMode)
+			window.myHTML.setAttribute('data-bs-theme', 'light')
+		else
+			console.log('Le thème n\'est pas spécifié ou le système ne supporte pas cette fonctionnalité.');
+
+
+
+			const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+			const handleThemeChange = (event) => {
+				if (event.matches) {
+					console.log('Le thème sombre est activé.');
+				} else {
+					console.log('Le thème clair est activé.');
+				}
+			};
+// Ajouter un écouteur d'événements pour les changements de thème
+darkModeMediaQuery.addEventListener('change', handleThemeChange);
+
+// Vérifier l'état initial
+handleThemeChange(darkModeMediaQuery);
 		document.getElementById("mySelectTheme").addEventListener("click", this.mySwitchTheme, false)
 		document.querySelector(".btn-picturama-check-clock").addEventListener('change', () => this.myToggleBloc("#myClock"), false)
 		document.querySelector(".btn-picturama-check-chrono").addEventListener('change', () => this.myToggleBloc("#myChrono"), false)
@@ -41,10 +66,14 @@ export default class MyDOM {
 	
 	
 	mySwitchTheme() {
-		if (window.myHTML.getAttribute('data-bs-theme') === 'dark')
+		if (window.myHTML.getAttribute('data-bs-theme') === 'dark') {
 			window.myHTML.setAttribute('data-bs-theme', 'light')
-		else
+			localStorage.setItem('theme', 'light')
+		}
+		else {
 			window.myHTML.setAttribute('data-bs-theme', 'dark')
+			localStorage.setItem('theme', 'dark')
+		}
 	}
 
 
