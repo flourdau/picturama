@@ -7,9 +7,6 @@ export default class MyStorage {
 		const storageShuffle = localStorage.getItem('shuffle')?.toString()
 		const storageDelay = localStorage.getItem('delay')?.toString()
 		const storageBGColor = localStorage.getItem('bgColor')?.toString()
-console.log(storageShuffle)
-console.log(storageDelay)
-console.log(storageBGColor)
 
 		if (storageShuffle) {
 			window.myShuffle = true
@@ -26,7 +23,7 @@ console.log(storageBGColor)
 			window.myBody.style.backgroundColor = window.myBgColor
 		}
 
-
+		
     }
 
 }
