@@ -70,6 +70,7 @@ export default class MyPicturama {
 
 	myDelay() {
 		window.myDelay = document.querySelector(".btn-picturama-timer select").value
+		localStorage.setItem('delay', window.myDelay)
 	}
 
 
@@ -101,7 +102,8 @@ export default class MyPicturama {
 		document.querySelector(".myBarControl>ul>li:nth-child(3)").classList.remove('d-none')
 		document.querySelector("body").classList.remove('bg-body')
 		window.myBgColor = event.target.value
-		window.myBody.style.backgroundColor = event.target.value
+		window.myBody.style.backgroundColor = window.myBgColor
+		localStorage.setItem('bgColor', window.myBgColor)
 	}
 
 
@@ -234,10 +236,12 @@ export default class MyPicturama {
 	myShuffle() {
 		if (!window.myShuffle) {
 			window.myShuffle = true
+			localStorage.setItem('shuffle', true)
 			document.querySelector(".btn-picturama-shuffle").style.color = 'red'
 		}
 		else {
 			window.myShuffle = false
+			localStorage.setItem('shuffle', false)
 			document.querySelector(".btn-picturama-shuffle").style.color = 'black'
 		}
 	}
