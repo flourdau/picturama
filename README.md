@@ -3,9 +3,9 @@
 **Diaporama de photos local avec horloge et design shell**
 
 #### Le projet :
-L'idée initiale était de créer un diaporama de photos fonctionnant en local,
-en utilisant uniquement HTML, CSS et JavaScript,
-avec un minimum de dépendances externes.
+L'idée initiale était de créer un diaporama de photos fonctionnant en local.
+En utilisant uniquement HTML, CSS et JavaScript.
+Et avec un minimum de dépendances externes...
 Par la suite, j'ai décidé d'intégrer une refonte de la base de [ma page personnelle](https://positive-link.net/ "positive-link.net") 
 dans le but de maximiser l'utilisation des ressources du client.
 
