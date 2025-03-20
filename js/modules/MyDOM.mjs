@@ -23,13 +23,19 @@ export default class MyDOM {
 	}
 
 	myToggleReadMe() {
-		const shells = document.getElementsByClassName("my-shell")
-
-		for (let i = 0; i < shells.length; i++) {
-			if (shells[i].id === "myReadMe") 
-				shells[i].classList.remove('d-none')
-			else
-				shells[i].classList.add('d-none')
+		const myReadMe = document.getElementById("myReadMe")
+		if (myReadMe.classList.contains('d-none')) {
+			const shells = document.getElementsByClassName("my-shell")
+			for (let i = 0; i < shells.length; i++) {
+				if (shells[i].id === "myReadMe") 
+					shells[i].classList.remove('d-none')
+				else
+					shells[i].classList.add('d-none')
+			}
+		}
+		else {
+			myReadMe.classList.add('d-none')
+			document.getElementById("myClock").classList.remove('d-none')
 		}
 	}
 	
