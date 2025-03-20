@@ -1,5 +1,3 @@
-
-
 /** MyReadMe
  *  @description: Get Readme.md in GitHut et convert markdown to html
 */
@@ -26,7 +24,6 @@ export default class MyReadMe {
 			converter.setOption('noHeaderId', 'true')
 		
 			const html = converter.makeHtml(data)
-			console.log(html)
 			document.querySelector('#myReadMe>.my-shell-content').innerHTML = html
 		})
 	}
