@@ -23,7 +23,7 @@
 	justify-content:center
 }
 #myPub .my-shell-content img {
-	margin: auto;
+	margin:auto;
 	min-width:64px;
 	max-width:256px;
 	width:100%

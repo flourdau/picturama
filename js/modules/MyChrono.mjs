@@ -1,5 +1,5 @@
 /**	MYCHRONO
- *	@description: Modify 1 elements of DOM (#myChrono)
+ *	@description:	Modify 1 elements of DOM (#myChrono)
  */
 export default class MyChrono {
 	isPaused = true

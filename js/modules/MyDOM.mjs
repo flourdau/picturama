@@ -1,5 +1,5 @@
 /** MYDOM
- *  @description: Global mofications to the DOM
+ *  @description:	Global mofications to the DOM
 */
 export default class MyDOM {
 	constructor() {
@@ -42,6 +42,7 @@ export default class MyDOM {
 		this.anchor()
 		this.footerYear()
 	}
+
 
 	myToggleReadMe() {
 		const myReadMe = document.getElementById("myReadMe")

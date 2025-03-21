@@ -1,5 +1,5 @@
 /** MyReadMe
- *  @description: Get Readme.md in GitHut et convert markdown to html
+ *  @description:	Get Readme.md in GitHut et convert markdown to html
 */
 export default class MyReadMe {
 	constructor() {
@@ -16,15 +16,13 @@ export default class MyReadMe {
 		fetch("./README.md", myInit)
 			.then(function(response) {
 				return response.text()
-		})
-		.then(function(data) {
-			showdown.setFlavor('github')
-			
-			const converter = new showdown.Converter()
-			converter.setOption('noHeaderId', 'true')
-		
-			const html = converter.makeHtml(data)
-			document.querySelector('#myReadMe>.my-shell-content').innerHTML = html
+			})
+			.then(function(data) {
+				showdown.setFlavor('github')
+				const converter = new showdown.Converter()
+				converter.setOption('noHeaderId', 'true')
+				const html = converter.makeHtml(data)
+				document.querySelector('#myReadMe>.my-shell-content').innerHTML = html
 		})
 	}
 }

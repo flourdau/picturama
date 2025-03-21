@@ -1,5 +1,5 @@
 /**	MYSHELL
- *	@description: Emulate a shell design
+ *	@description:	Emulate a shell design
 */
 export default class MyShell {
 	constructor() {

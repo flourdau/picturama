@@ -1,8 +1,7 @@
 /**	MYDEBUG
- *	@description: Debug informations
+ *	@description:	Debug informations
 */
 export default class MyDebug {
-
 	constructor() {
 		this.MyInfos = {}
 		this.MyInfos.myFullScreen = window.screen.width + " x " + window.screen.height
@@ -20,7 +19,5 @@ export default class MyDebug {
 				"Y = ", event.clientY
 			)
 		})
-
 	}
-
 }

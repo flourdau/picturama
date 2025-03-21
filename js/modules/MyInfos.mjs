@@ -1,8 +1,7 @@
 /**	MYINFOS
- *	@description: Browser JavaScript informations
+ *	@description:	Browser JavaScript informations
 */
 export default class MyInfos {
-
 	constructor() {
 		this.blocInfos = document.querySelector('#myInfos .my-shell-content ul')
 		this.blocScreen = document.querySelector('.my-screen')
@@ -27,7 +26,6 @@ export default class MyInfos {
 		this.blocInfos.appendChild(spanLanguage)
 
 		document.querySelector("#SwitchLocalisation").addEventListener("change", this.myLocalisation, false)
-
 	}
 
 	myLocalisation() {
@@ -35,15 +33,13 @@ export default class MyInfos {
 			navigator.geolocation.getCurrentPosition((position) => {
 				const spanLat = myCreateLiElement('span', `Latitude: ${position.coords.latitude} °`)
 				const spanLon = myCreateLiElement('span', `Longitude: ${position.coords.longitude} °`)
-				this.blocInfos = document.querySelector('#myInfos .my-shell-content ul')
 
+				this.blocInfos = document.querySelector('#myInfos .my-shell-content ul')
 				this.blocInfos.appendChild(spanLat)
 				this.blocInfos.appendChild(spanLon)
 				document.querySelector("#SwitchLocalisation").setAttribute('disabled', "")
 		})}
-
 	}
-
 }
 
 function myCreateLiElement(tag, text) {

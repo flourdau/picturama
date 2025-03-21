@@ -1,5 +1,5 @@
 /**	MYCREATESHELLS
- *	@description: Create a shell elements 
+ *	@description:	Create all shells elements 
 */
 export default class MyCreateShells {
 	constructor() {

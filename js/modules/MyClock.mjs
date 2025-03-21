@@ -1,8 +1,7 @@
 /**	MYCLOCK
- *	@description: Modify 2 elements of DOM (#myDate & #myHour)
+ *	@description:	Modify 2 elements of DOM (#myDate & #myHour)
  */
 export default class MyClock {
-
 	constructor() {
 		//	Options
 		this.local			=	'fr-FR'
@@ -14,9 +13,9 @@ export default class MyClock {
 								}
 
 		//	Created Date
-		const currentDate	= new Date()
-		const myHour		= currentDate.toLocaleTimeString(this.local)
-		let myDate			= currentDate.toLocaleDateString(this.local, this.options)
+		const currentDate	=	new Date()
+		const myHour		=	currentDate.toLocaleTimeString(this.local)
+		let myDate			=	currentDate.toLocaleDateString(this.local, this.options)
 
 		//	Modifications Date
 		myDate				=	myDate.toLowerCase()
@@ -28,15 +27,11 @@ export default class MyClock {
 		this.$myDate		=	document.getElementById("myDate")
 		this.$myHour		=	document.getElementById("myHour")
 
-		if (!this.$myDate || !this.$myHour) {
-			console.error("Error: Elements with IDs 'myDate' or 'myHour' not found in the DOM.")
-			return
-		}
+		if (!this.$myDate || !this.$myHour)
+			return console.error("Error: Elements with IDs 'myDate' or 'myHour' not found in the DOM.")
 
 		//	Update DOM
 		this.$myDate.textContent	=	myDate
 		this.$myHour.textContent	=	myHour
-
 	}
-
 }

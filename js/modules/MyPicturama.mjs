@@ -1,8 +1,7 @@
 /**	MYPICTURAMA
- * @description: 
+ *	@description: 
 */
 export default class MyPicturama {
-
 	constructor() {
 		/* Select elements */
 		window.myBody = document.querySelector("body")
@@ -131,7 +130,6 @@ export default class MyPicturama {
 				const item = document.createElement("li"),
 				reader = new FileReader,
 				img = new Image
-
 				item.classList.add('item')
 				if (window.myList[line]) reader.readAsDataURL(window.myList[line][column])
 
@@ -151,9 +149,9 @@ export default class MyPicturama {
 				}, false)
 	
 				window.myListing.appendChild(item)
-	}}
-	window.prevButton.setAttribute('hidden', 'hidden')
-}
+		}}
+		window.prevButton.setAttribute('hidden', 'hidden')
+	}
 
 
 	myLeft() {
@@ -196,7 +194,6 @@ export default class MyPicturama {
 		document.getElementById("myInputPlayPause").classList.add('d-none')
 		document.getElementById("myInputPause").classList.remove('d-none')
 		window.mySetInterval = setInterval(function(){
-
 			if (!window.myShuffle) {
 				if (window.myPositionX === window.myList[window.myPositionY].length - 1 ) {
 					window.myPositionX= -1
@@ -212,13 +209,13 @@ export default class MyPicturama {
 				window.myPositionX= Math.floor(Math.random() * window.myList[window.myPositionY].length)
 			}
 			MyPicturama.myChangeBg(URL.createObjectURL(window.myList[window.myPositionY][window.myPositionX]))
-
 		}, window.myDelay * 1000)
 	}
 
 
 	myReset() {
 		clearInterval(window.mySetInterval)
+		localStorage.clear()
 		window.myPositionX= 0 // Reset Position
 		window.myPositionY = 0
 		window.myBgColor = 'var(--my-color2)'
@@ -274,43 +271,34 @@ export default class MyPicturama {
 		document.querySelector("#myPub>div>ul>li:nth-child(4)").classList.toggle('d-none')
 		document.querySelector("#myPub>div>ul>li:nth-child(5)").classList.toggle('d-none')
 		document.querySelector("#myPub>div>ul>li:nth-child(6)").classList.toggle('d-none')
-
 		document.querySelector(".myBarControl").classList.toggle('bg-body-secondary')
 		document.querySelector(".myBarControl>ul>li:nth-child(1) i").classList.toggle('d-none')
 		document.querySelector(".myBarControl>ul>li:nth-child(2)>ul").classList.toggle('d-none')
 	}
 
 
-	myFullScreen() {
-		MyPicturama.myUpdateScreen()
-	}
+	myFullScreen() {MyPicturama.myUpdateScreen()}
 
 
 	/*	SLIDER	*/
 	/**
 	* Utilise la variable --items pour déterminer le nombre d'élément visible
 	**/
-	get itemsToScroll () {
-		return parseInt(window.getComputedStyle(window.wrapper).getPropertyValue('--items'), 10);
-	}
+	get itemsToScroll () {return parseInt(window.getComputedStyle(window.wrapper).getPropertyValue('--items'), 10)}
 
 
 	/**
 	* Nombre total de "pages" dans notre slider
 	* @returns {number}
 	**/
-	get pages () {
-		return Math.ceil(window.wrapper.children.length / this.itemsToScroll)
-	}
+	get pages () {return Math.ceil(window.wrapper.children.length / this.itemsToScroll)}
 
 
 	/**
 	* Page courante
 	* @returns {number}
 	**/
-	get page () {
-		return Math.ceil(window.wrapper.scrollLeft / window.wrapper.offsetWidth)
-	}
+	get page () {return Math.ceil(window.wrapper.scrollLeft / window.wrapper.offsetWidth)}
 
 
 	/**
@@ -352,8 +340,5 @@ export default class MyPicturama {
 	/*
 	 * Ferme le slider
 	*/
-	myCloseSlider() {
-		document.querySelector(".myMiniatures").classList.add('d-none')
-	}
-
+	myCloseSlider() {document.querySelector(".myMiniatures").classList.add('d-none')}
 }

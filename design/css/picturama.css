@@ -85,7 +85,7 @@
 
 /*	> 1000px	*/
 @media (min-width:1000px) and (pointer:fine) {
-	items {overflow:hidden}
+	.items {overflow:hidden}
 }
 
 
