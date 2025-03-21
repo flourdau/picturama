@@ -7,11 +7,13 @@
 	width:100% !important;
 	height:90vh
 }
+.my-left {
+	position:absolute;
+	left:5rem
+}
 
 
 .my-shell {
-	position:absolute;
-	left:5rem;
 	display:flex;
 	flex-flow:column
 }
