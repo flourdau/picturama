@@ -49,7 +49,7 @@ export default class MyShell {
 					document.querySelector("#myShells").style.padding = "1rem 1rem"
 				else {
 					document.querySelector("#myShells").style.padding = "2rem 1rem"
-					this.parentNode.parentNode.parentNode.parentNode.classList.toggle('my-left')
+					this.parentNode.parentNode.parentNode.classList.toggle('my-left')
 				}
 		})}
 
