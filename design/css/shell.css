@@ -10,7 +10,7 @@
 
 
 .my-shell {
-	position: absolute;
+	position:absolute;
 	left:5rem;
 	display:flex;
 	flex-flow:column
@@ -28,7 +28,9 @@
 	padding:1.5rem;
 	height:100%;
 	display:flex;
-	flex-flow:column
+	flex-flow:column;
+	align-items:center;
+	justify-content:center
 }
 
 
@@ -52,5 +54,8 @@
 
 /*	< 700px	*/
 @media screen and (max-width:700px) {
-	.my-shell {position:initial}
+	.my-shell {
+		position:initial;
+		left:none
+	}
 }

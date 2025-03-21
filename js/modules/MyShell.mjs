@@ -76,25 +76,24 @@ export default class MyShell {
 
 			myContent.querySelector('.btn-shell-X select').addEventListener("change", () => {
 				const myShellX = myContent.querySelector(".btn-shell-X select").value
-				let tmp = 'center'
 
-				if (myShellX === 'left')
-					tmp = 'flex-start'
-				else if (myShellX === 'right')
-					tmp = 'flex-end'
-
-				myContent.querySelector('.my-shell-content').style.textAlign = myShellX
-				myContent.querySelector('.my-shell-content').style.justifyContent = tmp
+				myContent.querySelector('.my-shell-content').style.alignItems = myShellX
 			}, false)
-
+			
 			myContent.querySelector('.btn-shell-Y select').addEventListener("change", () => {
 				const myShellY = myContent.querySelector(".btn-shell-Y select").value
 
-				myContent.querySelector('.my-shell-content').style.alignItems = myShellY
+				myContent.querySelector('.my-shell-content').style.justifyContent = myShellY
 			}, false)
 
 			myContent.querySelector('.btn-shell-font-size input').addEventListener("change", (e) => {
-				myContent.querySelector('.my-shell-content').style.fontSize = e.target.value + 'rem'
+				console.log(myContent.id)
+				if (myContent.id === 'myClock') {
+					myContent.querySelector('#myClock .my-shell-content #myHour').style.fontSize = e.target.value * 1.05 + 'rem'
+					myContent.querySelector('#myClock .my-shell-content #myDate').style.fontSize = e.target.value + 'rem'
+				}
+				else
+					myContent.querySelector('.my-shell-content').style.fontSize = e.target.value + 'rem'
 			}, false)
 
 			myContent.querySelector('.btn-shell-color button').addEventListener("click", () => {

@@ -62,13 +62,14 @@ export default class MyCreateShells {
 		select.name = "myShellY"
 		select.setAttribute("aria-label", "Select vertical center.")
 
-		option1.value = "top"
+		option1.value = "flex-start"
 		option1.innerHTML = 'Haut'
 
 		option2.value = "center"
 		option2.innerHTML = 'Centre'
+		option2.setAttribute('selected', 'selected')
 
-		option3.value = "bottom"
+		option3.value = "flex-end"
 		option3.innerHTML = 'Bas'
 
 		select.appendChild(option1)
@@ -108,13 +109,14 @@ export default class MyCreateShells {
 		select.name = "myShellX"
 		select.setAttribute("aria-label", "Select horizontal center.")
 
-		option1.value = "left"
+		option1.value = "flex-start"
 		option1.innerHTML = 'Gauche'
 
 		option2.value = "center"
 		option2.innerHTML = 'Centre'
+		option2.setAttribute('selected', 'selected')
 
-		option3.value = "right"
+		option3.value = "flex-end"
 		option3.innerHTML = 'Droite'
 
 		select.appendChild(option1)
@@ -190,13 +192,14 @@ export default class MyCreateShells {
 
 		select.classList.add("form-select")
 		select.name = "myShellFont"
-		select.attributes["aria-label"] = "Select font."
+		select.setAttribute("aria-label", "Select font.")
 
 		option1.value = "monospace"
 		option1.innerHTML = "Monospace"
 
 		option2.value = "Open Sans"
 		option2.innerHTML = "Open Sans"
+		option2.setAttribute('selected', 'selected')
 
 		select.appendChild(option1)
 		select.appendChild(option2)

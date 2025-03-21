@@ -64,8 +64,11 @@
 /*	QUERY	*/
 /*	< 700px		*/
 @media screen and (max-width:700px) {
-	#myShells {justify-content:center}
-
+	#myShells {
+		justify-content:center;
+		padding:2rem 1rem
+	}
+	
 
 	#myReadMe img {display:none}
 
