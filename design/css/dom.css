@@ -30,7 +30,6 @@ header {min-height:100vh}
  */
 #staticBackdrop {
 	overflow:visible;
-	z-index:10;
 	padding:1rem
 }
 #staticBackdrop i {

@@ -46,9 +46,8 @@ export default class MyShell {
 					document.querySelector("#myShells").style.padding = "0 1rem"
 				else if (!this.parentNode.parentNode.parentNode.classList.contains('my-size-max') && window.innerWidth <= 700)
 					document.querySelector("#myShells").style.padding = "1rem 1rem"
-				else {
+				else
 					document.querySelector("#myShells").style.padding = "2rem 1rem"
-				}
 		})}
 
 
