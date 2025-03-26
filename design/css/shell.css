@@ -27,6 +27,7 @@
 
 .my-shell-content {
 	overflow-y:auto;
+	text-align:center;
 	padding:1.5rem;
 	height:100%;
 	display:flex;
@@ -34,7 +35,7 @@
 	align-items:center;
 	justify-content:center
 }
-
+#myInfos .my-shell-content {text-align:left} /* Correction for #myInfos bloc */
 
 .my-shell-bar {
 	display:flex;

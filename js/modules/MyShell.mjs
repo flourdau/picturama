@@ -83,8 +83,15 @@ export default class MyShell {
 			}, false)
 
 			myContent.querySelector('.btn-shell-X select').addEventListener("change", () => {
+				let tmp = 'center'
 				const myShellX = myContent.querySelector(".btn-shell-X select").value
 
+				if (myShellX === 'flex-start')
+					tmp = 'left'
+				else if (myShellX === 'flex-end')
+					tmp = 'right'
+
+				myContent.querySelector('.my-shell-content').style.textAlign = tmp
 				myContent.querySelector('.my-shell-content').style.alignItems = myShellX
 			}, false)
 			
