@@ -47,7 +47,13 @@ header {min-height:100vh}
 	flex-flow:row wrap;
 	justify-content:space-evenly
 }
-
+#staticBackdrop2{
+}
+#staticBackdrop2 iframe {
+	align-self:flex-end;
+	justify-self:center;
+	padding:0 1rem
+}
 
 
 /*	SEPARATOR:
