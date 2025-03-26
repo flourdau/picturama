@@ -50,8 +50,8 @@
 
 
 #myTV {background-color:transparent}
-#myTV>.my-shell-content {
-	padding:3rem 4rem 6rem 4rem;
+#myTV>.my-shell-content iframe{
+	padding:1.75rem 3rem 4.5rem 3rem;
 	min-width:600px;
 	min-height:400px;
 	background:center / contain no-repeat url('https://flourdau.github.io/picturama/design/img/SimpsonsHDTV.webp') 

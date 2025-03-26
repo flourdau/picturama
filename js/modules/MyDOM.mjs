@@ -33,6 +33,7 @@ export default class MyDOM {
 		document.querySelector(".btn-picturama-check-infos").addEventListener('change', () => this.myToggleBloc("#myInfos"), false)
 		document.querySelector(".btn-picturama-check-cam").addEventListener('change', () => this.myToggleBloc("#myCam"), false)
 		document.querySelector(".btn-picturama-check-pub").addEventListener('change', () => this.myToggleBloc("#myPub"), false)
+		document.querySelector(".btn-picturama-check-tv").addEventListener('change', () => this.myToggleBloc("#myTV"), false)
 		document.querySelector(".btn-picturama-check-miniatures").addEventListener('change', () => this.myToggleBloc(".myMiniatures"), false)
 		document.querySelector(".myBtnReadMe").addEventListener("click", (e) => {
 			e.preventDefault()
