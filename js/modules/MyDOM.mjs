@@ -22,6 +22,7 @@ export default class MyDOM {
 			else
 				window.myHTML.setAttribute('data-bs-theme', 'light')
 		}
+		
 		darkModeMediaQuery.addEventListener('change', handleThemeChange)
 
 		handleThemeChange(darkModeMediaQuery)
