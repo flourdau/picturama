@@ -43,12 +43,14 @@
 			import MyCam from  "./js/modules/MyCam.mjs"
 			import MyReadMe from  "./js/modules/MyReadMe.mjs"
 			import MyStorage from  "./js/modules/MyStorage.mjs"
+			import MyTxt2ASCII from  "./js/modules/MyTxt2ASCII.mjs"
 
 			//	MYDOM
 			new MyDOM()
 			//  MYPICTURAMA
 			document.addEventListener("DOMContentLoaded", new MyPicturama(), false)
 			//  MYCLOCK
+			new MyClock()
 			setInterval(() => { new MyClock() }, 1000)
 			//	MYCREATESHELLS
 			new MyCreateShells()
@@ -64,6 +66,8 @@
 			new MyReadMe()
 			//	MYSTORAGE
 			new MyStorage()
+			//	MYTXT2ASCII
+			new MyTxt2ASCII()
 			//  MYDEBUG
 			// new MyDebug()
 		</script>
@@ -80,8 +84,9 @@
 					</div>
 
 					<a class="navbar-brand p-0 me-0 me-lg-2" href="/picturama/" aria-label="Picturama">
-						<i class="bi bi-heart"></i>
-						<h1 class="d-inline-block align-text-top">Picturama</h1>
+						<i class="bi bi-heart d-lg-none"></i>
+						<h1 class="d-inline-block align-text-top d-lg-none">Picturama</h1>
+						<pre id="output" class="rainbow_text_animated  d-none d-lg-flex" aria-hidden="true"></pre>
 					</a>
 
 					<div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">

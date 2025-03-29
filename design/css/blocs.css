@@ -53,12 +53,13 @@
 	padding:1.75rem 3rem 4.5rem 3rem;
 	min-width:600px;
 	min-height:400px;
-	background:center / contain no-repeat url('https://flourdau.github.io/picturama/design/img/SimpsonsHDTV.webp') 
+	background:center / contain no-repeat url('https://flourdau.github.io/picturama/design/img/SimpsonsHDTV.webp')
 }
 
 
 #myRadio {padding:1rem}
 
+#output {letter-spacing:.35rem}
 
 /*	QUERY	*/
 /*	< 700px		*/
@@ -76,6 +77,6 @@
 		padding:3rem 1.5rem 4rem 1.5rem;
 		min-width:320px;
 		min-height:280px;
-		background:center / contain no-repeat url('https://flourdau.github.io/picturama/design/img/SimpsonsHDTV.webp') 
+		background:center / contain no-repeat url('https://flourdau.github.io/picturama/design/img/SimpsonsHDTV.webp')
 	}
 }
