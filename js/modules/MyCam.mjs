@@ -31,7 +31,7 @@ export default class MyCam {
 			.catch((err) => {console.error(`Une erreur est survenue : ${err}`)})}
 		, false)
 
-  
+
 		this.video.addEventListener("canplay",
 			(ev) => {
 			if (!this.streaming) {
@@ -55,12 +55,12 @@ export default class MyCam {
 				ev.preventDefault()
 			},
 			false)
-  
+
 		this.clearphoto(this)		
 	}
 
 
-    showViewLiveResultButton() {
+	showViewLiveResultButton() {
 		if (window.self !== window.top) {
 			document.querySelector(".contentarea").remove()
 			const button = document.createElement("button")
@@ -70,7 +70,7 @@ export default class MyCam {
 			return true
 		}
 		return false
-    }
+	}
 
 
 	clearphoto() {
@@ -80,7 +80,7 @@ export default class MyCam {
 
 		const data = this.canvas.toDataURL("image/png")
 		this.photo.setAttribute("src", data)
-    }
+}
 
 
 	takepicture() {
@@ -95,5 +95,5 @@ export default class MyCam {
 			this.photo.setAttribute("src", data)
 		}
 		else {clearphoto()}
-    }
+	}
 }

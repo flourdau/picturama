@@ -59,7 +59,12 @@
 
 #myRadio {padding:1rem}
 
-#output {letter-spacing:.35rem}
+
+#output {
+	font-weight:bold;
+	letter-spacing:.35rem
+}
+
 
 /*	QUERY	*/
 /*	< 700px		*/

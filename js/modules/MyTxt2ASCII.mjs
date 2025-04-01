@@ -4,7 +4,7 @@
 export default class MyTxt2ASCII {
 	constructor() {this.loopTxt2ASCII()}
 
-	async loopTxt2ASCII(T = document.title, L = 4, H = 5, char = '@') {
+	async loopTxt2ASCII(T = document.title, L = 4, H = 5, char = '#') {
 		const alpha = " -_!.ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
 		const tmp = T.trim().split('');
 		let ROW = "";

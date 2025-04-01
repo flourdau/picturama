@@ -27,5 +27,5 @@ export default class MyStorage {
 			window.myBgColor = storageBGColor
 			window.myBody.style.backgroundColor = window.myBgColor
 		}
-    }
+	}
 }

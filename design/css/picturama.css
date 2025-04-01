@@ -67,12 +67,12 @@
 
 .items {
 	display:flex;
-    gap:var(--gap);
-    overflow-x:auto;
-    scroll-snap-type:x proximity;
-    padding:calc(var(--gap) * .5);
-    margin:calc(var(--gap) * -.5);
-    scroll-padding-inline:calc(var(--gap) * .5)
+	gap:var(--gap);
+	overflow-x:auto;
+	scroll-snap-type:x proximity;
+	padding:calc(var(--gap) * .5);
+	margin:calc(var(--gap) * -.5);
+	scroll-padding-inline:calc(var(--gap) * .5)
 }
 
 

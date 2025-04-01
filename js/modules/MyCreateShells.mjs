@@ -48,7 +48,7 @@ export default class MyCreateShells {
 
 		li.classList.add("btn-shell-Y")
 		li.classList.add("dropdown-item")
-		
+
 		label.title = 'Centrage vertical.'
 		label.classList.add("form-label")
 		label.classList.add("d-flex")
@@ -145,7 +145,7 @@ export default class MyCreateShells {
 		label.classList.add("d-flex")
 		label.classList.add("align-items-center")
 		label.setAttribute("aria-label", "Taille de la police.")
-		
+
 		svgMin.classList.add("btn")
 		svgMin.classList.add("bi")
 		svgMin.classList.add("bi-dash")
@@ -265,13 +265,13 @@ export default class MyCreateShells {
 		label.classList.add("form-label")
 		label.classList.add("d-flex")
 		label.classList.add("align-items-center")
-		
+
 		svg.classList.add("btn")
 		svg.classList.add("bi")
 		svg.classList.add("bi-paint-bucket")
 		svg.title = "Couleur du background."
 		svg.setAttribute("aria-label", "Couleur du background.")
-		
+
 		span.innerHTML = 'Couleur du background.'
 
 		input.type = "color"
@@ -414,7 +414,7 @@ export default class MyCreateShells {
 	createBtnClose() {
 		const closeBtn = document.createElement("li")
 		const img = document.createElement("i")
-		
+
 		img.classList.add("btnClose")
 		img.classList.add("btn")
 		img.classList.add("bi")

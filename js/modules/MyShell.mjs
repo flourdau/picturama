@@ -15,7 +15,6 @@ export default class MyShell {
 				const val = this.parentNode.parentNode.parentNode.parentNode.querySelector('.btn-shell-font-size input').value
 
 				this.style.fontSize = (val * 1.15) + 'rem'
-
 		})
 
 
