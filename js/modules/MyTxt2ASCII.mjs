@@ -1,22 +1,23 @@
 /**	MyTxt2ASCII
- *	@description:	transform string to ASCII art 
-*/
+ *	@description:	transform string to ASCII art
+ */
 export default class MyTxt2ASCII {
-	constructor() {this.loopTxt2ASCII()}
+	constructor() {
+		this.loopTxt2ASCII();
+	}
 
-	async loopTxt2ASCII(T = document.title, L = 4, H = 5, char = '#') {
+	async loopTxt2ASCII(T = document.title, L = 4, H = 5, char = "#") {
 		const alpha = " -_!.ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
-		const tmp = T.trim().split('');
+		const tmp = T.trim().split("");
 		let ROW = "";
 
 		try {
-			const response = await fetch('./ascii.txt');
+			const response = await fetch("./ascii.txt");
 
-			if (!response.ok)
-				throw new Error('Fichier ascii.txt non trouvé');
+			if (!response.ok) throw new Error("Fichier ascii.txt non trouvé");
 
 			const text = await response.text();
-			const lines = text.split('\n');
+			const lines = text.split("\n");
 
 			for (const buffer of lines) {
 				if (!buffer.trim()) continue;
@@ -31,8 +32,9 @@ export default class MyTxt2ASCII {
 
 			ROW = ROW.replace(/#/g, char);
 			console.log(ROW);
-			document.getElementById('output').textContent = ROW;
+			document.getElementById("output").textContent = ROW;
+		} catch (error) {
+			console.error("Erreur:", error.message);
 		}
-		catch (error) {console.error("Erreur:", error.message);}
 	}
 }
