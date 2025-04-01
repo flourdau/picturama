@@ -2,6 +2,7 @@
 ### [PICTURAMA](https://flourdau.github.io/picturama/ "Picturama")
 **Diaporama de photos local avec horloge et design shell**
 
+
 #### Le projet :
 L'idée initiale était de créer un diaporama de photos fonctionnant en local.
 En utilisant uniquement HTML, CSS et JavaScript.
