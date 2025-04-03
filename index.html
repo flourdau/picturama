@@ -73,7 +73,7 @@
 	</head>
 	<body class="bg-body">
 		<header>
-			<section class="navbar shadow-lg nav-underline navbar-expand-lg bd-navbar sticky-top bg-body-secondary">
+			<!-- <section class="navbar shadow-lg nav-underline navbar-expand-lg bd-navbar sticky-top bg-body-secondary">
 				<nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
 					<div class="bd-navbar-toggle">
 						<button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-label="Toggle docs navigation">
@@ -82,10 +82,10 @@
 						</button>
 					</div>
 
-					<a class="navbar-brand p-0 me-0 me-lg-2" href="/picturama/" aria-label="Picturama">
-						<i class="bi bi-heart d-lg-none"></i>
+					<a class="navbar-brand p-0 me-0 me-lg-2 d-flex align-items-center" href="/picturama/" aria-label="Picturama">
+						<i class="bi bi-heart"></i>
 						<h1 class="d-inline-block align-text-top d-lg-none">Picturama</h1>
-						<pre id="output" class="rainbow_text_animated  d-none d-lg-flex" aria-hidden="true"></pre>
+						<pre><code id="output" class="rainbow_text_animated d-none d-lg-flex" aria-hidden="true"></code></pre>
 					</a>
 
 					<div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
@@ -151,7 +151,60 @@
 						</div>
 					</div>
 				</nav>
-			</section>
+			</section> -->
+			<nav class="d-flex sticky-top bg-body-secondary flex-row justify-content-between" aria-label="Main navigation">
+				<a class="navbar-brand d-flex align-items-center" href="/picturama/" aria-label="Picturama">
+					<i class="bi bi-heart"></i>
+					<h1 class="d-inline-block align-text-top d-lg-none">Picturama</h1>
+					<pre><code id="output" class="rainbow_text_animated d-none d-lg-flex" aria-hidden="true"></code></pre>
+				</a>
+
+				<div class="d-flex w-100 align-items-end flex-row flex-wrap justify-content-end">
+					<ul class="d-flex flex-row">
+						<li>
+							<a class="nav-link active" aria-current="true" href="/picturama/">Home</a>
+						</li>
+						<li>
+							<div class="vr d-flex h-100 mx-2">
+						</li>
+						<li>
+							<a class="myBtnReadMe nav-link" href="/#read_me">Read Me</a>
+						</li>
+						<li>
+							<div class="vr d-flex h-100 mx-2"></div>
+							<!-- <hr class="d-lg-none text-white-50"> -->
+						</li>
+						<li>
+							<a class="nav-link" href="https://blog.positive-link.net/" target="_blank" rel="noopener">Blog</a>
+						</li>
+					</ul>
+
+					<ul class="d-flex flex-row justify-content-around">
+						<li>
+							<a class="nav-link" href="https://github.com/flourdau/picturama" target="_blank" rel="noopener">
+								<i class="btn bi bi-github"></i>
+							</a>
+						</li>
+
+						<li>
+							<i class="btn bi bi-discord" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop2" aria-controls="staticBackdrop"></i>
+							<!-- <small class="d-lg-none ms-2">Discord</small> -->
+						</li>
+
+						<li>
+							<!-- <label> -->
+								<i id="mySelectTheme" class="btn bi bi-moon"></i>
+								<!-- <small class="d-lg-none ms-2">Thème</small> -->
+							<!-- </label> -->
+						</li>
+					</ul>
+
+					<form class="d-none" role="search">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
 
 			<section id="myShells">
 				<!-- OFFCANVAS MYCONTROLS -->
@@ -346,7 +399,7 @@
 				</section>
 
 				<!-- MYCLOCK -->
-				<section id="myClock" class="my-shell my-left">
+				<section id="myClock" class="my-shell my-left bg-body-tertiary">
 					<ul class="rainbow_text_animated my-shell-content bg-opacity-75">
 						<li id='myHour'><span></span></li>
 						<li id='myDate'><span></span></li>

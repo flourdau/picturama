@@ -7,8 +7,22 @@ body {
 	display:flex;
 	flex-flow:column
 }
-
-
+nav {
+	padding:0 1rem;
+}
+nav>div ul {
+padding:1em;
+}
+nav pre {
+	padding:1em 0;
+	background-color:rgba(0, 0, 0, .05)}
+nav code {
+	font-size:.9em;
+	line-height:.9em;
+	font-family:monospace;
+	font-weight:bold;
+	overflow:hidden
+}
 nav>a i {
 	font-size:2rem;
 	height:48px;
@@ -22,7 +36,7 @@ nav>div i {
 }
 
 
-header {min-height:100vh}
+/* header {min-height:100vh} */
 
 
 /*	MYCONTROLS

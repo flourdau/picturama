@@ -36,6 +36,22 @@ export default class MyDOM {
 			this.myToggleReadMe();
 		});
 
+		// NAVBAR SCROLL
+		window.onscroll = function() {myScrool()};
+		function myScrool() {
+			const myPre = document.querySelector("nav>a>pre");
+			const myH1 = document.querySelector("nav>a>h1");
+
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				myH1.className = "d-inline-block";
+				myPre.className = "d-none";
+			}
+			else {
+				myH1.className = "d-inline-block align-text-top d-lg-none";
+				myPre.className = ""
+			}
+		}
+
 		this.anchor();
 		this.footerYear();
 	}
