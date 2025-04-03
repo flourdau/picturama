@@ -33,6 +33,7 @@
 		<!--	MY JS	-->
 		<script type="module">
 			import MyDOM from "./js/modules/MyDOM.mjs"
+			import MyPings from "./js/modules/MyPings.mjs"
 			import MyCreateShells from  "./js/modules/MyCreateShells.mjs"
 			import MyPicturama from "./js/modules/MyPicturama.mjs"
 			import MyClock from  "./js/modules/MyClock.mjs"
@@ -41,12 +42,12 @@
 			import MyDebug from  "./js/modules/MyDebug.mjs"
 			import MyInfos from  "./js/modules/MyInfos.mjs"
 			import MyCam from  "./js/modules/MyCam.mjs"
-			import MyReadMe from  "./js/modules/MyReadMe.mjs"
 			import MyStorage from  "./js/modules/MyStorage.mjs"
-			import MyTxt2ASCII from  "./js/modules/MyTxt2ASCII.mjs"
 
 			//	MYDOM
 			new MyDOM()
+			//	MYDOM
+			new MyPings()
 			//  MYPICTURAMA
 			document.addEventListener("DOMContentLoaded", new MyPicturama(), false)
 			//  MYCLOCK
@@ -62,12 +63,8 @@
 			new MyCam()
 			//	MYCHRONO
 			new MyChrono()
-			//	MYREADME
-			new MyReadMe()
 			//	MYSTORAGE
 			new MyStorage()
-			//	MYTXT2ASCII
-			new MyTxt2ASCII()
 			//  MYDEBUG
 			// new MyDebug()
 		</script>
