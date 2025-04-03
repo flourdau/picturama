@@ -8,7 +8,7 @@
 export default class MyPings {
 	myInit = {
 		method: "GET",
-		headers: { "X-Requested-With": "XMLHttpRequest" },
+		headers: { "X-Requested-With": "XMLHttpRequest" }
 	};
 
 	constructor() {
@@ -30,7 +30,7 @@ export default class MyPings {
 			const myHello = json[rand];
 
 			console.log(myHello);
-		} catch (error) {console.error("Erreur:", error.message);}
+		} catch (error) {return console.error("Erreur:", error.message);}
 	}
 
 	async myWelcome() {
@@ -44,7 +44,7 @@ export default class MyPings {
 			const myWelcome = json[rand];
 
 			console.log(myWelcome);
-		} catch (error) {console.error("Erreur:", error.message);}
+		} catch (error) {return console.error("Erreur:", error.message);}
 	}
 
 	async myCitation() {
@@ -58,7 +58,7 @@ export default class MyPings {
 			const myCitation = json[rand];
 
 			console.log(myCitation);
-		} catch (error) {console.error("Erreur:", error.message);}
+		} catch (error) {return console.error("Erreur:", error.message);}
 	}
 
 	async myCalendar() {
@@ -69,7 +69,7 @@ export default class MyPings {
 			const json = await response.json();
 
 			console.log(json);
-		} catch (error) {console.error("Erreur:", error.message);}
+		} catch (error) {return console.error("Erreur:", error.message);}
 	}
 
 	async myReadme() {
@@ -86,7 +86,7 @@ export default class MyPings {
 			const html = converter.makeHtml(text);
 
 			document.querySelector("#myReadMe>.my-shell-content").innerHTML = html;
-		} catch (error) {console.error("Erreur:", error.message);}
+		} catch (error) {return console.error("Erreur:", error.message);}
 	}
 
 	async loopTxt2ASCII(T = document.title, L = 4, H = 5, char = "#") {
@@ -114,6 +114,9 @@ export default class MyPings {
 			ROW = ROW.replace(/#/g, char);
 			console.log(ROW);
 			document.getElementById("output").textContent = ROW;
-		} catch (error) {console.error("Erreur:", error.message);}
+			const monCommentaire = document.createComment(`\n${ROW}`);
+
+			document.querySelector("html").parentNode.insertBefore(monCommentaire, document.querySelector("html"));
+		} catch (error) {return console.error("Erreur:", error.message);}
 	}
 }
