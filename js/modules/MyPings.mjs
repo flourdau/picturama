@@ -14,6 +14,62 @@ export default class MyPings {
 	constructor() {
 		this.myReadme();
 		this.loopTxt2ASCII();
+		this.myHello();
+		this.myWelcome();
+		this.myCitation();
+	}
+
+	async myHello() {
+		try {
+			const response = await fetch("./Collections/bonjour.json", this.myInit);
+
+			if (!response.ok) throw new Error("Fichier bonjour.json non trouvé");
+			const text = await response.text();
+			const json = JSON.parse(text);
+			const rand = Math.floor(Math.random() * json.length);
+			const myHello = json[rand];
+
+			console.log(myHello);
+		} catch (error) {console.error("Erreur:", error.message);}
+	}
+
+	async myWelcome() {
+		try {
+			const response = await fetch("./Collections/bienvenue.json", this.myInit);
+
+			if (!response.ok) throw new Error("Fichier bienvenue.json non trouvé");
+			const text = await response.text();
+			const json = JSON.parse(text);
+			const rand = Math.floor(Math.random() * json.length);
+			const myWelcome = json[rand];
+
+			console.log(myWelcome);
+		} catch (error) {console.error("Erreur:", error.message);}
+	}
+
+	async myCitation() {
+		try {
+			const response = await fetch("./Collections/citations.json", this.myInit);
+
+			if (!response.ok) throw new Error("Fichier citation.json non trouvé");
+			const text = await response.text();
+			const json = JSON.parse(text);
+			const rand = Math.floor(Math.random() * json.length);
+			const myCitation = json[rand];
+
+			console.log(myCitation);
+		} catch (error) {console.error("Erreur:", error.message);}
+	}
+
+	async myCalendar() {
+		try {
+			const response = await fetch("./Collections/calendar.json", this.myInit);
+
+			if (!response.ok) throw new Error("Fichier calendar.json non trouvé");
+			const json = await response.json();
+
+			console.log(json);
+		} catch (error) {console.error("Erreur:", error.message);}
 	}
 
 	async myReadme() {
@@ -39,7 +95,7 @@ export default class MyPings {
 		let ROW = "";
 
 		try {
-			const response = await fetch("./ascii.txt", this.myInit);
+			const response = await fetch("./Collections/ascii.txt", this.myInit);
 
 			if (!response.ok) throw new Error("Fichier ascii.txt non trouvé");
 			const text = await response.text();
