@@ -13,7 +13,7 @@ export default class MyShell {
 		document.querySelector("#myClock #myHour").addEventListener("click", function () {
 			const val = this.parentNode.parentNode.parentNode.parentNode.querySelector(".btn-shell-font-size input").value;
 
-			this.style.fontSize = val * 1.15 + "rem";
+			this.style.fontSize = (val * 1.5) + "em";
 		});
 
 		// MESSAGE
@@ -56,95 +56,60 @@ export default class MyShell {
 			const colorPickerBG = myContent.querySelector(".btn-shell-bg-color input");
 			const colorPicker = myContent.querySelector(".btn-shell-color input");
 
-			function myUpDateBGColor(e) {
-				myContent.style.background = e.target.value;
-			}
-
-			function myUpDateColor(e) {
-				myContent.style.color = e.target.value;
-			}
+			function myUpDateBGColor(e) {myContent.style.background = e.target.value;}
+			function myUpDateColor(e) {myContent.style.color = e.target.value;}
 
 			colorPickerBG.addEventListener("input", myUpDateBGColor, false);
 			colorPickerBG.addEventListener("change", myUpDateBGColor, false);
 			colorPicker.addEventListener("input", myUpDateColor, false);
 			colorPicker.addEventListener("change", myUpDateColor, false);
 
-			myContent.querySelector(".btn-shell-font select").addEventListener(
-				"change",
-				(e) => {
-					myContent.querySelector(".my-shell-content").style.fontFamily = e.target.value;
-				},
-				false
-			);
+			myContent.querySelector(".btn-shell-font select").addEventListener("change", (e) => {
+				myContent.querySelector(".my-shell-content").style.fontFamily = e.target.value;
+			}, false);
 
-			myContent.querySelector(".btn-shell-X select").addEventListener(
-				"change",
-				() => {
-					let tmp = "center";
-					const myShellX = myContent.querySelector(".btn-shell-X select").value;
+			myContent.querySelector(".btn-shell-X select").addEventListener("change", () => {
+				let tmp = "center";
+				const myShellX = myContent.querySelector(".btn-shell-X select").value;
 
-					if (myShellX === "flex-start") tmp = "left";
-					else if (myShellX === "flex-end") tmp = "right";
+				if (myShellX === "flex-start") tmp = "left";
+				else if (myShellX === "flex-end") tmp = "right";
 
-					myContent.querySelector(".my-shell-content").style.textAlign = tmp;
-					myContent.querySelector(".my-shell-content").style.alignItems = myShellX;
-				},
-				false
-			);
+				myContent.querySelector(".my-shell-content").style.textAlign = tmp;
+				myContent.querySelector(".my-shell-content").style.alignItems = myShellX;
+			}, false);
 
-			myContent.querySelector(".btn-shell-Y select").addEventListener(
-				"change",
-				() => {
-					const myShellY = myContent.querySelector(".btn-shell-Y select").value;
+			myContent.querySelector(".btn-shell-Y select").addEventListener("change", () => {
+				const myShellY = myContent.querySelector(".btn-shell-Y select").value;
 
-					myContent.querySelector(".my-shell-content").style.justifyContent = myShellY;
-				},
-				false
-			);
+				myContent.querySelector(".my-shell-content").style.justifyContent = myShellY;
+			}, false);
 
-			myContent.querySelector(".btn-shell-font-size input").addEventListener(
-				"change",
-				(e) => {
-					if (myContent.id === "myClock") {
-						myContent.querySelector("#myClock .my-shell-content #myHour").style.fontSize = e.target.value * 1.05 + "rem";
-						myContent.querySelector("#myClock .my-shell-content #myDate").style.fontSize = e.target.value + "rem";
-					}
-					else myContent.querySelector(".my-shell-content").style.fontSize = e.target.value + "rem";
-				},
-				false
-			);
+			myContent.querySelector(".btn-shell-font-size input").addEventListener("change", (e) => {
+				if (myContent.id === "myClock") {
+					myContent.querySelector("#myClock .my-shell-content #myHour").style.fontSize = e.target.value * 1.05 + "rem";
+					myContent.querySelector("#myClock .my-shell-content #myDate").style.fontSize = e.target.value + "rem";
+				}
+				else myContent.querySelector(".my-shell-content").style.fontSize = e.target.value + "rem";
+			}, false);
 
-			myContent.querySelector(".btn-shell-color button").addEventListener(
-				"click",
-				() => {
-					myContent.querySelector(".my-shell-content").classList.toggle("rainbow_text_animated");
-				},
-				false
-			);
+			myContent.querySelector(".btn-shell-color button").addEventListener("click", () => {
+				myContent.querySelector(".my-shell-content").classList.toggle("rainbow_text_animated");
+			}, false);
 
-			myContent.querySelector(".btn-shell-opacity input").addEventListener(
-				"change",
-				(e) => {
-					myContent.style.opacity = e.target.value / 10;
-				},
-				false
-			);
+			myContent.querySelector(".btn-shell-opacity input").addEventListener("change", (e) => {
+				myContent.style.opacity = e.target.value / 10;
+			}, false);
 
-			myContent.querySelector(".btn-shell-delete-bg-color").addEventListener(
-				"click",
-				() => {
-					myContent.style.background = "transparent";
-				},
-				false
-			);
+			myContent.querySelector(".btn-shell-delete-bg-color").addEventListener("click", () => {
+				myContent.style.background = "transparent";
+			}, false);
 
 			colorPickerBG.select();
 			colorPicker.select();
 		}
 		for (let i = 0; i < buttonMagic.length; i++) {
-			buttonMagic[i].addEventListener("click", function () {
-				myMagicButton(this);
-			});
+			buttonMagic[i].addEventListener("click", function () { myMagicButton(this); });
 		}
 
 		// NAMEBUTTON DRAGGABLE

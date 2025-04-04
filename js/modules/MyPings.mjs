@@ -3,7 +3,7 @@
  *     @description:	fetch datas
  *     @version:		1.0.0
  *     @date:			2025-04-03
- *     @update:			2025-04-03
+ *     @update:			2025-04-04
  */
 export default class MyPings {
 	myInit = {

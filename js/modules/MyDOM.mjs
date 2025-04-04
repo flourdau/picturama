@@ -12,14 +12,12 @@ export default class MyDOM {
 		else console.log("Le thème n'est pas spécifié ou le système ne supporte pas cette fonctionnalité.");
 
 		const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
 		const handleThemeChange = (event) => {
 			if (event.matches) window.myHTML.setAttribute("data-bs-theme", "dark");
 			else window.myHTML.setAttribute("data-bs-theme", "light");
 		};
 
 		darkModeMediaQuery.addEventListener("change", handleThemeChange);
-
 		handleThemeChange(darkModeMediaQuery);
 
 		document.getElementById("mySelectTheme").addEventListener("click", this.mySwitchTheme, false);
@@ -37,8 +35,7 @@ export default class MyDOM {
 		});
 
 		// NAVBAR SCROLL
-		window.onscroll = function() {myScrool()};
-		function myScrool() {
+		window.onscroll = function() {
 			const myPre = document.querySelector("nav>a>pre");
 			const myH1 = document.querySelector("nav>a>h1");
 
@@ -85,11 +82,10 @@ export default class MyDOM {
 	}
 
 	anchor() {
-		const ancre = window.location.hash.replace("#", "");
+		const ancre = window.location.hash;
 
-		if (ancre === "read_me") {
+		if (ancre === "#read_me")
 			this.myToggleReadMe();
-		}
 	}
 
 	myToggleBloc(myClass) {

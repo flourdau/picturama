@@ -17,55 +17,39 @@ export default class MyCam {
 		this.photo = document.getElementById("photo");
 		this.startbutton = document.getElementById("startbutton");
 
-		document.querySelector("#SwitchCamera").addEventListener(
-			"change",
-			() => {
-				navigator.mediaDevices
-					.getUserMedia({ video: true, audio: false })
-					.then((stream) => {
-						video.srcObject = stream;
+		document.querySelector("#SwitchCamera").addEventListener("change", () => {
+			navigator.mediaDevices
+				.getUserMedia({ video: true, audio: false })
+				.then((stream) => {
+					video.srcObject = stream;
+					if (document.querySelector("#SwitchCamera").checked) video.play();
+					else video.stop;
+				})
+				.catch((err) => {console.error(`Une erreur est survenue : ${err}`);});
+		}, false);
 
-						if (document.querySelector("#SwitchCamera").checked) video.play();
-						else video.stop;
-					})
-					.catch((err) => {
-						console.error(`Une erreur est survenue : ${err}`);
-					});
-			},
-			false
-		);
+		this.video.addEventListener("canplay", (ev) => {
+			if (!this.streaming) {
+				this.height = this.video.videoHeight / (this.video.videoWidth / this.width);
 
-		this.video.addEventListener(
-			"canplay",
-			(ev) => {
-				if (!this.streaming) {
-					this.height = this.video.videoHeight / (this.video.videoWidth / this.width);
+				// Firefox a un bug où la hauteur ne peut pas être lue
+				// à partir de la vidéo. On prend des précautions.
 
-					// Firefox a un bug où la hauteur ne peut pas être lue
-					// à partir de la vidéo. On prend des précautions.
-
-					if (isNaN(this.height)) {
-						this.height = this.width / (4 / 3);
-					}
-
-					this.video.setAttribute("width", this.width);
-					this.video.setAttribute("height", this.height);
-					this.canvas.setAttribute("width", this.width);
-					this.canvas.setAttribute("height", this.height);
-					this.streaming = true;
+				if (isNaN(this.height)) {
+					this.height = this.width / (4 / 3);
 				}
-			},
-			false
-		);
 
-		this.startbutton.addEventListener(
-			"click",
-			(ev) => {
-				this.takepicture(this);
-				ev.preventDefault();
-			},
-			false
-		);
+				this.video.setAttribute("width", this.width);
+				this.video.setAttribute("height", this.height);
+				this.canvas.setAttribute("width", this.width);
+				this.canvas.setAttribute("height", this.height);
+				this.streaming = true;
+		}}, false);
+
+		this.startbutton.addEventListener("click", (ev) => {
+			this.takepicture(this);
+			ev.preventDefault();
+		}, false);
 
 		this.clearphoto(this);
 	}
@@ -97,12 +81,13 @@ export default class MyCam {
 		if (this.width && this.height) {
 			this.canvas.width = this.width;
 			this.canvas.height = this.height;
-			context.drawImage(this.video, 0, 0, this.width, this.height);
 
+			context.drawImage(this.video, 0, 0, this.width, this.height);
 			const data = this.canvas.toDataURL("image/png");
+
 			this.photo.setAttribute("src", data);
-		} else {
-			clearphoto();
 		}
+		else
+			clearphoto();
 	}
 }

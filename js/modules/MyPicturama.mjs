@@ -189,7 +189,8 @@ export default class MyPicturama {
 					window.myPositionY = 0;
 				}
 				window.myPositionX++;
-			} else {
+			}
+			else {
 				window.myPositionY = Math.floor(Math.random() * window.myList.length);
 				window.myPositionX = Math.floor(Math.random() * window.myList[window.myPositionY].length);
 			}
@@ -242,11 +243,11 @@ export default class MyPicturama {
 			Separation[i].classList.toggle("d-none");
 		}
 
-		document.querySelector("#myChrono .my-shell-content>button").classList.toggle("d-none");
-		document.querySelector("#staticBackdrop").classList.toggle("d-none");
+		document.querySelector("nav").classList.toggle("d-none");
 		document.querySelector("main").classList.toggle("d-none");
 		document.querySelector("footer").classList.toggle("d-none");
-		document.querySelector(".navbar").classList.toggle("d-none");
+		document.querySelector("#myChrono .my-shell-content>button").classList.toggle("d-none");
+		document.querySelector("#staticBackdrop").classList.toggle("d-none");
 		document.querySelector("#myPub>div>ul>li:nth-child(2)").classList.toggle("d-none");
 		document.querySelector("#myPub>div>ul>li:nth-child(3)").classList.toggle("d-none");
 		document.querySelector("#myPub>div>ul>li:nth-child(4)").classList.toggle("d-none");
