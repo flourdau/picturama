@@ -1,6 +1,6 @@
 
 ### [PICTURAMA](https://flourdau.github.io/picturama/ "Picturama")
-**Diaporama de photos local avec horloge et design shell**
+*Diaporama de photos local avec horloge et divers blocs avec un design shell...**
 
 #### Le projet :
 L'idée initiale était de créer un diaporama de photos fonctionnant en local.

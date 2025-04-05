@@ -36,15 +36,18 @@ export default class MyDOM {
 
 		// NAVBAR SCROLL
 		window.onscroll = function() {
-			const myPre = document.querySelector("nav>a>pre");
-			const myH1 = document.querySelector("nav>a>h1");
+			const myPre = document.querySelector("header>nav>a pre");
+			const myH1 = document.querySelector("header>nav>a h1");
+			const myH2 = document.querySelector("header>nav>a h2");
 
 			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-				myH1.className = "d-inline-block";
+				myH1.className = "";
+				myH2.className = "d-none";
 				myPre.className = "d-none";
 			}
 			else {
-				myH1.className = "d-inline-block align-text-top d-lg-none";
+				myH1.className = "d-lg-none";
+				myH2.className = "d-none d-lg-flex";
 				myPre.className = ""
 			}
 		}

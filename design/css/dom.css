@@ -9,37 +9,74 @@ body {
 }
 
 
-nav {
-	position: fixed;
+/* NAV */
+header>nav {
+	position:fixed;
 	top:0;
 	width:100%;
 	z-index:100;
-	padding:0 1rem
+	padding:0 1rem;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
+	align-items:flex-end;
 }
-nav>div ul {padding:1em}
-nav pre {
+header>nav>a {
+	display:flex;
+	flex-flow:column nowrap;
+	align-items:center;
+	padding-top:var(--bs-navbar-brand-padding-y);
+	padding-bottom:var(--bs-navbar-brand-padding-y);
+	margin-right:var(--bs-navbar-brand-margin-end);
+	font-size:var(--bs-navbar-brand-font-size);
+	color:var(--bs-navbar-brand-color);
+	text-decoration:none;
+	white-space:nowrap
+}
+header>nav>a>div {
+	display:flex;
+	align-items:center
+}
+
+header>nav>a>h1 {text-align:start}
+header>nav>a>h2 {
+	font-size:1.05em;
+	font-style:italic;
+	color:var(--my-color1);
+	padding:0 0 1em 0
+}
+header>nav>a>div i {
+	font-size:2.5rem;
+	padding-right:.2em;
+	text-align:center;
+	font-weight:bold;
+	color:var(--my-color1)
+}
+header>nav>a pre {
 	padding:1em 0;
 	background-color:rgba(0, 0, 0, .05)
 }
-nav code {
+header>nav>a code {
 	font-size:.9em;
 	line-height:.9em;
 	font-family:monospace;
 	font-weight:bold;
 	overflow:hidden
 }
-nav>a i {
-	font-size:2rem;
-	height:48px;
-	width:48px;
-	color:var(--my-color1)
-}
-nav>div i {
-	font-size:1.5rem;
-	height:32px;
-	width:32px
-}
 
+header>nav>div {
+	display:flex;
+	flex-flow:row wrap;
+	align-items:center;
+	justify-content:flex-end
+}
+header>nav>div ul,
+header>nav>div form {display:flex}
+header>nav>div ul:nth-child(2) {padding:0 0 0 2em}
+header>nav>div ul:nth-child(2) i {font-size:1.25em}
+header>nav>div ul:nth-child(2) i:hover,
+ header>nav>div li:hover {color:var(--my-color1)}
+		
 
 /* header {min-height:100vh} */
 
@@ -59,7 +96,7 @@ nav>div i {
 	display:flex;
 	flex-flow:column nowrap
 }
-.my-nav-links {margin:1rem}
+/* .my-nav-links {margin:1rem} */
 .btn-checks {
 	display:flex;
 	gap:1.5rem;
@@ -148,17 +185,7 @@ footer svg:hover {color:var(--my-color3)}
 /*	QUERY	*/
 /*	< 700px		*/
 @media screen and (max-width:700px) {
-	nav>div ul {padding:0}
-	nav>a i {
-		font-size:1rem;
-		height:32px;
-		width:32px
-	}
-	nav>div i {
-		font-size:2rem;
-		height:48px;
-		width:48px
-	}
+	header>nav>div {width: 100%}
 	
 	
 	main {flex-flow:column}
