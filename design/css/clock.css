@@ -2,12 +2,16 @@
  *
  */
 
-
-#myClock {
+#myHour {
+	border:none;
+	border-bottom:solid 3px;
+}
+ #myClock {
 	display:flex;
 	flex-flow:column
 }
 #myClock .my-shell-content {font-size:2rem}
+#myChrono .my-shell-content,
 #myClock .my-shell-content #myHour {font-size:8rem}
 #myClock .my-shell-content #myDate {font-size:4rem}
 

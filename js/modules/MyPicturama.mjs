@@ -1,7 +1,7 @@
 /**	MYPICTURAMA
  *	@description:
  */
-export default class MyPicturama {
+export default class MyPicturama {	
 	constructor() {
 		/* Select elements */
 		window.myBody = document.querySelector("body");
@@ -102,9 +102,9 @@ export default class MyPicturama {
 		document.querySelector(".myMiniatures").classList.add("show");
 		document.querySelector("#myPicturama>div>ul:nth-child(1)").classList.remove("d-none");
 		document.querySelector("#myPicturama>div>div:nth-child(2)").classList.remove("d-none");
-		document.querySelector(".my-nav-control>div:nth-child(1) ul>li:nth-child(2)").classList.remove("d-none");
-		document.querySelector(".my-nav-control>div:nth-child(1) ul>li:nth-child(3)").classList.remove("d-none");
-		document.querySelector(".my-nav-control>div:nth-child(1) ul>li:nth-child(4)").classList.remove("d-none");
+		document.querySelector(".my-nav-control>div:nth-child(2) ul>li:nth-child(2)").classList.remove("d-none");
+		document.querySelector(".my-nav-control>div:nth-child(2) ul>li:nth-child(3)").classList.remove("d-none");
+		document.querySelector(".my-nav-control>div:nth-child(2) ul>li:nth-child(4)").classList.remove("d-none");
 		document.querySelector(".my-nav-control>div:nth-child(3)").classList.remove("d-none");
 		document.querySelector(".myBarControl>ul>li:nth-child(2)").classList.remove("d-none");
 		document.querySelector(".myBarControl>ul>li:last-child").classList.remove("d-none");

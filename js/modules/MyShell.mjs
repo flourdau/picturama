@@ -13,7 +13,7 @@ export default class MyShell {
 		document.querySelector("#myClock #myHour").addEventListener("click", function () {
 			const val = this.parentNode.parentNode.parentNode.parentNode.querySelector(".btn-shell-font-size input").value;
 
-			this.style.fontSize = (val * 1.5) + "em";
+			this.style.fontSize = (val * 1.25) + "em";
 		});
 
 		// MESSAGE
@@ -56,7 +56,9 @@ export default class MyShell {
 			const colorPickerBG = myContent.querySelector(".btn-shell-bg-color input");
 			const colorPicker = myContent.querySelector(".btn-shell-color input");
 
-			function myUpDateBGColor(e) {myContent.style.background = e.target.value;}
+			function myUpDateBGColor(e) {
+				myContent.classList.remove('bg-body-tertiary')
+				myContent.style.background = e.target.value;}
 			function myUpDateColor(e) {myContent.style.color = e.target.value;}
 
 			colorPickerBG.addEventListener("input", myUpDateBGColor, false);
@@ -102,7 +104,7 @@ export default class MyShell {
 			}, false);
 
 			myContent.querySelector(".btn-shell-delete-bg-color").addEventListener("click", () => {
-				myContent.style.background = "transparent";
+				myContent.classList.add("bg-body-tertiary");
 			}, false);
 
 			colorPickerBG.select();

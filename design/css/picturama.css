@@ -26,7 +26,7 @@
 }
 .myBarControl i {
 	vertical-align: middle;
-	padding:.15rem;
+	padding:.25em .15em;
 	font-size:1.5rem
 }
 .myBarControl>ul>li:nth-child(1) i {

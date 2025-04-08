@@ -42,7 +42,8 @@ header>nav>a>h1 {text-align:start}
 header>nav>a>h2 {
 	font-size:1.05em;
 	font-style:italic;
-	color:var(--my-color1);
+	color:var(--my-color2);
+	margin:0 0 0 4.5em;
 	padding:0 0 1em 0
 }
 header>nav>a>div i {
@@ -76,14 +77,19 @@ header>nav>div ul:nth-child(2) {padding:0 0 0 2em}
 header>nav>div ul:nth-child(2) i {font-size:1.25em}
 header>nav>div ul:nth-child(2) i:hover,
  header>nav>div li:hover {color:var(--my-color1)}
-		
 
-/* header {min-height:100vh} */
+
+/* header {min-height:100vh}
 
 
 /*	MYCONTROLS
  *
  */
+.accordion-items{
+	padding:1em;
+	width:100% !important
+}
+#flush-collapseOne, #flush-collapseThree {text-align:left}
 #staticBackdrop {
 	overflow:visible;
 	padding:1rem
@@ -96,18 +102,20 @@ header>nav>div ul:nth-child(2) i:hover,
 	display:flex;
 	flex-flow:column nowrap
 }
-/* .my-nav-links {margin:1rem} */
-.btn-checks {
-	display:flex;
-	gap:1.5rem;
-	flex-flow:row wrap;
-	justify-content:space-evenly
-}
 #staticBackdrop2 iframe {
 	align-self:flex-end;
 	justify-self:center;
 	padding:0 1rem
 }
+.btn-checks {
+	max-width:320px;
+	padding:1em;
+	display:flex;
+	gap:.5em;
+	flex-flow:row wrap;
+	justify-content:space-evenly
+}
+.btn-group {align-items:center}
 
 
 /*	SEPARATOR:
@@ -186,8 +194,9 @@ footer svg:hover {color:var(--my-color3)}
 /*	< 700px		*/
 @media screen and (max-width:700px) {
 	header>nav>div {width: 100%}
-	
-	
+	header>nav>div ul:first {padding:.5em 0 0 0}
+
+
 	main {flex-flow:column}
 
 

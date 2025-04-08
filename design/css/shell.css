@@ -38,7 +38,8 @@
 #myReadMe .my-shell-content,
 #myInfos .my-shell-content {
 	align-items:flex-start;
-	text-align:left} /* Correction for #myInfos bloc */
+	text-align:left
+} /* Correction for #myInfos bloc */
 
 .my-shell-bar {
 	display:flex;

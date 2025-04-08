@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Picturama</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Picturama Demo">
+		<meta name="description" content="Diaporama de photos local + divers blocs avec un design shell.">
 		<meta name="author" content="LOURDAUX Florian">
 
 		<!--	RESET CSS	-->
@@ -80,7 +80,7 @@
 						<h1 class="d-lg-none">Picturama</h1>
 						<pre><code id="output" class="rainbow_text_animated d-none d-lg-flex" aria-hidden="true"></code></pre>
 					</div>
-					<h2 class="d-none d-lg-flex">Diaporama de photos local avec horloge et divers blocs avec un design shell...</h2>
+					<h2 class="d-none d-lg-flex">Diaporama de photos local + divers blocs avec un design shell.</h2>
 				</a>
 
 				<div>
@@ -114,13 +114,64 @@
 			</nav>
 
 			<section id="myShells">
+
 				<!-- OFFCANVAS MYCONTROLS -->
 				<section id="staticBackdrop" class="shadow-lg offcanvas-xxl offcanvas-start" data-bs-scroll="false" tabindex="-1" aria-labelledby="staticBackdropLabel">
 					<div class="offcanvas-header">
 						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#staticBackdrop" aria-label="Close"></button>
 					</div>
 					<!-- MYCONTROL -->
-					<aside id="accordionFlushExample" class="my-nav-control shadow-lg my-shell-content accordion accordion-flush bg-body-secondary">
+					<aside id="accordionFlushExample" class="my-nav-control shadow-lg accordion accordion-flush bg-body-secondary">
+						<!-- BLOCS -->
+						<ul class="btn-checks">
+							<!-- BTN-CLOCK -->
+							<li class="btn btn-lg btn-secondary" type="button">
+								<input id="btn-check1" class="btn-picturama-check-clock btn-check" type="checkbox" autocomplete="off" checked>
+								<label for="btn-check1"><i class="bi bi-clock"></i>	</label>
+							</li>
+							<!-- BTN-CHRONO -->
+							<li class="btn btn-lg btn-secondary" type="button">
+								<input id="btn-check6" class="btn-picturama-check-chrono btn-check" type="checkbox" autocomplete="off">
+								<label for="btn-check6"><i class="bi bi-stopwatch"></i></label>
+							</li>
+							<!-- BTN-MESSAGE -->
+							<li  class="btn btn-lg btn-secondary" type="button">
+								<input id="btn-check2" class="btn-picturama-check-message btn-check" type="checkbox" autocomplete="off">
+								<label for="btn-check2"><i class="bi bi-chat"></i></label>
+							</li>
+							<!-- BTN-INFOS -->
+							<li  class="btn btn-lg btn-secondary" type="button">
+								<input id="btn-check3" class="btn-picturama-check-infos btn-check" type="checkbox" autocomplete="off">
+								<label for="btn-check3"></label><i class="bi bi-info-circle"></i></label>
+							</li>
+							<!-- <li class="mx-2"></li> -->
+							<!-- BTN-CAM -->
+							<li  class="btn btn-lg btn-secondary" type="button">
+								<input id="btn-check5" class="btn-picturama-check-cam btn-check" type="checkbox" autocomplete="off">
+								<label for="btn-check5"><i class="bi bi-camera"></i></label>
+							</li>
+							<!-- BTN-MYPUB -->
+							<li  class="btn btn-lg btn-secondary" type="button">
+								<input id="btn-check4" class="btn-picturama-check-pub btn-check" type="checkbox" autocomplete="off">
+								<label for="btn-check4"><i class="bi bi-qr-code"></i></label>
+							</li>
+							<!-- BTN-TV -->
+							<li  class="btn btn-lg btn-secondary" type="button">
+								<input id="btn-check8" class="btn-picturama-check-tv btn-check" type="checkbox" autocomplete="off">
+								<label for="btn-check8"><i class="bi bi-youtube"></i></label>
+							</li>
+							<!-- BTN-ROBOT -->
+							<li  class="btn btn-lg btn-secondary" type="button">
+								<input id="btn-check9" class="btn-picturama-check-tv btn-check" type="checkbox" autocomplete="off">
+								<label for="btn-check9"><i class="bi bi-robot"></i></label>
+							</li>
+							<!-- <li class="mx-2"></li> -->
+							<!-- BTN-MINIATURES -->
+							<li class="d-none btn btn-lg btn-secondary" type="button">
+								<input id="btn-check7" class="btn-picturama-check-miniatures btn-check" type="checkbox" autocomplete="off">
+								<label for="btn-check7"><i class="bi bi-images"></i></label>
+							</li>									
+						</ul>
 						<!-- BACKGROUND -->
 						<div class="accordion-item">
 							<h3 class="accordion-header" id="flush-headingOne">
@@ -182,56 +233,6 @@
 								</ul>
 							</div>
 						</div>
-						<!-- BLOCS -->
-						<div class="accordion-item">
-							<h3 class="accordion-header" id="flush-headingTwo">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Blocs</button>
-							</h3>
-							<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-								<ul class="accordion-body btn-checks">
-									<!-- BTN-CLOCK -->
-									<li>
-										<input id="btn-check1" class="btn-picturama-check-clock btn-check" type="checkbox" autocomplete="off" checked>
-										<label for="btn-check1" class="btn btn-secondary" type="button"><i class="bi bi-clock"></i></label>
-									</li>
-									<!-- BTN-CHRONO -->
-									<li>
-										<input id="btn-check6" class="btn-picturama-check-chrono btn-check" type="checkbox" autocomplete="off">
-										<label for="btn-check6" class="btn btn-secondary" type="button"><i class="bi bi-stopwatch"></i></label>
-									</li>
-									<!-- BTN-MESSAGE -->
-									<li>
-										<input id="btn-check2" class="btn-picturama-check-message btn-check" type="checkbox" autocomplete="off">
-										<label for="btn-check2" class="btn btn-secondary" type="button"><i class="bi bi-chat"></i></label>
-									</li>
-									<!-- BTN-INFOS -->
-									<li>
-										<input id="btn-check3" class="btn-picturama-check-infos btn-check" type="checkbox" autocomplete="off">
-										<label for="btn-check3" class="btn btn-secondary" type="button"><i class="bi bi-info-circle"></i></label>
-									</li>
-									<!-- BTN-CAM -->
-									<li>
-										<input id="btn-check5" class="btn-picturama-check-cam btn-check" type="checkbox" autocomplete="off">
-										<label for="btn-check5" class="btn btn-secondary d-flex justify-content-left align-items-center" type="button"><i class="bi bi-camera"></i></label>
-									</li>
-									<!-- BTN-MYPUB -->
-									<li>
-										<input id="btn-check4" class="btn-picturama-check-pub btn-check" type="checkbox" autocomplete="off">
-										<label for="btn-check4" class="btn btn-secondary d-flex justify-content-left align-items-center" type="button"><i class="bi bi-qr-code"></i></label>
-									</li>
-									<!-- BTN-TV -->
-									<li>
-										<input id="btn-check8" class="btn-picturama-check-tv btn-check" type="checkbox" autocomplete="off">
-										<label for="btn-check8" class="btn btn-secondary" type="button"><i class="bi bi-tv"></i></label>
-									</li>
-									<!-- BTN-MINIATURES -->
-									<li class="d-none">
-										<input id="btn-check7" class="btn-picturama-check-miniatures btn-check" type="checkbox" autocomplete="off">
-										<label for="btn-check7" class="btn d-none btn-secondary" type="button"><i class="bi bi-images"></i></label>
-									</li>									
-								</ul>
-							</div>
-						</div>
 						<!-- DIAPORAMA -->
 						<div class="accordion-item d-none">
 							<h3 class="accordion-header" id="flush-headingThree">
@@ -261,7 +262,7 @@
 									<li class="btn-picturama-shuffle">
 										<label class="btn-group" type="button">
 											<i class="btn bi bi-shuffle"></i>
-											<span>Shuffle</span>
+											<p>Shuffle</p>
 										</label>
 									</li>
 									<!-- RESET -->
@@ -290,25 +291,24 @@
 				</section>
 
 				<!-- MYCLOCK -->
-				<section id="myClock" class="my-shell my-left bg-body-tertiary">
-					<ul class="rainbow_text_animated my-shell-content bg-opacity-75">
+				<section id="myClock" class="my-shell my-left bg-body-tertiary bg-opacity-75">
+					<ul class="rainbow_text_animated my-shell-content">
 						<li id='myHour'><span></span></li>
 						<li id='myDate'><span></span></li>
 					</ul>
 				</section>
 
 				<!-- MYPUB -->
-				<section id="myPub" class="my-shell my-left d-none">
-					<div class="my-shell-content bg-body-tertiary bg-opacity-50">
+				<section id="myPub" class="my-shell my-left bg-body-tertiary bg-opacity-50 d-none">
+					<div class="my-shell-content">
 						<ul>
 							<li><img alt="QR Code vers ce site." class="bg-light" src="https://flourdau.github.io/picturama/design/img/qrcode.webp"></li>
-							<li><h3>Développeur:</h3></li>
-							<li class="nav-item py-1 col-12 col-lg-auto">
+							<li>
 								<div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
 								<hr class="d-lg-none text-white-50">
 							</li>
-							<li><h4><a href="https://flourdau.github.io/">LOURDAUX Florian</a></h4></li>
-							<li><h6><i class="btn bi bi-envelope-heart"></i><a href="mailto:lourdaux.florian.pro@gmail.com" target="_blank">lourdaux.florian.pro@gmail.com</a></h6></li>
+							<li><h3><a href="https://flourdau.github.io/">LOURDAUX Florian</a></h3></li>
+							<li><h4><i class="btn bi bi-envelope-heart"></i><a href="mailto:lourdaux.florian.pro@gmail.com" target="_blank">lourdaux.florian.pro@gmail.com</a></h4></li>
 							<li>
 								<ul class="my-social-network">
 									<li><a href="" target="_blank"><i class="bi bi-github"></i></a></li>
@@ -320,8 +320,8 @@
 				</section>
 
 				<!-- MYCHRONO -->
-				<section id="myChrono" class="my-shell my-left d-none">
-					<div class="my-shell-content bg-body-tertiary bg-opacity-50">
+				<section id="myChrono" class="my-shell my-left bg-body-tertiary bg-opacity-50 d-none">
+					<div class="my-shell-content">
 						<div class="rainbow_text_animated">00:00:00</div>
 						<button type="button" class="myChronoPlay btn btn-secondary">Play</button>
 						<i type="button" class="myChronoReset btn bi bi-arrow-counterclockwise"></i>
@@ -329,16 +329,16 @@
 				</section>
 
 				<!-- MYMESSAGE -->
-				<section id="myMessage" class="my-shell my-left d-none">
-					<div class="my-shell-content bg-body-tertiary bg-opacity-50" style="text-align: center; justify-content: center;">
+				<section id="myMessage" class="my-shell my-left bg-body-tertiary bg-opacity-50 d-none">
+					<div class="my-shell-content" style="text-align: center; justify-content: center;">
 						<span>Hello W🌍rld!</span>
 						<button class="btn myBtnASCII">ASCII</button>
 					</div>
 				</section>
 
 				<!-- MYINFOS -->
-				<section id="myInfos" class="my-shell my-left d-none">
-					<div class="my-shell-content bg-body-tertiary bg-opacity-50">
+				<section id="myInfos" class="my-shell my-left bg-body-tertiary bg-opacity-50 d-none">
+					<div class="my-shell-content">
 						<ul>
 							<div class="form-check form-switch">
 								<input class="form-check-input" type="checkbox" role="switch" id="SwitchLocalisation">
@@ -351,8 +351,8 @@
 				</section>
 
 				<!-- MYCAM -->
-				<section id="myCam" class="my-shell my-left d-none">
-					<div class="my-shell-content bg-body-tertiary bg-opacity-50">
+				<section id="myCam" class="my-shell my-left bg-body-tertiary bg-opacity-50 d-none">
+					<div class="my-shell-content">
 						<div class="form-check form-switch">
 							<input class="form-check-input" type="checkbox" role="switch" id="SwitchCamera">
 							<label class="form-check-label" for="SwitchCamera">Caméra: </label>
@@ -369,14 +369,14 @@
 				</section>
 
 				<!-- MYREADME -->
-				<section id="myReadMe" class="my-shell my-left d-none">
-					<div class="my-shell-content bg-body-tertiary bg-opacity-50">
+				<section id="myReadMe" class="my-shell my-left bg-body-tertiary bg-opacity-50 d-none">
+					<div class="my-shell-content">
 					</div>
 				</section>	
 
 				<!-- MYQRCODE -->
-				<section id="myQRCode" class="my-shell my-left d-none bg-opacity-75">
-					<div class="my-shell-content bg-body-tertiary bg-opacity-50">
+				<section id="myQRCode" class="my-shell my-left bg-body-tertiary bg-opacity-75 d-none">
+					<div class="my-shell-content">
 					</div>
 				</section>
 
@@ -427,12 +427,10 @@
 			</section>
 		</header>
 
-		<section class="separation">
-			<hr><p>💗💗💗</p><hr>
-		</section>
+		<section class="separation"><hr><p>💗💗💗</p><hr></section>
 
 		<main id="myMain" class="bg-body-secondary">
-			<section class="column-left">
+			<!-- <section class="column-left">
 				<canvas id="canvas"></canvas>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim facere doloremque aliquam qui consequatur in quo ullam autem provident minima, amet optio nihil accusantium saepe fuga, praesentium non blanditiis velit?
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim facere doloremque aliquam qui consequatur in quo ullam autem provident minima, amet optio nihil accusantium saepe fuga, praesentium non blanditiis velit?
@@ -494,14 +492,10 @@
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim facere doloremque aliquam qui consequatur in quo ullam autem provident minima, amet optio nihil accusantium saepe fuga, praesentium non blanditiis velit?
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim facere doloremque aliquam qui consequatur in quo ullam autem provident minima, amet optio nihil accusantium saepe fuga, praesentium non blanditiis velit?
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim facere doloremque aliquam qui consequatur in quo ullam autem provident minima, amet optio nihil accusantium saepe fuga, praesentium non blanditiis velit?
-			</section>
+			</section> -->
 		</main> 
 
-        <section class="separation">
-			<hr>
-				<p>💗💗💗</p>
-			<hr>
-		</section>
+        <section class="separation"><hr><p>💗💗💗</p><hr></section>
 
 		<footer class="bg-body-secondary">
             <address>
