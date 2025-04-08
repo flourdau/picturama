@@ -244,7 +244,7 @@ export default class MyPicturama {
 		}
 
 		document.querySelector("nav").classList.toggle("d-none");
-		document.querySelector("main").classList.toggle("d-none");
+		// document.querySelector("main").classList.toggle("d-none");
 		document.querySelector("footer").classList.toggle("d-none");
 		document.querySelector("#myChrono .my-shell-content>button").classList.toggle("d-none");
 		document.querySelector("#staticBackdrop").classList.toggle("d-none");
@@ -252,7 +252,6 @@ export default class MyPicturama {
 		document.querySelector("#myPub>div>ul>li:nth-child(3)").classList.toggle("d-none");
 		document.querySelector("#myPub>div>ul>li:nth-child(4)").classList.toggle("d-none");
 		document.querySelector("#myPub>div>ul>li:nth-child(5)").classList.toggle("d-none");
-		document.querySelector("#myPub>div>ul>li:nth-child(6)").classList.toggle("d-none");
 		document.querySelector(".myBarControl").classList.toggle("bg-body-secondary");
 		document.querySelector(".myBarControl>ul>li:nth-child(1) i").classList.toggle("d-none");
 		document.querySelector(".myBarControl>ul>li:nth-child(2)>ul").classList.toggle("d-none");

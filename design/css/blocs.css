@@ -3,7 +3,7 @@
  */
 
 #myShells {
-	min-height:90vh;
+	min-height:100vh;
 	display:flex;
 	flex-flow:row wrap;
 	padding:131px 4rem;
@@ -49,6 +49,7 @@
 
 #myReadMe .my-shell-content>p:last-child {text-align:right}
 #myReadMe img {
+	background-color:white;
 	position:absolute;
 	bottom:0;
 	right:0;
