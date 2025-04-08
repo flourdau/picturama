@@ -19,6 +19,7 @@
 /*	< 700px	*/
 @media screen and (max-width:700px) {
 	#myClock .my-shell-content {font-size:1.5rem}
+	#myChrono .my-shell-content,
 	#myClock .my-shell-content #myHour {font-size:3rem}
 	#myClock .my-shell-content #myDate {font-size:1.5rem}
 }

@@ -3,10 +3,10 @@
  */
 
 #myShells {
-	min-height:100vh;
+	min-height:90vh;
 	display:flex;
 	flex-flow:row wrap;
-	padding:2rem 4rem;
+	padding:131px 4rem;
 	column-gap:5rem;
 	row-gap:5rem;
 	justify-content:flex-end;
@@ -87,7 +87,7 @@
 @media screen and (max-width:700px) {
 	#myShells {
 		justify-content:center;
-		padding:2rem 1rem
+		padding:125px 1rem
 	}
 	
 

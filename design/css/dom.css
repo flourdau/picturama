@@ -96,7 +96,7 @@ header>nav>div ul:nth-child(2) i:hover,
 }
 #staticBackdrop i {
 	cursor:pointer;
-	font-size:1.75rem
+	font-size:1.6em
 }
 .my-nav-control>div {
 	display:flex;
@@ -143,7 +143,7 @@ header>nav>div ul:nth-child(2) i:hover,
 }
 
 
-main {
+/* main {
 	display:flex;
 	flex-flow:row wrap;
 	padding:0 1rem
@@ -161,7 +161,7 @@ main {
 	display:flex;
 	flex-flow:column nowrap;
 	align-items:center
-}
+} */
 
 
 /*	FOOTER:
