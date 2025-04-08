@@ -19,7 +19,7 @@ header>nav {
 	display:flex;
 	flex-flow:row wrap;
 	justify-content:space-between;
-	align-items:flex-end;
+	align-items:flex-end
 }
 header>nav>a {
 	display:flex;
@@ -141,27 +141,6 @@ header>nav>div ul:nth-child(2) i:hover,
 	border-bottom:solid 3px;
 	margin:0 2%
 }
-
-
-/* main {
-	display:flex;
-	flex-flow:row wrap;
-	padding:0 1rem
-}
-.column-left {flex:2}
-.column-right {
-	padding:1rem 0 0 0;
-	flex:1;
-	display:flex;
-	flex-flow:column nowrap;
-	align-items:center;
-	justify-content:center
-}
-.column-right>div {
-	display:flex;
-	flex-flow:column nowrap;
-	align-items:center
-} */
 
 
 /*	FOOTER:

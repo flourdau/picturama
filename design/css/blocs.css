@@ -16,19 +16,17 @@
 
 
 #myPub .my-shell-content>ul h4 {
-	display: flex;
+	display:flex;
 	flex-flow:row nowrap;
-	justify-content: center;
-	align-items: center;
-	font-size: .75em
+	justify-content:center;
+	align-items:center;
+	font-size:.75em
 }
 #myPub .my-shell-content>ul a {
-	text-decoration: none;
-	color: var(--bs-gray-500);
+	text-decoration:none;
+	color:var(--bs-gray-500)
 }
-.my-social-network i:hover {
-	color: var(--my-color1);
-}
+.my-social-network i:hover {color: var(--my-color1)}
 #myPub .my-shell-content>ul {
 	display:flex;
 	flex-flow:column;
@@ -53,7 +51,7 @@
 #myReadMe img {
 	position:absolute;
 	bottom:0;
-	right: 0;
+	right:0;
 	width:256px
 }
 
