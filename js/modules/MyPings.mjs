@@ -14,9 +14,10 @@ export default class MyPings {
 	constructor() {
 		this.myReadme();
 		this.loopTxt2ASCII();
-		this.myHello();
-		this.myWelcome();
-		this.myCitation();
+		this.myCitation().then(
+			this.myHello().then(
+				this.myWelcome()))
+		this.myCalendar();
 	}
 
 	async myHello() {
@@ -24,12 +25,11 @@ export default class MyPings {
 			const response = await fetch("./Collections/bonjour.json", this.myInit);
 
 			if (!response.ok) throw new Error("Fichier bonjour.json non trouvé");
-			const text = await response.text();
-			const json = JSON.parse(text);
+			const json = await response.json();
 			const rand = Math.floor(Math.random() * json.length);
 			const myHello = json[rand];
 
-			console.log(myHello);
+			document.querySelector("#myHelloWord").innerHTML = myHello;
 		} catch (error) {return console.error("Erreur:", error.message);}
 	}
 
@@ -38,12 +38,11 @@ export default class MyPings {
 			const response = await fetch("./Collections/bienvenue.json", this.myInit);
 
 			if (!response.ok) throw new Error("Fichier bienvenue.json non trouvé");
-			const text = await response.text();
-			const json = JSON.parse(text);
+			const json = await response.json();
 			const rand = Math.floor(Math.random() * json.length);
 			const myWelcome = json[rand];
 
-			console.log(myWelcome);
+			document.querySelector("#myHelloWord").innerHTML += " & " + myWelcome + "! ";
 		} catch (error) {return console.error("Erreur:", error.message);}
 	}
 
@@ -52,12 +51,11 @@ export default class MyPings {
 			const response = await fetch("./Collections/citations.json", this.myInit);
 
 			if (!response.ok) throw new Error("Fichier citation.json non trouvé");
-			const text = await response.text();
-			const json = JSON.parse(text);
+			const json = await response.json();
 			const rand = Math.floor(Math.random() * json.length);
 			const myCitation = json[rand];
 
-			console.log(myCitation);
+			document.querySelector("#myCitation").innerHTML = myCitation + "! " ;
 		} catch (error) {return console.error("Erreur:", error.message);}
 	}
 

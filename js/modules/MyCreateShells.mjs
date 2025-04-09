@@ -8,7 +8,7 @@ export default class MyCreateShells {
 		for (let i = 0; i < shells.length; i++) {
 			shells[i].classList.add("shadow-lg");
 
-			if (shells[i].id !== "staticBackdrop" && shells[i].id !== "myTV") shells[i].prepend(this.createBar(shells[i]));
+			if (shells[i].id !== "staticBackdrop" && shells[i].id !== "myTV" && shells[i].id !== "myHello") shells[i].prepend(this.createBar(shells[i]));
 
 			if (shells[i].id === "myMessage") shells[i].append(this.createPrompt());
 		}

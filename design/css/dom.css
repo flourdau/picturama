@@ -21,6 +21,10 @@ header>nav {
 	justify-content:space-between;
 	align-items:flex-end
 }
+/* header>nav>div {
+	width:100%;
+} */
+
 header>nav>a {
 	display:flex;
 	flex-flow:column nowrap;

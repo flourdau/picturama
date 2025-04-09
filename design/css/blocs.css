@@ -15,6 +15,18 @@
 }
 
 
+#myNotif {
+	/* position: absolute;
+	top: 130px;
+	right:-100%;
+	padding:.75em */
+}
+
+.myFirst {
+	/* animation:myfirst 10s;
+	animation-direction:alternate; */
+}
+
 #myPub .my-shell-content>ul h4 {
 	display:flex;
 	flex-flow:row nowrap;
@@ -26,7 +38,7 @@
 	text-decoration:none;
 	color:var(--bs-gray-500)
 }
-.my-social-network i:hover {color: var(--my-color1)}
+.my-social-network i:hover {color:var(--my-color1)}
 #myPub .my-shell-content>ul {
 	display:flex;
 	flex-flow:column;
@@ -78,6 +90,14 @@
 #output {
 	font-weight:bold;
 	letter-spacing:.35rem
+}
+
+
+@keyframes myfirst {
+	0%      {right:-100%}
+	30%     {right:10em}
+	70%     {right:10em}
+	100%    {right:-100%}
 }
 
 
