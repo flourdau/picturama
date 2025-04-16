@@ -71,6 +71,9 @@ code {
 }
 
 
+html {font-size:1em}
+
+
 /*	MULTICOLOR */
 .rainbow_text_animated {
 	background:linear-gradient(to right, var(--my-color1), var(--my-color2), var(--my-color3), var(--my-color4));

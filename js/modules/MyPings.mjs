@@ -14,9 +14,8 @@ export default class MyPings {
 	constructor() {
 		this.myReadme();
 		this.loopTxt2ASCII();
-		this.myCitation().then(
-			this.myHello().then(
-				this.myWelcome()))
+		this.myCitation()
+		this.myHello()
 		this.myCalendar();
 	}
 
@@ -28,11 +27,13 @@ export default class MyPings {
 			const json = await response.json();
 			const rand = Math.floor(Math.random() * json.length);
 			const myHello = json[rand];
-
+			
 			document.querySelector("#myHelloWord").innerHTML = myHello;
 		} catch (error) {return console.error("Erreur:", error.message);}
+		this.myWelcome()
+		return
 	}
-
+	
 	async myWelcome() {
 		try {
 			const response = await fetch("./Collections/bienvenue.json", this.myInit);
@@ -42,8 +43,9 @@ export default class MyPings {
 			const rand = Math.floor(Math.random() * json.length);
 			const myWelcome = json[rand];
 
-			document.querySelector("#myHelloWord").innerHTML += " & " + myWelcome + "! ";
+			document.querySelector("#myHelloWord").innerHTML += " & " + myWelcome + "!  ";
 		} catch (error) {return console.error("Erreur:", error.message);}
+		return
 	}
 
 	async myCitation() {
@@ -55,7 +57,7 @@ export default class MyPings {
 			const rand = Math.floor(Math.random() * json.length);
 			const myCitation = json[rand];
 
-			document.querySelector("#myCitation").innerHTML = myCitation + "! " ;
+			document.querySelector("#myCitation").innerHTML = myCitation + "!  " ;
 		} catch (error) {return console.error("Erreur:", error.message);}
 	}
 

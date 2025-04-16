@@ -74,7 +74,7 @@
 	<body class="bg-body">
 		<header>
 			<nav class="bg-body-secondary" aria-label="Main navigation">
-
+				<!-- TITLE -->
 				<a href="/picturama/" aria-label="Picturama">
 					<div>
 						<i class="bi bi-heart"></i>
@@ -85,44 +85,47 @@
 				</a>
 
 				<div>
+					<!-- MYNOTIF -->
 					<ul>
-						<li><a class="nav-link active" aria-current="true" href="/picturama/">Home</a></li>
-						<li><div class="vr d-flex h-100 mx-2"></div></li>
-						<li><a class="myBtnReadMe nav-link" href="/#read_me">ReadMe</a></li>
-						<li><div class="vr d-flex h-100 mx-2"></div></li>
-						<li><a class="nav-link" href="https://blog.positive-link.net/" target="_blank" rel="noopener">Blog</a></li>
+						<li><i class="bi bi-robot"></i> </li>
+						<li><span id="myDatation"></span></li>
+						<li><span id="myCitation"></span></li>
+						<li><span id="myHelloWord"></span></li>
 					</ul>
 
-					<ul>
-						<li class="btn btn-lg" type="button">
-							<a class="nav-link" href="https://github.com/flourdau/picturama" target="_blank" rel="noopener">
-								<i class="bi bi-github"></i>
-							</a>
-						</li>
-						<li class="btn btn-lg" type="button">
-							<i class="bi bi-discord" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop2" aria-controls="staticBackdrop"></i>
-						</li>
-						<li class="btn btn-lg" type="button">
-							<i id="mySelectTheme" class="bi bi-moon"></i>
-						</li>
-					</ul>
-
+					<!-- MYSEARCH -->
 					<form class="d-none" role="search">
 						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 						<button class="btn btn-outline-success" type="submit">Search</button>
 					</form>
+					
+					<div>
+						<!-- NAVLINKS -->
+						<ul>
+							<li><a class="nav-link active" aria-current="true" href="/picturama/">Home</a></li>
+							<li><div class="vr d-flex h-100 mx-2"></div></li>
+							<li><a class="myBtnReadMe nav-link" href="/#read_me">ReadMe</a></li>
+							<li><div class="vr d-flex h-100 mx-2"></div></li>
+							<li><a class="nav-link" href="https://blog.positive-link.net/" target="_blank" rel="noopener">Blog</a></li>
+						</ul>
+
+						<!-- SOCIAL NETWORKS -->
+						<ul>
+							<li class="btn btn-lg" type="button">
+								<a class="nav-link" href="https://github.com/flourdau/picturama" target="_blank" rel="noopener">
+									<i class="bi bi-github"></i>
+								</a>
+							</li>
+							<li class="btn btn-lg" type="button">
+								<i class="bi bi-discord" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop2" aria-controls="staticBackdrop"></i>
+							</li>
+							<li class="btn btn-lg" type="button">
+								<i id="mySelectTheme" class="bi bi-moon"></i>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</nav>
-
-			<!-- MYNOTIF -->
-			<section id="myNotif">
-				<p class="myFirst">
-					<i class="bi bi-robot"></i>
-					<span id="myDatation"></span>
-					<span id="myCitation"></span>
-					<span id="myHelloWord"></span>
-				</p>
-			</section>
 
 			<section id="myShells">
 				<!-- OFFCANVAS MYCONTROLS -->
