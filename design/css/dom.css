@@ -18,19 +18,14 @@ header>nav {
 	z-index:100;
 	display:flex;
 	flex-flow:row wrap;
-	justify-content:space-between;
+	justify-content:center;
 	align-items:center
 }
 /* BLOC1 TITLE */
 header>nav>a {
-	/* background-color: aqua; */
-/* justify-self:flex-start; */
-	animation:slideInDown;
-	animation-duration:1s;
 	display:flex;
 	flex-flow:column nowrap;
 	align-items:center;
-
 	text-decoration:none;
 	white-space:nowrap
 }
@@ -79,19 +74,16 @@ header>nav>div form {width:50%}
 header>nav>div>div,
 header>nav>div form,
 header>nav>div ul {display:flex}
+
 /* MYNOTIF */
 header>nav>div>ul {
 	font-style:italic;
 	white-space:break-spaces;
 	word-spacing:.1rem;
-	animation:fadeIn;
-	animation-duration:2s;
 	padding:0 0 0 1em;
 }
 
 header>nav>div>div>ul {
-	animation:slideInUp;
-	animation-duration:1s;
 	align-items:flex-end;
 	padding:0 0 1em 0
 }
@@ -194,14 +186,23 @@ footer svg:hover {color:var(--my-color3)}
 /*	QUERY	*/
 /*	< 700px		*/
 @media screen and (max-width:700px) {
-	header>nav>div {width: 100%}
-	header>nav>div ul:first {padding:.5em 0 0 0}
+	/* MYNOTIF */
+	header>nav>div>ul {
+		font-size:.9em;
+		padding:0 0 2em 1em
+	}
+
+	header>nav>div {
+		padding:1em;
+		width:100vw
+	}
 
 
+	header>nav>div>div,
+	.separation,
 	main {flex-flow:column}
 
 
-	.separation {flex-direction:column}
 	.separation hr {
 		width:98%;
 		margin:0 2%
