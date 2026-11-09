@@ -11,15 +11,47 @@ export default class MyShell {
 
 		// BIG CLOCK
 		document.querySelector("#myClock #myHour").addEventListener("click", function () {
-			const val = this.parentNode.parentNode.parentNode.parentNode.querySelector(".btn-shell-font-size input").value;
+			const val = this.closest(".my-shell")?.querySelector(".btn-shell-font-size input")?.value || 4;
 
 			this.style.fontSize = (val * 1.25) + "em";
 		});
 
 		// MESSAGE
-		document.querySelector("#myMessage .my-shell-prompt input").addEventListener("input", function () {
-			document.querySelector("#myMessage .my-shell-content span").innerHTML = this.value;
-		});
+		const msgInput = document.querySelector("#myMessage .my-shell-prompt input");
+		const msgSpan = document.querySelector("#myMessage .my-shell-content span");
+		const msgAsciiBtn = document.querySelector("#myMessage .myBtnASCII");
+		let isMessageAscii = false;
+		let rawMessageText = msgSpan ? msgSpan.textContent : "Hello W🌍rld!";
+
+		if (msgInput && msgSpan) {
+			msgInput.addEventListener("input", async function () {
+				rawMessageText = this.value || "Hello W🌍rld!";
+				if (isMessageAscii && window.myPings) {
+					const ascii = await window.myPings.textToASCII(rawMessageText);
+					msgSpan.innerHTML = "";
+					const pre = document.createElement("pre");
+					pre.textContent = ascii;
+					msgSpan.appendChild(pre);
+				} else {
+					msgSpan.textContent = rawMessageText;
+				}
+			});
+		}
+
+		if (msgAsciiBtn && msgSpan) {
+			msgAsciiBtn.addEventListener("click", async () => {
+				isMessageAscii = !isMessageAscii;
+				if (isMessageAscii && window.myPings) {
+					const ascii = await window.myPings.textToASCII(rawMessageText);
+					msgSpan.innerHTML = "";
+					const pre = document.createElement("pre");
+					pre.textContent = ascii;
+					msgSpan.appendChild(pre);
+				} else {
+					msgSpan.textContent = rawMessageText;
+				}
+			});
+		}
 
 		// BOUTONS
 		// CLOSE
@@ -53,6 +85,8 @@ export default class MyShell {
 		// MAGICBUTTON
 		function myMagicButton(e) {
 			const myContent = e.parentNode.parentNode.parentNode;
+			if (myContent.dataset.magicInit) return;
+			myContent.dataset.magicInit = "true";
 			const colorPickerBG = myContent.querySelector(".btn-shell-bg-color input");
 			const colorPicker = myContent.querySelector(".btn-shell-color input");
 
@@ -129,6 +163,9 @@ export default class MyShell {
 
 			function dragMouseDown(e) {
 				e = e || window.event;
+				if (e.target && ["INPUT", "SELECT", "BUTTON", "TEXTAREA", "LABEL", "A"].includes(e.target.tagName)) {
+					return;
+				}
 				e.preventDefault();
 				// get the mouse cursor position at startup:
 				pos3 = e.clientX;

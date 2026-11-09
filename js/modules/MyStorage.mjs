@@ -8,17 +8,23 @@ export default class MyStorage {
 		const storageBGColor = localStorage.getItem("bgColor")?.toString();
 		const storageTheme = localStorage.getItem("theme")?.toString();
 
-		if (storageShuffle) {
+		if (storageShuffle === "true") {
 			window.myShuffle = true;
-			document.querySelector(".btn-picturama-shuffle").style.color = "red";
+			const shuffleBtn = document.querySelector(".btn-picturama-shuffle");
+			if (shuffleBtn) shuffleBtn.style.color = "red";
 		}
 
 		if (storageTheme) window.myHTML.setAttribute("data-bs-theme", storageTheme);
 
 		if (storageDelay) {
 			window.myDelay = storageDelay;
+			const select = document.querySelector(".btn-picturama-timer select");
 			const query = `.btn-picturama-timer select option[value='${window.myDelay}']`;
-			document.querySelector(query).setAttribute("selected", "selected");
+			const opt = document.querySelector(query);
+			if (select && opt) {
+				select.value = window.myDelay;
+				opt.setAttribute("selected", "selected");
+			}
 		}
 
 		if (storageBGColor) {

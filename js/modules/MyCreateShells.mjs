@@ -222,7 +222,7 @@ export default class MyCreateShells {
 		svg.title = "Couleur du texte.";
 		svg.setAttribute("aria-label", "Couleur du texte.");
 
-		span.innerHTML = "Couleur du teste.";
+		span.innerHTML = "Couleur du texte.";
 
 		input.type = "color";
 		input.hidden = true;

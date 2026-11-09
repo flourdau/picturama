@@ -28,7 +28,7 @@ export default class MyDOM {
 		document.querySelector(".btn-picturama-check-cam").addEventListener("change", () => this.myToggleBloc("#myCam"), false);
 		document.querySelector(".btn-picturama-check-pub").addEventListener("change", () => this.myToggleBloc("#myPub"), false);
 		document.querySelector(".btn-picturama-check-tv").addEventListener("change", () => this.myToggleBloc("#myTV"), false);
-		document.querySelector(".btn-picturama-check-robot").addEventListener("change", () => document.querySelector("#myNotif").style.left = "5em", false);
+		document.querySelector(".btn-picturama-check-robot").addEventListener("change", () => this.myToggleBloc("#myNotif"), false);
 		document.querySelector(".btn-picturama-check-miniatures").addEventListener("change", () => this.myToggleBloc(".myMiniatures"), false);
 		document.querySelector(".myBtnReadMe").addEventListener("click", (e) => {
 			e.preventDefault();
@@ -41,6 +41,8 @@ export default class MyDOM {
 			const myH1 = document.querySelector("header>nav>a h1");
 			const myH2 = document.querySelector("header>nav>a h2");
 
+			if (!myPre || !myH1 || !myH2) return;
+
 			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
 				myH1.className = "";
 				myH2.className = "d-none";
@@ -49,7 +51,7 @@ export default class MyDOM {
 			else {
 				myH1.className = "d-lg-none";
 				myH2.className = "d-none d-lg-flex";
-				myPre.className = ""
+				myPre.className = "";
 			}
 		}
 
@@ -93,10 +95,12 @@ export default class MyDOM {
 	}
 
 	myToggleBloc(myClass) {
-		document.querySelector(myClass).classList.toggle("d-none");
+		const el = document.querySelector(myClass);
+		if (el) el.classList.toggle("d-none");
 	}
 
 	footerYear() {
-		document.getElementById("footer-year").innerHTML = new Date().getFullYear();
+		const el = document.getElementById("footer-year");
+		if (el) el.textContent = new Date().getFullYear();
 	}
 }

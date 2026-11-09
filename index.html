@@ -45,11 +45,11 @@
 			import MyStorage		from "./js/modules/MyStorage.mjs"
 
 			//	MYPINGS
-			new MyPings()
+			window.myPings = new MyPings()
 			//	MYDOM
 			new MyDOM()
 			//  MYPICTURAMA
-			document.addEventListener("DOMContentLoaded", new MyPicturama(), false)
+			new MyPicturama()
 			//  MYCLOCK
 			new MyClock()
 			setInterval(() => { new MyClock() }, 1000)
@@ -75,7 +75,7 @@
 		<header>
 			<nav class="bg-body-secondary" aria-label="Main navigation">
 				<!-- TITLE -->
-				<a href="/picturama/" aria-label="Picturama">
+				<a href="./" aria-label="Picturama">
 					<div>
 						<i class="bi bi-heart"></i>
 						<h1 class="d-lg-none">Picturama</h1>
@@ -86,7 +86,7 @@
 
 				<div>
 					<!-- MYNOTIF -->
-					<ul>
+					<ul id="myNotif">
 						<li><i class="bi bi-robot"></i> </li>
 						<li><span id="myDatation"></span></li>
 						<li><span id="myCitation"></span></li>
@@ -102,9 +102,9 @@
 					<div>
 						<!-- NAVLINKS -->
 						<ul>
-							<li><a class="nav-link active" aria-current="true" href="/picturama/">Home</a></li>
+							<li><a class="nav-link active" aria-current="true" href="./">Home</a></li>
 							<li><div class="vr d-flex h-100 mx-2"></div></li>
-							<li><a class="myBtnReadMe nav-link" href="/#read_me">ReadMe</a></li>
+							<li><a class="myBtnReadMe nav-link" href="#read_me">ReadMe</a></li>
 							<li><div class="vr d-flex h-100 mx-2"></div></li>
 							<li><a class="nav-link" href="https://blog.positive-link.net/" target="_blank" rel="noopener">Blog</a></li>
 						</ul>
@@ -174,7 +174,7 @@
 							</li>
 							<!-- BTN-ROBOT -->
 							<li class="btn btn-lg btn-secondary" type="button">
-								<input id="btn-check9" class="btn-picturama-check-robot btn-check" type="checkbox" autocomplete="off">
+								<input id="btn-check9" class="btn-picturama-check-robot btn-check" type="checkbox" autocomplete="off" checked>
 								<label for="btn-check9"><i class="bi bi-robot"></i></label>
 							</li>
 							<!-- BTN-MINIATURES -->
@@ -281,7 +281,7 @@
 										<label class="btn-group">
 											<i class="btn bi bi-arrow-counterclockwise"></i>
 											<span>Reset</span>
-											<input type="reset" value="Reset" hidden></input>
+											<input type="reset" value="Reset" hidden>
 										</label>
 									</li>
 								</ul>
@@ -313,17 +313,17 @@
 				<section id="myPub" class="my-shell my-left bg-body-tertiary bg-opacity-50 d-none">
 					<div class="my-shell-content">
 						<ul>
-							<li><img alt="QR Code vers ce site." class="bg-light" src="https://flourdau.github.io/picturama/design/img/qrcode.webp"></li>
+							<li><img alt="QR Code vers ce site." class="bg-light" src="./design/img/qrcode.webp"></li>
 							<li>
 								<div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
 								<hr class="d-lg-none text-white-50">
 							</li>
 							<li><h3><a href="https://flourdau.github.io/">LOURDAUX Florian</a></h3></li>
-							<li><h4><i class="btn bi bi-envelope-heart"></i><a href="mailto:lourdaux.florian.pro@gmail.com" target="_blank">lourdaux.florian.pro@gmail.com</a></h4></li>
+							<li><h4><i class="btn bi bi-envelope-heart"></i><a href="mailto:lourdaux.florian.pro@gmail.com" target="_blank" rel="noopener">lourdaux.florian.pro@gmail.com</a></h4></li>
 							<li>
 								<ul class="my-social-network">
-									<li><a href="" target="_blank"><i class="bi bi-github"></i></a></li>
-									<li><a href="https://fr.linkedin.com/in/flourdau" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+									<li><a href="https://github.com/flourdau" target="_blank" rel="noopener"><i class="bi bi-github"></i></a></li>
+									<li><a href="https://fr.linkedin.com/in/flourdau" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a></li>
 								</ul>
 							</li>
 						</ul>
@@ -394,7 +394,7 @@
 				<!-- MYTV -->
 				<div id="myTV" class="my-shell my-left d-none">
 					<div class="my-shell-content">
-						<iframe title="France 24 sur Youtube!" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLCnUnV3yCIYuuHRjVDwiBaRDeSbEbGyZU" title="France24: Journal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+						<iframe title="France 24 sur Youtube!" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLCnUnV3yCIYuuHRjVDwiBaRDeSbEbGyZU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 					</div>
 				</div>
 			</section>
@@ -444,19 +444,19 @@
             <address>
                 <ul>
                     <li>
-						<a title="Picturama" href="/picturama/">
+						<a title="Picturama" href="./">
 							<i class="bi bi-heart"></i>
 							<span>Picturama</span>
 						</a>
 					</li>
                     <li>
-						<a target="blank" href="https://flourdau.github.io/" title="Florian LOURDAUX">
+						<a target="_blank" rel="noopener" href="https://flourdau.github.io/" title="Florian LOURDAUX">
 							<span>2024 - </span>
 							<span id="footer-year"></span>
 						</a>
 					</li>
 					<li>
-						<a target="blank" href="mailto:lourdaux.florian.pro@gmail.com" title="Contact me">
+						<a target="_blank" rel="noopener" href="mailto:lourdaux.florian.pro@gmail.com" title="Contact me">
 							<i class="bi bi-envelope-heart-fill"></i>
 							<span>Contactez-moi</span>
 						</a>

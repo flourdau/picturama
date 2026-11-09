@@ -18,14 +18,21 @@ export default class MyCam {
 		this.startbutton = document.getElementById("startbutton");
 
 		document.querySelector("#SwitchCamera").addEventListener("change", () => {
-			navigator.mediaDevices
-				.getUserMedia({ video: true, audio: false })
-				.then((stream) => {
-					video.srcObject = stream;
-					if (document.querySelector("#SwitchCamera").checked) video.play();
-					else video.stop;
-				})
-				.catch((err) => {console.error(`Une erreur est survenue : ${err}`);});
+			if (document.querySelector("#SwitchCamera").checked) {
+				navigator.mediaDevices
+					.getUserMedia({ video: true, audio: false })
+					.then((stream) => {
+						this.video.srcObject = stream;
+						this.video.play();
+					})
+					.catch((err) => {console.error(`Une erreur est survenue : ${err}`);});
+			} else {
+				this.video.pause();
+				if (this.video.srcObject) {
+					this.video.srcObject.getTracks().forEach((track) => track.stop());
+					this.video.srcObject = null;
+				}
+			}
 		}, false);
 
 		this.video.addEventListener("canplay", (ev) => {
@@ -56,7 +63,7 @@ export default class MyCam {
 
 	showViewLiveResultButton() {
 		if (window.self !== window.top) {
-			document.querySelector(".contentarea").remove();
+			document.querySelector(".contentarea")?.remove();
 			const button = document.createElement("button");
 			button.textContent = "Voir le résultat de l'exemple dont le code est présenté avant";
 			document.body.append(button);
@@ -88,6 +95,6 @@ export default class MyCam {
 			this.photo.setAttribute("src", data);
 		}
 		else
-			clearphoto();
+			this.clearphoto();
 	}
 }

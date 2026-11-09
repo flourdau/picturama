@@ -150,15 +150,22 @@ export default class MyPicturama {
 	}
 
 	myLeft() {
-		if (window.myPositionX === 0) window.myPositionX = window.myList[window.myPositionY--].length - 1;
-		else window.myPositionX--;
+		if (window.myList.length === 0) return;
 
-		if (window.myPositionY < 0) window.myPositionY = window.myList.length - 1;
+		if (window.myPositionX === 0) {
+			window.myPositionY--;
+			if (window.myPositionY < 0) window.myPositionY = window.myList.length - 1;
+			window.myPositionX = window.myList[window.myPositionY].length - 1;
+		} else {
+			window.myPositionX--;
+		}
 
 		MyPicturama.myChangeBg(URL.createObjectURL(window.myList[window.myPositionY][window.myPositionX]));
 	}
 
 	myRight() {
+		if (window.myList.length === 0) return;
+
 		if (window.myPositionX === window.myList[window.myPositionY].length - 1) {
 			window.myPositionX = 0;
 			window.myPositionY++;
@@ -177,6 +184,9 @@ export default class MyPicturama {
 	}
 
 	myPlay() {
+		if (window.myList.length === 0) return;
+
+		clearInterval(window.mySetInterval);
 		document.getElementById("myInputPlayPause").classList.add("d-none");
 		document.getElementById("myInputPause").classList.remove("d-none");
 		window.mySetInterval = setInterval(function () {
@@ -210,7 +220,8 @@ export default class MyPicturama {
 		document.getElementById("myInputPlayPause").classList.remove("d-none");
 		document.getElementById("myInputPause").classList.add("d-none");
 		window.myShuffle = false;
-		document.querySelector("#myShuffle").style.color = "black";
+		const shuffleBtn = document.querySelector(".btn-picturama-shuffle");
+		if (shuffleBtn) shuffleBtn.style.color = "black";
 		document.querySelector(".myMiniatures").classList.add("d-none");
 	}
 

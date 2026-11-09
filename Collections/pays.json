@@ -1,0 +1,1359 @@
+{
+	"metadata": {
+		"name": "countries.json",
+		"description": "Base de donnees des pays du monde : capitales, superficie, population et drapeaux.",
+		"author": "Florian LOURDAUX",
+		"email": "lourdaux.florian.pro@gmail.com",
+		"project": "Standard Collection",
+		"create": "2026-01-22",
+		"update": "2026-11-09",
+		"version": "1.1",
+		"count": 192
+	},
+	"countries": [
+		{
+			"name": "Afghanistan",
+			"capital": "Kaboul",
+			"area_km2": 652864,
+			"population": 40100000,
+			"flag": "🇦🇫"
+		},
+		{
+			"name": "Afrique du Sud",
+			"capital": "Pretoria",
+			"area_km2": 1221037,
+			"population": 60400000,
+			"flag": "🇿🇦"
+		},
+		{
+			"name": "Albanie",
+			"capital": "Tirana",
+			"area_km2": 28748,
+			"population": 2830000,
+			"flag": "🇦🇱"
+		},
+		{
+			"name": "Algérie",
+			"capital": "Alger",
+			"area_km2": 2381741,
+			"population": 44700000,
+			"flag": "🇩🇿"
+		},
+		{
+			"name": "Allemagne",
+			"capital": "Berlin",
+			"area_km2": 357588,
+			"population": 83200000,
+			"flag": "🇩🇪"
+		},
+		{
+			"name": "Andorre",
+			"capital": "Andorre-la-Vieille",
+			"area_km2": 468,
+			"population": 77000,
+			"flag": "🇦🇩"
+		},
+		{
+			"name": "Angola",
+			"capital": "Luanda",
+			"area_km2": 1246700,
+			"population": 34500000,
+			"flag": "🇦🇴"
+		},
+		{
+			"name": "Antigua-et-Barbuda",
+			"capital": "Saint John's",
+			"area_km2": 442,
+			"population": 99000,
+			"flag": "🇦🇬"
+		},
+		{
+			"name": "Arabie saoudite",
+			"capital": "Riyad",
+			"area_km2": 2149690,
+			"population": 36400000,
+			"flag": "🇸🇦"
+		},
+		{
+			"name": "Argentine",
+			"capital": "Buenos Aires",
+			"area_km2": 2780400,
+			"population": 45800000,
+			"flag": "🇦🇷"
+		},
+		{
+			"name": "Arménie",
+			"capital": "Erevan",
+			"area_km2": 29743,
+			"population": 2800000,
+			"flag": "🇦🇲"
+		},
+		{
+			"name": "Australie",
+			"capital": "Canberra",
+			"area_km2": 7692024,
+			"population": 26000000,
+			"flag": "🇦🇺"
+		},
+		{
+			"name": "Autriche",
+			"capital": "Vienne",
+			"area_km2": 83879,
+			"population": 9000000,
+			"flag": "🇦🇹"
+		},
+		{
+			"name": "Azerbaïdjan",
+			"capital": "Bakou",
+			"area_km2": 86600,
+			"population": 10100000,
+			"flag": "🇦🇿"
+		},
+		{
+			"name": "Bahamas",
+			"capital": "Nassau",
+			"area_km2": 13880,
+			"population": 400000,
+			"flag": "🇧🇸"
+		},
+		{
+			"name": "Bahreïn",
+			"capital": "Manama",
+			"area_km2": 765,
+			"population": 1400000,
+			"flag": "🇧🇭"
+		},
+		{
+			"name": "Bangladesh",
+			"capital": "Dacca",
+			"area_km2": 147570,
+			"population": 169800000,
+			"flag": "🇧🇩"
+		},
+		{
+			"name": "Barbade",
+			"capital": "Bridgetown",
+			"area_km2": 430,
+			"population": 281000,
+			"flag": "🇧🇧"
+		},
+		{
+			"name": "Belgique",
+			"capital": "Bruxelles",
+			"area_km2": 30528,
+			"population": 11600000,
+			"flag": "🇧🇪"
+		},
+		{
+			"name": "Belize",
+			"capital": "Belmopan",
+			"area_km2": 22966,
+			"population": 400000,
+			"flag": "🇧🇿"
+		},
+		{
+			"name": "Bénin",
+			"capital": "Porto-Novo",
+			"area_km2": 114763,
+			"population": 13300000,
+			"flag": "🇧🇯"
+		},
+		{
+			"name": "Bhoutan",
+			"capital": "Thimphou",
+			"area_km2": 38394,
+			"population": 780000,
+			"flag": "🇧🇹"
+		},
+		{
+			"name": "Biélorussie",
+			"capital": "Minsk",
+			"area_km2": 207600,
+			"population": 9300000,
+			"flag": "🇧🇾"
+		},
+		{
+			"name": "Bolivie",
+			"capital": "Sucre",
+			"area_km2": 1098581,
+			"population": 12200000,
+			"flag": "🇧🇴"
+		},
+		{
+			"name": "Bosnie-Herzégovine",
+			"capital": "Sarajevo",
+			"area_km2": 51197,
+			"population": 3200000,
+			"flag": "🇧🇦"
+		},
+		{
+			"name": "Botswana",
+			"capital": "Gaborone",
+			"area_km2": 600370,
+			"population": 2600000,
+			"flag": "🇧🇼"
+		},
+		{
+			"name": "Brésil",
+			"capital": "Brasilia",
+			"area_km2": 8515767,
+			"population": 215300000,
+			"flag": "🇧🇷"
+		},
+		{
+			"name": "Brunéi Darussalam",
+			"capital": "Bandar Seri Begawan",
+			"area_km2": 5765,
+			"population": 445000,
+			"flag": "🇧🇳"
+		},
+		{
+			"name": "Bulgarie",
+			"capital": "Sofia",
+			"area_km2": 110994,
+			"population": 6700000,
+			"flag": "🇧🇬"
+		},
+		{
+			"name": "Burkina Faso",
+			"capital": "Ouagadougou",
+			"area_km2": 274200,
+			"population": 22100000,
+			"flag": "🇧🇫"
+		},
+		{
+			"name": "Burundi",
+			"capital": "Gitega",
+			"area_km2": 27834,
+			"population": 12600000,
+			"flag": "🇧🇮"
+		},
+		{
+			"name": "Cabo Verde",
+			"capital": "Praia",
+			"area_km2": 4033,
+			"population": 593000,
+			"flag": "🇨🇻"
+		},
+		{
+			"name": "Cambodge",
+			"capital": "Phnom Penh",
+			"area_km2": 181035,
+			"population": 16800000,
+			"flag": "🇰🇭"
+		},
+		{
+			"name": "Cameroun",
+			"capital": "Yaoundé",
+			"area_km2": 475442,
+			"population": 27900000,
+			"flag": "🇨🇲"
+		},
+		{
+			"name": "Canada",
+			"capital": "Ottawa",
+			"area_km2": 9984670,
+			"population": 38200000,
+			"flag": "🇨🇦"
+		},
+		{
+			"name": "Centrafrique",
+			"capital": "Bangui",
+			"area_km2": 622984,
+			"population": 5000000,
+			"flag": "🇨🇫"
+		},
+		{
+			"name": "Chili",
+			"capital": "Santiago",
+			"area_km2": 756102,
+			"population": 19500000,
+			"flag": "🇨🇱"
+		},
+		{
+			"name": "Chine",
+			"capital": "Pékin",
+			"area_km2": 9596961,
+			"population": 1425600000,
+			"flag": "🇨🇳"
+		},
+		{
+			"name": "Chypre",
+			"capital": "Nicosie",
+			"area_km2": 9251,
+			"population": 1200000,
+			"flag": "🇨🇾"
+		},
+		{
+			"name": "Colombie",
+			"capital": "Bogota",
+			"area_km2": 1141748,
+			"population": 51500000,
+			"flag": "🇨🇴"
+		},
+		{
+			"name": "Comores",
+			"capital": "Moroni",
+			"area_km2": 1862,
+			"population": 836000,
+			"flag": "🇰🇲"
+		},
+		{
+			"name": "Congo",
+			"capital": "Brazzaville",
+			"area_km2": 342000,
+			"population": 5800000,
+			"flag": "🇨🇬"
+		},
+		{
+			"name": "Congo (RDC)",
+			"capital": "Kinshasa",
+			"area_km2": 2344858,
+			"population": 99000000,
+			"flag": "🇨🇩"
+		},
+		{
+			"name": "Corée du Nord",
+			"capital": "Pyongyang",
+			"area_km2": 120538,
+			"population": 26000000,
+			"flag": "🇰🇵"
+		},
+		{
+			"name": "Corée du Sud",
+			"capital": "Séoul",
+			"area_km2": 100210,
+			"population": 51700000,
+			"flag": "🇰🇷"
+		},
+		{
+			"name": "Costa Rica",
+			"capital": "San José",
+			"area_km2": 51100,
+			"population": 5200000,
+			"flag": "🇨🇷"
+		},
+		{
+			"name": "Côte d'Ivoire",
+			"capital": "Yamoussoukro",
+			"area_km2": 322463,
+			"population": 28100000,
+			"flag": "🇨🇮"
+		},
+		{
+			"name": "Croatie",
+			"capital": "Zagreb",
+			"area_km2": 56594,
+			"population": 3900000,
+			"flag": "🇭🇷"
+		},
+		{
+			"name": "Cuba",
+			"capital": "La Havane",
+			"area_km2": 109884,
+			"population": 11200000,
+			"flag": "🇨🇺"
+		},
+		{
+			"name": "Danemark",
+			"capital": "Copenhague",
+			"area_km2": 43094,
+			"population": 5900000,
+			"flag": "🇩🇰"
+		},
+		{
+			"name": "Djibouti",
+			"capital": "Djibouti",
+			"area_km2": 23200,
+			"population": 1100000,
+			"flag": "🇩🇯"
+		},
+		{
+			"name": "Dominique",
+			"capital": "Roseau",
+			"area_km2": 751,
+			"population": 72000,
+			"flag": "🇩🇲"
+		},
+		{
+			"name": "Égypte",
+			"capital": "Le Caire",
+			"area_km2": 1010408,
+			"population": 111000000,
+			"flag": "🇪🇬"
+		},
+		{
+			"name": "Émirats arabes unis",
+			"capital": "Abou Dabi",
+			"area_km2": 83600,
+			"population": 9400000,
+			"flag": "🇦🇪"
+		},
+		{
+			"name": "Équateur",
+			"capital": "Quito",
+			"area_km2": 283561,
+			"population": 18000000,
+			"flag": "🇪🇨"
+		},
+		{
+			"name": "Érythrée",
+			"capital": "Asmara",
+			"area_km2": 117600,
+			"population": 3600000,
+			"flag": "🇪🇷"
+		},
+		{
+			"name": "Espagne",
+			"capital": "Madrid",
+			"area_km2": 505990,
+			"population": 47500000,
+			"flag": "🇪🇸"
+		},
+		{
+			"name": "Estonie",
+			"capital": "Tallinn",
+			"area_km2": 45227,
+			"population": 1300000,
+			"flag": "🇪🇪"
+		},
+		{
+			"name": "Eswatini",
+			"capital": "Mbabane",
+			"area_km2": 17364,
+			"population": 1100000,
+			"flag": "🇸🇿"
+		},
+		{
+			"name": "États-Unis",
+			"capital": "Washington D.C.",
+			"area_km2": 9833520,
+			"population": 332000000,
+			"flag": "🇺🇸"
+		},
+		{
+			"name": "Éthiopie",
+			"capital": "Addis-Abeba",
+			"area_km2": 1104300,
+			"population": 123400000,
+			"flag": "🇪🇹"
+		},
+		{
+			"name": "Fidji",
+			"capital": "Suva",
+			"area_km2": 18274,
+			"population": 936000,
+			"flag": "🇫🇯"
+		},
+		{
+			"name": "Finlande",
+			"capital": "Helsinki",
+			"area_km2": 338424,
+			"population": 5500000,
+			"flag": "🇫🇮"
+		},
+		{
+			"name": "France",
+			"capital": "Paris",
+			"area_km2": 643801,
+			"population": 65600000,
+			"flag": "🇫🇷"
+		},
+		{
+			"name": "Gabon",
+			"capital": "Libreville",
+			"area_km2": 267667,
+			"population": 2300000,
+			"flag": "🇬🇦"
+		},
+		{
+			"name": "Gambie",
+			"capital": "Banjul",
+			"area_km2": 11300,
+			"population": 2700000,
+			"flag": "🇬🇲"
+		},
+		{
+			"name": "Géorgie",
+			"capital": "Tbilissi",
+			"area_km2": 69700,
+			"population": 3700000,
+			"flag": "🇬🇪"
+		},
+		{
+			"name": "Ghana",
+			"capital": "Accra",
+			"area_km2": 238533,
+			"population": 33400000,
+			"flag": "🇬🇭"
+		},
+		{
+			"name": "Grèce",
+			"capital": "Athènes",
+			"area_km2": 131957,
+			"population": 10400000,
+			"flag": "🇬🇷"
+		},
+		{
+			"name": "Grenade",
+			"capital": "Saint-Georges",
+			"area_km2": 344,
+			"population": 114000,
+			"flag": "🇬🇩"
+		},
+		{
+			"name": "Guatemala",
+			"capital": "Guatemala",
+			"area_km2": 108889,
+			"population": 17800000,
+			"flag": "🇬🇹"
+		},
+		{
+			"name": "Guinée",
+			"capital": "Conakry",
+			"area_km2": 245857,
+			"population": 13800000,
+			"flag": "🇬🇳"
+		},
+		{
+			"name": "Guinée-Bissau",
+			"capital": "Bissau",
+			"area_km2": 36125,
+			"population": 2100000,
+			"flag": "🇬🇼"
+		},
+		{
+			"name": "Guinée équatoriale",
+			"capital": "Malabo",
+			"area_km2": 28051,
+			"population": 1600000,
+			"flag": "🇬🇶"
+		},
+		{
+			"name": "Guyana",
+			"capital": "Georgetown",
+			"area_km2": 214969,
+			"population": 804000,
+			"flag": "🇬🇾"
+		},
+		{
+			"name": "Haïti",
+			"capital": "Port-au-Prince",
+			"area_km2": 27750,
+			"population": 11500000,
+			"flag": "🇭🇹"
+		},
+		{
+			"name": "Honduras",
+			"capital": "Tegucigalpa",
+			"area_km2": 112492,
+			"population": 10400000,
+			"flag": "🇭🇳"
+		},
+		{
+			"name": "Hongrie",
+			"capital": "Budapest",
+			"area_km2": 93028,
+			"population": 9700000,
+			"flag": "🇭🇺"
+		},
+		{
+			"name": "Inde",
+			"capital": "New Delhi",
+			"area_km2": 3287263,
+			"population": 1428600000,
+			"flag": "🇮🇳"
+		},
+		{
+			"name": "Indonésie",
+			"capital": "Jakarta",
+			"area_km2": 1904569,
+			"population": 275500000,
+			"flag": "🇮🇩"
+		},
+		{
+			"name": "Irak",
+			"capital": "Bagdad",
+			"area_km2": 438317,
+			"population": 44500000,
+			"flag": "🇮🇶"
+		},
+		{
+			"name": "Iran",
+			"capital": "Téhéran",
+			"area_km2": 1648195,
+			"population": 88500000,
+			"flag": "🇮🇷"
+		},
+		{
+			"name": "Irlande",
+			"capital": "Dublin",
+			"area_km2": 70273,
+			"population": 5000000,
+			"flag": "🇮🇪"
+		},
+		{
+			"name": "Islande",
+			"capital": "Reykjavik",
+			"area_km2": 103000,
+			"population": 376000,
+			"flag": "🇮🇸"
+		},
+		{
+			"name": "Israël",
+			"capital": "Jérusalem",
+			"area_km2": 22072,
+			"population": 9300000,
+			"flag": "🇮🇱"
+		},
+		{
+			"name": "Italie",
+			"capital": "Rome",
+			"area_km2": 301340,
+			"population": 58800000,
+			"flag": "🇮🇹"
+		},
+		{
+			"name": "Jamaïque",
+			"capital": "Kingston",
+			"area_km2": 10991,
+			"population": 2800000,
+			"flag": "🇯🇲"
+		},
+		{
+			"name": "Japon",
+			"capital": "Tokyo",
+			"area_km2": 377975,
+			"population": 123900000,
+			"flag": "🇯🇵"
+		},
+		{
+			"name": "Jordanie",
+			"capital": "Amman",
+			"area_km2": 89342,
+			"population": 11300000,
+			"flag": "🇯🇴"
+		},
+		{
+			"name": "Kazakhstan",
+			"capital": "Astana",
+			"area_km2": 2724900,
+			"population": 19600000,
+			"flag": "🇰🇿"
+		},
+		{
+			"name": "Kenya",
+			"capital": "Nairobi",
+			"area_km2": 580367,
+			"population": 54000000,
+			"flag": "🇰🇪"
+		},
+		{
+			"name": "Kirghizistan",
+			"capital": "Bichkek",
+			"area_km2": 199951,
+			"population": 6700000,
+			"flag": "🇰🇬"
+		},
+		{
+			"name": "Kiribati",
+			"capital": "Tarawa-Sud",
+			"area_km2": 811,
+			"population": 131000,
+			"flag": "🇰🇮"
+		},
+		{
+			"name": "Koweït",
+			"capital": "Koweït",
+			"area_km2": 17818,
+			"population": 4300000,
+			"flag": "🇰🇼"
+		},
+		{
+			"name": "Laos",
+			"capital": "Vientiane",
+			"area_km2": 236800,
+			"population": 7500000,
+			"flag": "🇱🇦"
+		},
+		{
+			"name": "Lesotho",
+			"capital": "Maseru",
+			"area_km2": 30355,
+			"population": 2300000,
+			"flag": "🇱🇸"
+		},
+		{
+			"name": "Lettonie",
+			"capital": "Riga",
+			"area_km2": 64589,
+			"population": 1800000,
+			"flag": "🇱🇻"
+		},
+		{
+			"name": "Liban",
+			"capital": "Beyrouth",
+			"area_km2": 10452,
+			"population": 5400000,
+			"flag": "🇱🇧"
+		},
+		{
+			"name": "Libéria",
+			"capital": "Monrovia",
+			"area_km2": 111369,
+			"population": 5300000,
+			"flag": "🇱🇷"
+		},
+		{
+			"name": "Libye",
+			"capital": "Tripoli",
+			"area_km2": 1759540,
+			"population": 6800000,
+			"flag": "🇱🇾"
+		},
+		{
+			"name": "Liechtenstein",
+			"capital": "Vaduz",
+			"area_km2": 160,
+			"population": 39000,
+			"flag": "🇱🇮"
+		},
+		{
+			"name": "Lituanie",
+			"capital": "Vilnius",
+			"area_km2": 65300,
+			"population": 2700000,
+			"flag": "🇱🇹"
+		},
+		{
+			"name": "Luxembourg",
+			"capital": "Luxembourg",
+			"area_km2": 2586,
+			"population": 650000,
+			"flag": "🇱🇺"
+		},
+		{
+			"name": "Macédoine du Nord",
+			"capital": "Skopje",
+			"area_km2": 25713,
+			"population": 1800000,
+			"flag": "🇲🇰"
+		},
+		{
+			"name": "Madagascar",
+			"capital": "Antananarivo",
+			"area_km2": 587041,
+			"population": 29600000,
+			"flag": "🇲🇬"
+		},
+		{
+			"name": "Malaisie",
+			"capital": "Kuala Lumpur",
+			"area_km2": 330803,
+			"population": 33900000,
+			"flag": "🇲🇾"
+		},
+		{
+			"name": "Malawi",
+			"capital": "Lilongwe",
+			"area_km2": 118484,
+			"population": 20400000,
+			"flag": "🇲🇼"
+		},
+		{
+			"name": "Maldives",
+			"capital": "Malé",
+			"area_km2": 300,
+			"population": 521000,
+			"flag": "🇲🇻"
+		},
+		{
+			"name": "Mali",
+			"capital": "Bamako",
+			"area_km2": 1240192,
+			"population": 22500000,
+			"flag": "🇲🇱"
+		},
+		{
+			"name": "Malte",
+			"capital": "La Valette",
+			"area_km2": 316,
+			"population": 535000,
+			"flag": "🇲🇹"
+		},
+		{
+			"name": "Maroc",
+			"capital": "Rabat",
+			"area_km2": 446550,
+			"population": 37000000,
+			"flag": "🇲🇦"
+		},
+		{
+			"name": "Maurice",
+			"capital": "Port-Louis",
+			"area_km2": 2040,
+			"population": 1200000,
+			"flag": "🇲🇺"
+		},
+		{
+			"name": "Mauritanie",
+			"capital": "Nouakchott",
+			"area_km2": 1030700,
+			"population": 4700000,
+			"flag": "🇲🇷"
+		},
+		{
+			"name": "Mexique",
+			"capital": "Mexico",
+			"area_km2": 1964375,
+			"population": 127500000,
+			"flag": "🇲🇽"
+		},
+		{
+			"name": "Micronésie",
+			"capital": "Palikir",
+			"area_km2": 702,
+			"population": 115000,
+			"flag": "🇫🇲"
+		},
+		{
+			"name": "Moldavie",
+			"capital": "Chișinău",
+			"area_km2": 33846,
+			"population": 2600000,
+			"flag": "🇲🇩"
+		},
+		{
+			"name": "Monaco",
+			"capital": "Monaco",
+			"area_km2": 2,
+			"population": 36000,
+			"flag": "🇲🇨"
+		},
+		{
+			"name": "Mongolie",
+			"capital": "Oulan-Bator",
+			"area_km2": 1564116,
+			"population": 3400000,
+			"flag": "🇲🇳"
+		},
+		{
+			"name": "Monténégro",
+			"capital": "Podgorica",
+			"area_km2": 13812,
+			"population": 619000,
+			"flag": "🇲🇪"
+		},
+		{
+			"name": "Mozambique",
+			"capital": "Maputo",
+			"area_km2": 801590,
+			"population": 33000000,
+			"flag": "🇲🇿"
+		},
+		{
+			"name": "Myanmar",
+			"capital": "Naypyidaw",
+			"area_km2": 676578,
+			"population": 53800000,
+			"flag": "🇲🇲"
+		},
+		{
+			"name": "Namibie",
+			"capital": "Windhoek",
+			"area_km2": 824268,
+			"population": 2500000,
+			"flag": "🇳🇦"
+		},
+		{
+			"name": "Nauru",
+			"capital": "Yaren",
+			"area_km2": 21,
+			"population": 10800,
+			"flag": "🇳🇷"
+		},
+		{
+			"name": "Népal",
+			"capital": "Katmandou",
+			"area_km2": 147181,
+			"population": 30800000,
+			"flag": "🇳🇵"
+		},
+		{
+			"name": "Nicaragua",
+			"capital": "Managua",
+			"area_km2": 130373,
+			"population": 6900000,
+			"flag": "🇳🇮"
+		},
+		{
+			"name": "Niger",
+			"capital": "Niamey",
+			"area_km2": 1267000,
+			"population": 26200000,
+			"flag": "🇳🇪"
+		},
+		{
+			"name": "Nigéria",
+			"capital": "Abuja",
+			"area_km2": 923768,
+			"population": 223800000,
+			"flag": "🇳🇬"
+		},
+		{
+			"name": "Norvège",
+			"capital": "Oslo",
+			"area_km2": 385207,
+			"population": 5400000,
+			"flag": "🇳🇴"
+		},
+		{
+			"name": "Nouvelle-Zélande",
+			"capital": "Wellington",
+			"area_km2": 268021,
+			"population": 5100000,
+			"flag": "🇳🇿"
+		},
+		{
+			"name": "Oman",
+			"capital": "Mascate",
+			"area_km2": 309500,
+			"population": 4600000,
+			"flag": "🇴🇲"
+		},
+		{
+			"name": "Ouganda",
+			"capital": "Kampala",
+			"area_km2": 241550,
+			"population": 47200000,
+			"flag": "🇺🇬"
+		},
+		{
+			"name": "Ouzbékistan",
+			"capital": "Tachkent",
+			"area_km2": 447400,
+			"population": 36000000,
+			"flag": "🇺🇿"
+		},
+		{
+			"name": "Pakistan",
+			"capital": "Islamabad",
+			"area_km2": 881913,
+			"population": 240500000,
+			"flag": "🇵🇰"
+		},
+		{
+			"name": "Palaos",
+			"capital": "Ngerulmud",
+			"area_km2": 459,
+			"population": 18000,
+			"flag": "🇵🇼"
+		},
+		{
+			"name": "Palestine",
+			"capital": "Jérusalem-Est",
+			"area_km2": 6020,
+			"population": 5300000,
+			"flag": "🇵🇸"
+		},
+		{
+			"name": "Panama",
+			"capital": "Panama",
+			"area_km2": 75417,
+			"population": 4400000,
+			"flag": "🇵🇦"
+		},
+		{
+			"name": "Papouasie-Nouvelle-Guinée",
+			"capital": "Port Moresby",
+			"area_km2": 462840,
+			"population": 10300000,
+			"flag": "🇵🇬"
+		},
+		{
+			"name": "Paraguay",
+			"capital": "Asunción",
+			"area_km2": 406752,
+			"population": 6800000,
+			"flag": "🇵🇾"
+		},
+		{
+			"name": "Pays-Bas",
+			"capital": "Amsterdam",
+			"area_km2": 41543,
+			"population": 17800000,
+			"flag": "🇳🇱"
+		},
+		{
+			"name": "Pérou",
+			"capital": "Lima",
+			"area_km2": 1285216,
+			"population": 34300000,
+			"flag": "🇵🇪"
+		},
+		{
+			"name": "Philippines",
+			"capital": "Manille",
+			"area_km2": 300000,
+			"population": 115600000,
+			"flag": "🇵🇭"
+		},
+		{
+			"name": "Pologne",
+			"capital": "Varsovie",
+			"area_km2": 312696,
+			"population": 37900000,
+			"flag": "🇵🇱"
+		},
+		{
+			"name": "Portugal",
+			"capital": "Lisbonne",
+			"area_km2": 92212,
+			"population": 10200000,
+			"flag": "🇵🇹"
+		},
+		{
+			"name": "Qatar",
+			"capital": "Doha",
+			"area_km2": 11586,
+			"population": 2700000,
+			"flag": "🇶🇦"
+		},
+		{
+			"name": "République dominicaine",
+			"capital": "Saint-Domingue",
+			"area_km2": 48671,
+			"population": 11200000,
+			"flag": "🇩🇴"
+		},
+		{
+			"name": "République tchèque",
+			"capital": "Prague",
+			"area_km2": 78867,
+			"population": 10500000,
+			"flag": "🇨🇿"
+		},
+		{
+			"name": "Roumanie",
+			"capital": "Bucarest",
+			"area_km2": 238397,
+			"population": 19000000,
+			"flag": "🇷🇴"
+		},
+		{
+			"name": "Royaume-Uni",
+			"capital": "Londres",
+			"area_km2": 243610,
+			"population": 67700000,
+			"flag": "🇬🇧"
+		},
+		{
+			"name": "Russie",
+			"capital": "Moscou",
+			"area_km2": 17098246,
+			"population": 144400000,
+			"flag": "🇷🇺"
+		},
+		{
+			"name": "Rwanda",
+			"capital": "Kigali",
+			"area_km2": 26338,
+			"population": 13700000,
+			"flag": "🇷🇼"
+		},
+		{
+			"name": "Saint-Christophe-et-Niévès",
+			"capital": "Basseterre",
+			"area_km2": 261,
+			"population": 47000,
+			"flag": "🇰🇳"
+		},
+		{
+			"name": "Saint-Marin",
+			"capital": "Saint-Marin",
+			"area_km2": 61,
+			"population": 34000,
+			"flag": "🇸🇲"
+		},
+		{
+			"name": "Saint-Vincent-et-les-Grenadines",
+			"capital": "Kingstown",
+			"area_km2": 389,
+			"population": 103000,
+			"flag": "🇻🇨"
+		},
+		{
+			"name": "Sainte-Lucie",
+			"capital": "Castries",
+			"area_km2": 616,
+			"population": 180000,
+			"flag": "🇱🇨"
+		},
+		{
+			"name": "Samoa",
+			"capital": "Apia",
+			"area_km2": 2842,
+			"population": 224000,
+			"flag": "🇼🇸"
+		},
+		{
+			"name": "Sao Tomé-et-Principe",
+			"capital": "Sao Tomé",
+			"area_km2": 964,
+			"population": 227000,
+			"flag": "🇸🇹"
+		},
+		{
+			"name": "Sénégal",
+			"capital": "Dakar",
+			"area_km2": 196712,
+			"population": 17800000,
+			"flag": "🇸🇳"
+		},
+		{
+			"name": "Serbie",
+			"capital": "Belgrade",
+			"area_km2": 88361,
+			"population": 7100000,
+			"flag": "🇷🇸"
+		},
+		{
+			"name": "Seychelles",
+			"capital": "Victoria",
+			"area_km2": 459,
+			"population": 107000,
+			"flag": "🇸🇨"
+		},
+		{
+			"name": "Sierra Leone",
+			"capital": "Freetown",
+			"area_km2": 71740,
+			"population": 8600000,
+			"flag": "🇸🇱"
+		},
+		{
+			"name": "Singapour",
+			"capital": "Singapour",
+			"area_km2": 728,
+			"population": 5600000,
+			"flag": "🇸🇬"
+		},
+		{
+			"name": "Slovaquie",
+			"capital": "Bratislava",
+			"area_km2": 49035,
+			"population": 5400000,
+			"flag": "🇸🇰"
+		},
+		{
+			"name": "Slovénie",
+			"capital": "Ljubljana",
+			"area_km2": 20273,
+			"population": 2100000,
+			"flag": "🇸🇮"
+		},
+		{
+			"name": "Somalie",
+			"capital": "Mogadiscio",
+			"area_km2": 637657,
+			"population": 17000000,
+			"flag": "🇸🇴"
+		},
+		{
+			"name": "Soudan",
+			"capital": "Khartoum",
+			"area_km2": 1886068,
+			"population": 46900000,
+			"flag": "🇸🇩"
+		},
+		{
+			"name": "Soudan du Sud",
+			"capital": "Djouba",
+			"area_km2": 644329,
+			"population": 11000000,
+			"flag": "🇸🇸"
+		},
+		{
+			"name": "Sri Lanka",
+			"capital": "Kotte",
+			"area_km2": 65610,
+			"population": 21800000,
+			"flag": "🇱🇰"
+		},
+		{
+			"name": "Suède",
+			"capital": "Stockholm",
+			"area_km2": 450295,
+			"population": 10500000,
+			"flag": "🇸🇪"
+		},
+		{
+			"name": "Suisse",
+			"capital": "Berne",
+			"area_km2": 41285,
+			"population": 8700000,
+			"flag": "🇨🇭"
+		},
+		{
+			"name": "Suriname",
+			"capital": "Paramaribo",
+			"area_km2": 163820,
+			"population": 618000,
+			"flag": "🇸🇷"
+		},
+		{
+			"name": "Syrie",
+			"capital": "Damas",
+			"area_km2": 185180,
+			"population": 23200000,
+			"flag": "🇸🇾"
+		},
+		{
+			"name": "Tadjikistan",
+			"capital": "Douchanbé",
+			"area_km2": 143100,
+			"population": 9700000,
+			"flag": "🇹🇯"
+		},
+		{
+			"name": "Tanzanie",
+			"capital": "Dodoma",
+			"area_km2": 945087,
+			"population": 67400000,
+			"flag": "🇹🇿"
+		},
+		{
+			"name": "Tchad",
+			"capital": "N'Djamena",
+			"area_km2": 1284000,
+			"population": 17700000,
+			"flag": "🇹🇩"
+		},
+		{
+			"name": "Thaïlande",
+			"capital": "Bangkok",
+			"area_km2": 513120,
+			"population": 71800000,
+			"flag": "🇹🇭"
+		},
+		{
+			"name": "Timor oriental",
+			"capital": "Dili",
+			"area_km2": 14874,
+			"population": 1300000,
+			"flag": "🇹🇱"
+		},
+		{
+			"name": "Togo",
+			"capital": "Lomé",
+			"area_km2": 56785,
+			"population": 8800000,
+			"flag": "🇹🇬"
+		},
+		{
+			"name": "Tonga",
+			"capital": "Nuku'alofa",
+			"area_km2": 747,
+			"population": 107000,
+			"flag": "🇹🇴"
+		},
+		{
+			"name": "Trinité-et-Tobago",
+			"capital": "Port-d'Espagne",
+			"area_km2": 5131,
+			"population": 1500000,
+			"flag": "🇹🇹"
+		},
+		{
+			"name": "Tunisie",
+			"capital": "Tunis",
+			"area_km2": 163610,
+			"population": 12400000,
+			"flag": "🇹🇳"
+		},
+		{
+			"name": "Turkménistan",
+			"capital": "Achgabat",
+			"area_km2": 488100,
+			"population": 6400000,
+			"flag": "🇹🇲"
+		},
+		{
+			"name": "Turquie",
+			"capital": "Ankara",
+			"area_km2": 783562,
+			"population": 85800000,
+			"flag": "🇹🇷"
+		},
+		{
+			"name": "Tuvalu",
+			"capital": "Funafuti",
+			"area_km2": 26,
+			"population": 11300,
+			"flag": "🇹🇻"
+		},
+		{
+			"name": "Ukraine",
+			"capital": "Kiev",
+			"area_km2": 603628,
+			"population": 43100000,
+			"flag": "🇺🇦"
+		},
+		{
+			"name": "Uruguay",
+			"capital": "Montevideo",
+			"area_km2": 176215,
+			"population": 3400000,
+			"flag": "🇺🇾"
+		},
+		{
+			"name": "Vanuatu",
+			"capital": "Port-Vila",
+			"area_km2": 12189,
+			"population": 326000,
+			"flag": "🇻🇺"
+		},
+		{
+			"name": "Vatican",
+			"capital": "Vatican",
+			"area_km2": 0.44,
+			"population": 800,
+			"flag": "🇻🇦"
+		},
+		{
+			"name": "Venezuela",
+			"capital": "Caracas",
+			"area_km2": 916445,
+			"population": 28800000,
+			"flag": "🇻🇪"
+		},
+		{
+			"name": "Vietnam",
+			"capital": "Hanoï",
+			"area_km2": 331212,
+			"population": 98500000,
+			"flag": "🇻🇳"
+		},
+		{
+			"name": "Yémen",
+			"capital": "Sanaa",
+			"area_km2": 527968,
+			"population": 33700000,
+			"flag": "🇾🇪"
+		},
+		{
+			"name": "Zambie",
+			"capital": "Lusaka",
+			"area_km2": 752618,
+			"population": 20000000,
+			"flag": "🇿🇲"
+		},
+		{
+			"name": "Zimbabwe",
+			"capital": "Harare",
+			"area_km2": 390757,
+			"population": 16300000,
+			"flag": "🇿🇼"
+		}
+	]
+}
